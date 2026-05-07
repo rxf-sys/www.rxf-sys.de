@@ -1,0 +1,18 @@
+:80 {
+    root * /var/www/rxf-sys.de
+    file_server
+
+    encode gzip zstd
+
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        Permissions-Policy "camera=(), microphone=(), geolocation=()"
+        -Server
+    }
+
+    handle_errors {
+        respond "{err.status_code} {err.status_text}"
+    }
+}
