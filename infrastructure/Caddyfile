@@ -1,6 +1,5 @@
 :80 {
     root * /var/www/www.rxf-sys.de
-    file_server
 
     encode gzip zstd
 
@@ -10,6 +9,16 @@
         Referrer-Policy "strict-origin-when-cross-origin"
         Permissions-Policy "camera=(), microphone=(), geolocation=()"
         -Server
+    }
+
+    # Interne Pfade (Repo-Metadaten, Infrastruktur-Configs) nicht ausliefern
+    @hidden path /infrastructure/* /.git/*
+    handle @hidden {
+        error 404
+    }
+
+    handle {
+        file_server
     }
 
     handle_errors {
