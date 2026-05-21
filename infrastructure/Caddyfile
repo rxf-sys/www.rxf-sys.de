@@ -1,5 +1,5 @@
 :80 {
-    root * /var/www/rxf-sys.de
+    root * /var/www/www.rxf-sys.de
     file_server
 
     encode gzip zstd

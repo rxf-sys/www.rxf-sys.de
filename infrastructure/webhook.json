@@ -1,8 +1,8 @@
 [
   {
     "id": "deploy-rxf-sys",
-    "execute-command": "/opt/rxf-sys.de/deploy.sh",
-    "command-working-directory": "/var/www/rxf-sys.de",
+    "execute-command": "/opt/landing/deploy.sh",
+    "command-working-directory": "/var/www/www.rxf-sys.de",
     "pass-arguments-to-command": [],
     "trigger-rule": {
       "and": [

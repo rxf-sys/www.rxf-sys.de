@@ -42,15 +42,18 @@ Awesome via cdnjs. Brand-DNA (Indigo `#424769` &rarr; Pfirsich `#ffb17a`) ist
 ├─ _headers                # Security-Header (Cloudflare Pages-Format, optional)
 └─ infrastructure/
    ├─ Caddyfile            # Static-Webserver auf :80 (Ziel des Cloudflare-Tunnels)
-   ├─ webhook.json         # GitHub-Webhook für Auto-Deploy
+   ├─ deploy.sh            # Pull-Deploy, installiert als /opt/landing/deploy.sh
+   ├─ webhook.json         # GitHub-Webhook für Auto-Deploy (Push auf main)
    └─ webhook.service      # systemd-Unit für adnanh/webhook
 ```
 
 ## Deployment
 
-1. Repo nach `/var/www/rxf-sys.de` clonen.
+1. Repo nach `/var/www/www.rxf-sys.de` clonen.
 2. Caddy mit `infrastructure/Caddyfile` als Static-Webserver auf Port 80.
 3. Der Cloudflare-Tunnel ist der einzige Zugriffsweg: er l&ouml;st
    `www.rxf-sys.de` auf und zeigt auf die interne LXC-IP `:80`. Keine
    &ouml;ffentlichen Ports, kein direkter DNS-A-Record auf den Host.
-4. GitHub-Webhook triggert `/opt/rxf-sys.de/deploy.sh` (`git pull`).
+4. `infrastructure/deploy.sh` ausf&uuml;hrbar nach `/opt/landing/deploy.sh`
+   kopieren. Der GitHub-Webhook triggert es bei jedem Push auf `main` und
+   bringt das Arbeitsverzeichnis per `git reset --hard origin/main` auf Stand.
