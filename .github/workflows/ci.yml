@@ -21,8 +21,8 @@ jobs:
         run: npm install -g html-validate
 
       - name: Validate HTML
-        # continue-on-error: bestehende Violations blockieren nicht — nach
-        # erstem Durchlauf auf false setzen, wenn alle Fehler behoben sind.
+        # continue-on-error: bestehende Violations blockieren nicht —
+        # nach Bereinigung auf false setzen.
         run: html-validate "*.html"
         continue-on-error: true
 
@@ -37,7 +37,6 @@ jobs:
         with:
           args: >
             --no-progress
-            --exclude-mail
             '*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
