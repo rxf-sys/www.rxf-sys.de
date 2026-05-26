@@ -38,6 +38,8 @@ jobs:
           args: >
             --no-progress
             --root-dir ${{ github.workspace }}
+            --exclude 'https://www\.linkedin\.com'
+            --exclude 'https://www\.xing\.com'
             '*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
