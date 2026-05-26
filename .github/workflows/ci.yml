@@ -37,7 +37,7 @@ jobs:
         with:
           args: >
             --no-progress
-            --base .
+            --root-dir ${{ github.workspace }}
             '*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
