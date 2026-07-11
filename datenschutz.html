@@ -14,7 +14,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/index.css?v=2026-05-07" />
+<link rel="stylesheet" href="/index.css?v=2026-07-11" />
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('rxf-theme');
+    if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.dataset.theme = t;
+  } catch (e) { document.documentElement.dataset.theme = 'light'; }
+})();
+</script>
 </head>
 <body>
 
@@ -64,10 +73,14 @@
     <section>
       <h2>3. Allgemeine Hinweise</h2>
       <p>
-        Diese Webseite ist die &ouml;ffentliche Einstiegsseite zur Domain rxf-sys.de. Es werden
+        Diese Webseite informiert &uuml;ber IT-Dienstleistungen f&uuml;r Privatkunden. Es werden
         keine Cookies gesetzt, kein Tracking, keine Analyse-Werkzeuge und keine Werbung
         eingebunden. Es gibt kein Kontaktformular &mdash; eine Kontaktaufnahme erfolgt
-        ausschlie&szlig;lich &uuml;ber die angegebene E-Mail-Adresse.
+        &uuml;ber die angegebene E-Mail-Adresse oder Telefonnummer. Bei einer Kontaktaufnahme
+        werden die von Ihnen &uuml;bermittelten Daten (z.&nbsp;B. Name, E-Mail-Adresse, Inhalt
+        der Anfrage) ausschlie&szlig;lich zur Bearbeitung Ihrer Anfrage und f&uuml;r
+        m&ouml;gliche Anschlussfragen verarbeitet (Art. 6 Abs. 1 lit. b DSGVO &mdash;
+        vorvertragliche Ma&szlig;nahmen bzw. Vertragserf&uuml;llung).
       </p>
     </section>
 

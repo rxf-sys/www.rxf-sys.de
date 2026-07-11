@@ -14,7 +14,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/index.css?v=2026-05-07" />
+<link rel="stylesheet" href="/index.css?v=2026-07-11" />
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('rxf-theme');
+    if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.dataset.theme = t;
+  } catch (e) { document.documentElement.dataset.theme = 'light'; }
+})();
+</script>
 </head>
 <body>
 
@@ -50,6 +59,22 @@
       <h2>Kontakt</h2>
       <p>
         E-Mail: <a href="mailto:info@rxf-sys.de">info@rxf-sys.de</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Umsatzsteuer</h2>
+      <p>
+        Als Kleinunternehmer im Sinne von &sect; 19 Abs. 1 UStG wird keine Umsatzsteuer
+        berechnet und ausgewiesen.
+      </p>
+    </section>
+
+    <section>
+      <h2>Verbraucherstreitbeilegung</h2>
+      <p>
+        Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer
+        Verbraucherschlichtungsstelle teilzunehmen.
       </p>
     </section>
 

@@ -4,24 +4,23 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>rxf-sys.de | Robin Frank — Infrastruktur &amp; Anwendungen</title>
-<meta name="description" content="rxf-sys.de — die Schaltzentrale von Robin Frank. Portfolio, Admin-Dashboard und HomeLab unter einem Dach." />
-<meta name="title" content="rxf-sys.de | Robin Frank — Infrastruktur &amp; Anwendungen" />
-<meta name="keywords" content="Robin Frank, rxf-sys, Portfolio, HomeLab, Proxmox, Linux, Cloudflare, IT-Systemadministrator" />
+<title>IT-Service für Zuhause in Dormagen &amp; Umgebung | rxf-sys.de</title>
+<meta name="description" content="Schnelle IT-Hilfe für Privatkunden in Dormagen &amp; Umgebung: PC- &amp; Laptop-Hilfe, WLAN &amp; Heimnetzwerk, Smart Home, Fernwartung. Transparent für 39 €/Std. — vor Ort oder remote." />
+<meta name="keywords" content="IT-Service Dormagen, PC-Hilfe Dormagen, Computerhilfe, WLAN einrichten, Fernwartung, Smart Home Hilfe, IT-Hilfe Privatkunden, Robin Frank" />
 <meta name="author" content="Robin Frank" />
 <meta name="robots" content="index, follow" />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rxf-sys.de/" />
-<meta property="og:title" content="rxf-sys.de | Robin Frank — Infrastruktur &amp; Anwendungen" />
-<meta property="og:description" content="Die Schaltzentrale von Robin Frank — Portfolio, Admin-Dashboard und HomeLab unter einem Dach." />
+<meta property="og:title" content="IT-Service für Zuhause in Dormagen &amp; Umgebung | rxf-sys.de" />
+<meta property="og:description" content="PC- &amp; Laptop-Hilfe, WLAN &amp; Heimnetzwerk, Smart Home und Fernwartung für Privatkunden — verständlich erklärt, transparent abgerechnet: 39 €/Std." />
 <meta property="og:locale" content="de_DE" />
 
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#0f1119" media="(prefers-color-scheme: dark)" />
-<meta name="theme-color" content="#f5f4ef" media="(prefers-color-scheme: light)" />
 
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 
@@ -30,43 +29,50 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<link rel="stylesheet" href="/index.css?v=2026-05-21" />
+<link rel="stylesheet" href="/index.css?v=2026-07-11" />
+
+<script>
+(function () {
+  document.documentElement.classList.add('js');
+  try {
+    var t = localStorage.getItem('rxf-theme');
+    if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.dataset.theme = t;
+  } catch (e) { document.documentElement.dataset.theme = 'light'; }
+})();
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "rxf-sys.de",
+  "@type": "LocalBusiness",
+  "name": "rxf-sys — IT-Service Robin Frank",
   "url": "https://rxf-sys.de/",
-  "author": {
+  "email": "info@rxf-sys.de",
+  "description": "IT-Dienstleistungen für Privatkunden: PC- und Laptop-Hilfe, WLAN und Heimnetzwerk, Smart Home, Fernwartung. Vor Ort in Dormagen und Umgebung oder remote.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dormagen",
+    "addressRegion": "NRW",
+    "addressCountry": "DE"
+  },
+  "areaServed": "Dormagen und Umgebung (Neuss, Grevenbroich, Rommerskirchen, Köln, Düsseldorf)",
+  "founder": {
     "@type": "Person",
     "name": "Robin Frank",
-    "url": "https://portfolio.rxf-sys.de/",
-    "email": "info@rxf-sys.de"
+    "url": "https://portfolio.rxf-sys.de/"
   },
-  "description": "rxf-sys.de — die Schaltzentrale von Robin Frank. Portfolio, Admin-Dashboard und HomeLab unter einem Dach."
+  "priceRange": "39 € pro Stunde"
 }
 </script>
 </head>
 <body>
 
-<!-- ============== BOOT SEQUENCE ============== -->
-<div class="boot" id="boot" aria-hidden="true">
-  <div class="boot-inner">
-    <div class="boot-header">
-      <span class="dot-row"><span></span><span></span><span></span></span>
-      <span class="boot-host mono">root@rxf-sys ~ # ./bootstrap</span>
-    </div>
-    <div class="boot-lines" id="bootLines"></div>
-    <span class="boot-cursor" aria-hidden="true"></span>
-  </div>
-  <button class="boot-skip mono" id="bootSkip" type="button">Skip ↵</button>
-</div>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-<!-- ============== BACKDROPS ============== -->
+<!-- ============== BACKDROP ============== -->
 <div class="bg-grid" aria-hidden="true"></div>
-<svg class="bg-constellation" id="constellation" aria-hidden="true"></svg>
-<div class="bg-spotlight" aria-hidden="true"></div>
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
 
 <!-- ============== TOPBAR ============== -->
 <header class="topbar">
@@ -75,264 +81,308 @@
     <span class="brand-text">rxf-sys<span class="brand-tld">.de</span></span>
   </a>
   <nav class="topbar-nav" aria-label="Hauptnavigation">
-    <a href="https://portfolio.rxf-sys.de/" target="_blank" rel="noopener noreferrer">Portfolio</a>
-    <a href="https://admin.rxf-sys.de/" target="_blank" rel="noopener noreferrer">Admin</a>
-    <a href="#contact">Kontakt</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#ablauf" class="nav-optional">Ablauf</a>
+    <a href="#preise">Preise</a>
+    <a href="#faq" class="nav-optional">FAQ</a>
+    <a href="#kontakt">Kontakt</a>
   </nav>
-  <div class="topbar-status" title="Alle Dienste laufen">
-    <span class="status-dot"></span>
-    <span>operational</span>
-  </div>
+  <a href="mailto:info@rxf-sys.de" class="topbar-cta">
+    <i class="fas fa-envelope" aria-hidden="true"></i>
+    <span>Anfrage senden</span>
+  </a>
   <button class="theme-toggle" id="themeToggle" type="button" aria-label="Theme umschalten">
-    <i class="fas fa-sun" aria-hidden="true"></i>
+    <i class="fas fa-moon" aria-hidden="true"></i>
   </button>
 </header>
 
 <main id="main">
 
   <!-- ============== HERO ============== -->
-  <section class="hero" data-screen-label="01 Hero">
-    <span class="hero-eyebrow">
-      <span class="badge"><i class="fas fa-bolt" aria-hidden="true"></i></span>
-      <span>Willkommen bei rxf-sys</span>
+  <section class="hero" aria-label="Einführung">
+    <span class="hero-eyebrow reveal">
+      <span class="badge"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></span>
+      <span>IT-Service für Privatkunden · Dormagen &amp; Umgebung</span>
     </span>
 
-    <h1>
-      <span class="line"><span class="split" data-text="Eine Domain." data-delay="200">Eine Domain.</span></span>
-      <span class="line">
-        <span class="word word--drei word--drei-outline split" data-text="Drei" data-delay="900">Drei</span>
-        <span class="split" data-text=" Welten." data-delay="1100"> Welten.</span>
-      </span>
+    <h1 class="reveal">
+      Computer&shy;probleme?<br />
+      Ich kümmere mich <span class="accent-underline">drum</span>.
     </h1>
 
-    <p class="lede">
-      Hi, ich bin <strong>Robin Frank</strong> — Junior IT-Systemadministrator und
-      Fachinformatiker für Anwendungsentwicklung. Hinter
-      <span class="mono">rxf-sys.de</span> stecken mein Portfolio, mein
-      Admin-Dashboard und ein wachsendes HomeLab. Wähl unten, wohin's gehen soll.
+    <p class="lede reveal">
+      Hallo, ich bin <strong>Robin Frank</strong> — Fachinformatiker aus Dormagen.
+      Ich helfe Ihnen bei allem rund um PC, WLAN, Smartphone &amp; Smart Home:
+      geduldig, verständlich erklärt und fair abgerechnet.
+      Vor Ort bei Ihnen zuhause oder bequem per Fernwartung.
     </p>
 
-    <div class="hero-meta">
-      <div class="hero-meta-item"><i class="fas fa-server" aria-hidden="true"></i><span>HomeLab seit <strong>2022</strong></span></div>
-      <div class="hero-meta-item"><i class="fas fa-shield-halved" aria-hidden="true"></i><span><strong>Cloudflare</strong> Zero Trust</span></div>
-      <div class="hero-meta-item"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span><strong>Dormagen</strong>, DE</span></div>
-      <div class="hero-meta-item"><i class="fas fa-clock" aria-hidden="true"></i><span id="liveClock" class="mono" style="color: var(--text-1)">--:--:-- MEZ</span></div>
+    <div class="hero-actions reveal">
+      <a href="mailto:info@rxf-sys.de" class="btn btn-primary">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span>info@rxf-sys.de</span>
+      </a>
+      <!-- TODO: Platzhalter durch echte Telefonnummer ersetzen (auch im Kontakt-Bereich unten) -->
+      <a href="tel:+4915700000000" class="btn btn-ghost">
+        <i class="fas fa-phone" aria-hidden="true"></i>
+        <span>0157&nbsp;00000000</span>
+      </a>
     </div>
 
-    <!-- Live ticker -->
-    <div class="live-ticker" aria-hidden="true">
-      <span class="live-ticker-label"><span class="status-dot"></span> Live</span>
-      <div class="live-ticker-content">
-        <div class="live-ticker-track">
-          <span class="live-ticker-item"><span class="pip ok"></span> Proxmox host <b>up 432d 14h</b></span>
-          <span class="live-ticker-item"><span class="pip ok"></span> Cloudflare tunnels <b>4/4 healthy</b></span>
-          <span class="live-ticker-item"><span class="pip ok"></span> Uptime 30d <b>99.98 %</b></span>
-          <span class="live-ticker-item"><span class="pip ok"></span> Last deploy <b>portfolio · vor 2 h</b></span>
-          <span class="live-ticker-item"><span class="pip warn"></span> Lab <b>staging · in Vorbereitung</b></span>
-          <span class="live-ticker-item"><span class="pip ok"></span> Backups (PBS) <b>letzter Lauf · 03:14 Uhr</b></span>
-          <!-- duplicate for seamless loop -->
-          <span class="live-ticker-item"><span class="pip ok"></span> Proxmox host <b>up 432d 14h</b></span>
-          <span class="live-ticker-item"><span class="pip ok"></span> Cloudflare tunnels <b>4/4 healthy</b></span>
-          <span class="live-ticker-item"><span class="pip ok"></span> Uptime 30d <b>99.98 %</b></span>
-          <span class="live-ticker-item"><span class="pip ok"></span> Last deploy <b>portfolio · vor 2 h</b></span>
-          <span class="live-ticker-item"><span class="pip warn"></span> Lab <b>staging · in Vorbereitung</b></span>
-          <span class="live-ticker-item"><span class="pip ok"></span> Backups (PBS) <b>letzter Lauf · 03:14 Uhr</b></span>
-        </div>
+    <div class="hero-meta reveal">
+      <div class="hero-meta-item"><i class="fas fa-house" aria-hidden="true"></i><span>Vor Ort in <strong>Dormagen &amp; Umgebung</strong></span></div>
+      <div class="hero-meta-item"><i class="fas fa-headset" aria-hidden="true"></i><span><strong>Fernwartung</strong> deutschlandweit</span></div>
+      <div class="hero-meta-item"><i class="fas fa-tag" aria-hidden="true"></i><span><strong>39 €</strong> pro Stunde — transparent</span></div>
+      <div class="hero-meta-item"><i class="fas fa-reply" aria-hidden="true"></i><span>Antwort meist <strong>&lt; 24 h</strong></span></div>
+    </div>
+  </section>
+
+  <!-- ============== LEISTUNGEN ============== -->
+  <section id="leistungen" class="services" aria-label="Leistungen">
+    <div class="section-head reveal">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Womit ich helfe</h2>
+      <span class="section-kicker">Alle Leistungen für Privatkunden</span>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card reveal">
+        <div class="service-icon service-icon-1"><i class="fas fa-laptop" aria-hidden="true"></i></div>
+        <h3>PC- &amp; Laptop-Hilfe</h3>
+        <p>Ihr Rechner streikt, ist langsam oder soll neu eingerichtet werden? Ich bringe ihn wieder in Form.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check" aria-hidden="true"></i> Einrichtung neuer PCs &amp; Laptops</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Windows-Probleme &amp; Fehlermeldungen</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Aufrüstung (SSD, Arbeitsspeicher)</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Viren- &amp; Schadsoftware-Entfernung</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Datenumzug &amp; Daten-Backup</li>
+        </ul>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon service-icon-2"><i class="fas fa-wifi" aria-hidden="true"></i></div>
+        <h3>WLAN &amp; Heimnetzwerk</h3>
+        <p>Schluss mit Funklöchern und Verbindungsabbrüchen — für stabiles Internet in jedem Zimmer.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check" aria-hidden="true"></i> Router einrichten (z.&nbsp;B. FRITZ!Box)</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> WLAN im ganzen Haus (Mesh, Repeater)</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Netzwerkprobleme finden &amp; beheben</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Sichere Konfiguration &amp; Gastnetz</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Umzug auf neuen Internetanschluss</li>
+        </ul>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon service-icon-3"><i class="fas fa-house-signal" aria-hidden="true"></i></div>
+        <h3>Smart Home &amp; Geräte</h3>
+        <p>Vom Drucker bis zur smarten Lampe — ich richte Ihre Geräte ein und bringe alles zum Zusammenspiel.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check" aria-hidden="true"></i> Drucker, Smart-TV &amp; Streaming</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Smartphone &amp; Tablet einrichten</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Smarte Lampen, Steckdosen, Heizung</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Sprachassistenten &amp; Automationen</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Netzwerkspeicher (NAS) für Fotos &amp; Co.</li>
+        </ul>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon service-icon-4"><i class="fas fa-headset" aria-hidden="true"></i></div>
+        <h3>Fernwartung</h3>
+        <p>Viele Probleme lassen sich ohne Termin lösen: Ich schalte mich sicher auf Ihren Bildschirm — Sie schauen live zu.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check" aria-hidden="true"></i> Hilfe ohne Anfahrt — oft noch am selben Tag</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Verbindung nur mit Ihrer Zustimmung</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Sie sehen jeden Schritt live mit</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Nach der Sitzung: Zugriff automatisch beendet</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Deutschlandweit möglich</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============== ABLAUF ============== -->
+  <section id="ablauf" class="steps" aria-label="So läuft es ab">
+    <div class="section-head reveal">
+      <span class="section-num">02</span>
+      <h2 class="section-title">So läuft&rsquo;s ab</h2>
+      <span class="section-kicker">In drei einfachen Schritten</span>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step reveal">
+        <span class="step-num">1</span>
+        <h3>Kontakt aufnehmen</h3>
+        <p>Schreiben Sie mir eine E-Mail oder rufen Sie an. Schildern Sie kurz, wo es hakt — Fachbegriffe sind nicht nötig.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-num">2</span>
+        <h3>Kostenlose Ersteinschätzung</h3>
+        <p>Ich melde mich zeitnah zurück, sage Ihnen ehrlich, ob und wie sich das Problem lösen lässt — per Fernwartung oder vor Ort — und wir vereinbaren einen Termin.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-num">3</span>
+        <h3>Lösung &amp; faire Abrechnung</h3>
+        <p>Ich löse das Problem und erkläre Ihnen verständlich, was gemacht wurde. Abgerechnet wird nur die tatsächliche Arbeitszeit.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============== HUB CARDS ============== -->
-  <section id="hub" class="hub" aria-label="Verfügbare Bereiche" data-screen-label="02 Hub">
-
-    <a class="hub-card" href="https://portfolio.rxf-sys.de/" target="_blank" rel="noopener noreferrer" aria-label="Zum Portfolio">
-      <div class="hub-head">
-        <span class="hub-num">01</span>
-        <span class="hub-tag hub-tag--live"><span class="pip"></span> Live</span>
-      </div>
-      <div class="hub-icon hub-icon-1">
-        <i class="fas fa-id-badge" aria-hidden="true"></i>
-      </div>
-      <h3>Portfolio</h3>
-      <p>Wer ich bin, was ich kann, woran ich arbeite. Werdegang, Projekte, Zertifikate — und ein Kontaktformular für alles dazwischen.</p>
-
-      <div class="hub-spark">
-        <svg class="hub-spark-svg" aria-hidden="true"></svg>
-        <div class="hub-spark-stat">visits 30d · <b>1.2k</b> · <span class="ok">▲ 18%</span></div>
-      </div>
-
-      <ul class="hub-list">
-        <li><i class="fas fa-check" aria-hidden="true"></i> Über mich &amp; Werdegang</li>
-        <li><i class="fas fa-check" aria-hidden="true"></i> Skills &amp; Zertifikate</li>
-        <li><i class="fas fa-check" aria-hidden="true"></i> Ausgewählte Projekte</li>
-      </ul>
-      <div class="hub-foot">
-        <span class="hub-host">portfolio.rxf-sys.de</span>
-        <span class="hub-cta">Öffnen <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-      </div>
-    </a>
-
-    <a class="hub-card" href="https://admin.rxf-sys.de/" target="_blank" rel="noopener noreferrer" aria-label="Zum Admin-Dashboard">
-      <div class="hub-head">
-        <span class="hub-num">02</span>
-        <span class="hub-tag hub-tag--locked"><i class="fas fa-lock" aria-hidden="true"></i> Cloudflare Access</span>
-      </div>
-      <div class="hub-icon hub-icon-2">
-        <i class="fas fa-gauge-high" aria-hidden="true"></i>
-      </div>
-      <h3>Admin</h3>
-      <p>Live-Dashboard für die rxf-sys-Infrastruktur: Proxmox-Host, LXC/VM, Service-Probes, Cloudflare-Tunnel, PBS-Backups und UniFi-Netzwerk.</p>
-
-      <div class="hub-spark">
-        <svg class="hub-spark-svg" aria-hidden="true"></svg>
-        <div class="hub-spark-stat">CPU 1h · <b>14 %</b> · <span class="ok">stable</span></div>
-      </div>
-
-      <ul class="hub-list">
-        <li><i class="fas fa-check" aria-hidden="true"></i> Proxmox VE &amp; PBS</li>
-        <li><i class="fas fa-check" aria-hidden="true"></i> Service-Health-Probes</li>
-        <li><i class="fas fa-check" aria-hidden="true"></i> Cloudflare &amp; UniFi</li>
-      </ul>
-      <div class="hub-foot">
-        <span class="hub-host">admin.rxf-sys.de</span>
-        <span class="hub-cta">Öffnen <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-      </div>
-    </a>
-
-    <div class="hub-card hub-card--soon" aria-disabled="true">
-      <div class="hub-head">
-        <span class="hub-num">03</span>
-        <span class="hub-tag hub-tag--soon"><i class="fas fa-circle-notch fa-spin" aria-hidden="true"></i> In Planung</span>
-      </div>
-      <div class="hub-icon hub-icon-3">
-        <i class="fas fa-flask" aria-hidden="true"></i>
-      </div>
-      <h3>Lab</h3>
-      <p>Ein offener Spielplatz für kleinere Tools, Demos und Experimente aus dem HomeLab — sobald das erste Projekt öffentlich reif ist.</p>
-
-      <div class="hub-spark">
-        <svg class="hub-spark-svg" aria-hidden="true" style="opacity:.55"></svg>
-        <div class="hub-spark-stat">build · <b>staging</b></div>
-      </div>
-
-      <ul class="hub-list">
-        <li><i class="fas fa-hourglass-half" aria-hidden="true"></i> Status-API für Subdomänen</li>
-        <li><i class="fas fa-hourglass-half" aria-hidden="true"></i> Mini-Tools &amp; Demos</li>
-        <li><i class="fas fa-hourglass-half" aria-hidden="true"></i> NinjaOne Script-Showcase</li>
-      </ul>
-      <div class="hub-foot">
-        <span class="hub-host">lab.rxf-sys.de</span>
-        <span class="hub-cta hub-cta-muted">Bald <i class="fas fa-hourglass-half" aria-hidden="true"></i></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============== STATS ============== -->
-  <section class="stats" aria-label="Kennzahlen" data-screen-label="03 Stats">
-    <div class="section-head">
+  <!-- ============== PREISE ============== -->
+  <section id="preise" class="pricing" aria-label="Preise">
+    <div class="section-head reveal">
       <span class="section-num">03</span>
-      <h2 class="section-title">Auf einen Blick</h2>
-      <span class="section-kicker">Stand heute</span>
+      <h2 class="section-title">Preise</h2>
+      <span class="section-kicker">Transparent, ohne Überraschungen</span>
     </div>
-    <div class="stats-grid">
-      <div class="stat">
-        <div class="stat-label"><i class="fas fa-calendar-alt" aria-hidden="true"></i> HomeLab</div>
-        <div class="stat-value"><span data-count data-to="4" data-integer="1">0</span><span class="stat-suffix">Jahre</span></div>
-        <div class="stat-trend">seit 2022 · in Eigenregie</div>
+
+    <div class="pricing-card reveal">
+      <div class="pricing-main">
+        <span class="pricing-label">Vor Ort &amp; Fernwartung</span>
+        <div class="pricing-value"><span class="pricing-amount">39&nbsp;€</span><span class="pricing-per">pro Stunde</span></div>
+        <p class="pricing-note">
+          Endpreis — gemäß §&nbsp;19&nbsp;UStG (Kleinunternehmerregelung) wird
+          keine Umsatzsteuer berechnet.
+        </p>
       </div>
-      <div class="stat">
-        <div class="stat-label"><i class="fas fa-cube" aria-hidden="true"></i> LXC / VMs</div>
-        <div class="stat-value"><span data-count data-to="11" data-integer="1">0</span><span class="stat-suffix">aktiv</span></div>
-        <div class="stat-trend"><span class="ok">+3</span> seit letztem Monat</div>
-      </div>
-      <div class="stat">
-        <div class="stat-label"><i class="fas fa-chart-line" aria-hidden="true"></i> Uptime · 30 Tage</div>
-        <div class="stat-value"><span data-count data-to="99.98" data-decimals="2">0</span><span class="stat-suffix">%</span></div>
-        <div class="stat-trend">SLO 99.5 % · <span class="ok">erfüllt</span></div>
-      </div>
-      <div class="stat">
-        <div class="stat-label"><i class="fas fa-bolt" aria-hidden="true"></i> Last Deploy</div>
-        <div class="stat-value"><span data-count data-to="2" data-integer="1">0</span><span class="stat-suffix">h</span></div>
-        <div class="stat-trend">portfolio · main → prod</div>
-      </div>
+      <ul class="pricing-list">
+        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span><strong>Telefonische Ersteinschätzung kostenlos</strong> — Sie wissen vorher, woran Sie sind</span></li>
+        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span>Abrechnung nach der ersten Stunde in <strong>15-Minuten-Schritten</strong></span></li>
+        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span><strong>Anfahrt in Dormagen inklusive</strong> — Umgebung nach Absprache</span></li>
+        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span><strong>Pauschalpreise auf Anfrage</strong> — für größere Vorhaben (z.&nbsp;B. komplette Neueinrichtung) gern ein Festpreis vorab</span></li>
+        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span>Rechnung per E-Mail — Zahlung per Überweisung oder bar vor Ort</span></li>
+      </ul>
     </div>
   </section>
 
-  <!-- ============== STACK ============== -->
-  <section class="stack" aria-label="Tech-Stack" data-screen-label="04 Stack">
-    <div class="section-head">
+  <!-- ============== ÜBER MICH ============== -->
+  <section id="ueber-mich" class="about" aria-label="Über mich">
+    <div class="section-head reveal">
       <span class="section-num">04</span>
-      <h2 class="section-title">Stack</h2>
-      <span class="section-kicker">Was die Sache am Laufen hält</span>
+      <h2 class="section-title">Wer hier hilft</h2>
+      <span class="section-kicker">Kein Callcenter — ein Ansprechpartner</span>
     </div>
 
-    <div class="stack-marquee">
-      <div class="stack-track">
-        <span class="stack-item"><i class="fab fa-linux" aria-hidden="true"></i> Linux</span>
-        <span class="stack-item"><i class="fas fa-server" aria-hidden="true"></i> Proxmox&nbsp;VE</span>
-        <span class="stack-item"><i class="fab fa-docker" aria-hidden="true"></i> Docker</span>
-        <span class="stack-item"><i class="fab fa-cloudflare" aria-hidden="true"></i> Cloudflare</span>
-        <span class="stack-item"><i class="fas fa-network-wired" aria-hidden="true"></i> UniFi</span>
-        <span class="stack-item"><i class="fab fa-react" aria-hidden="true"></i> React</span>
-        <span class="stack-item"><i class="fab fa-python" aria-hidden="true"></i> FastAPI</span>
-        <span class="stack-item"><i class="fab fa-js" aria-hidden="true"></i> JavaScript</span>
-        <span class="stack-item"><i class="fab fa-java" aria-hidden="true"></i> Java</span>
-        <span class="stack-item"><i class="fab fa-git-alt" aria-hidden="true"></i> Git</span>
-        <!-- duplicate for seamless loop -->
-        <span class="stack-item"><i class="fab fa-linux" aria-hidden="true"></i> Linux</span>
-        <span class="stack-item"><i class="fas fa-server" aria-hidden="true"></i> Proxmox&nbsp;VE</span>
-        <span class="stack-item"><i class="fab fa-docker" aria-hidden="true"></i> Docker</span>
-        <span class="stack-item"><i class="fab fa-cloudflare" aria-hidden="true"></i> Cloudflare</span>
-        <span class="stack-item"><i class="fas fa-network-wired" aria-hidden="true"></i> UniFi</span>
-        <span class="stack-item"><i class="fab fa-react" aria-hidden="true"></i> React</span>
-        <span class="stack-item"><i class="fab fa-python" aria-hidden="true"></i> FastAPI</span>
-        <span class="stack-item"><i class="fab fa-js" aria-hidden="true"></i> JavaScript</span>
-        <span class="stack-item"><i class="fab fa-java" aria-hidden="true"></i> Java</span>
-        <span class="stack-item"><i class="fab fa-git-alt" aria-hidden="true"></i> Git</span>
+    <div class="about-card reveal">
+      <div class="about-text">
+        <h3>Robin Frank</h3>
+        <p>
+          Ich bin ausgebildeter <strong>Fachinformatiker für Anwendungsentwicklung</strong> und
+          arbeite hauptberuflich als IT-Systemadministrator. Seit 2022 betreibe ich zudem meine
+          eigene Server-Infrastruktur — Technik ist für mich nicht nur Beruf, sondern Leidenschaft.
+        </p>
+        <p>
+          Bei mir bekommen Sie keine Fachchinesisch-Vorträge und keine versteckten Kosten:
+          Ich erkläre verständlich, was ich tue, empfehle nur, was Sie wirklich brauchen,
+          und Sie haben vor, während und nach dem Termin immer denselben Ansprechpartner.
+        </p>
+        <p class="about-link">
+          Mehr über meinen Werdegang und meine Projekte:
+          <a href="https://portfolio.rxf-sys.de/" target="_blank" rel="noopener noreferrer">portfolio.rxf-sys.de <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </p>
       </div>
-    </div>
-    <div class="stack-row stack-marquee" style="margin-top: 12px;">
-      <div class="stack-track reverse">
-        <span class="stack-item"><i class="fab fa-github" aria-hidden="true"></i> GitHub Actions</span>
-        <span class="stack-item"><i class="fas fa-shield-halved" aria-hidden="true"></i> Zero Trust</span>
-        <span class="stack-item"><i class="fas fa-database" aria-hidden="true"></i> PostgreSQL</span>
-        <span class="stack-item"><i class="fas fa-cloud" aria-hidden="true"></i> Tailscale</span>
-        <span class="stack-item"><i class="fas fa-robot" aria-hidden="true"></i> NinjaOne</span>
-        <span class="stack-item"><i class="fas fa-terminal" aria-hidden="true"></i> Ansible</span>
-        <span class="stack-item"><i class="fas fa-magic" aria-hidden="true"></i> MagicMirror²</span>
-        <span class="stack-item"><i class="fas fa-fire" aria-hidden="true"></i> Home Assistant</span>
-        <!-- duplicate -->
-        <span class="stack-item"><i class="fab fa-github" aria-hidden="true"></i> GitHub Actions</span>
-        <span class="stack-item"><i class="fas fa-shield-halved" aria-hidden="true"></i> Zero Trust</span>
-        <span class="stack-item"><i class="fas fa-database" aria-hidden="true"></i> PostgreSQL</span>
-        <span class="stack-item"><i class="fas fa-cloud" aria-hidden="true"></i> Tailscale</span>
-        <span class="stack-item"><i class="fas fa-robot" aria-hidden="true"></i> NinjaOne</span>
-        <span class="stack-item"><i class="fas fa-terminal" aria-hidden="true"></i> Ansible</span>
-        <span class="stack-item"><i class="fas fa-magic" aria-hidden="true"></i> MagicMirror²</span>
-        <span class="stack-item"><i class="fas fa-fire" aria-hidden="true"></i> Home Assistant</span>
-      </div>
+      <ul class="about-facts">
+        <li><i class="fas fa-graduation-cap" aria-hidden="true"></i><span><strong>Ausgebildeter Fachinformatiker</strong><br />Anwendungsentwicklung (IHK)</span></li>
+        <li><i class="fas fa-server" aria-hidden="true"></i><span><strong>IT-Systemadministrator</strong><br />täglich in der Praxis</span></li>
+        <li><i class="fas fa-comments" aria-hidden="true"></i><span><strong>Verständlich erklärt</strong><br />geduldig &amp; ohne Fachjargon</span></li>
+        <li><i class="fas fa-lock" aria-hidden="true"></i><span><strong>Diskret &amp; sorgfältig</strong><br />Ihre Daten bleiben Ihre Daten</span></li>
+      </ul>
     </div>
   </section>
 
-  <!-- ============== CONTACT ============== -->
-  <section id="contact" class="contact" data-screen-label="05 Kontakt">
-    <div class="contact-card">
+  <!-- ============== FAQ ============== -->
+  <section id="faq" class="faq" aria-label="Häufige Fragen">
+    <div class="section-head reveal">
+      <span class="section-num">05</span>
+      <h2 class="section-title">Häufige Fragen</h2>
+      <span class="section-kicker">Kurz &amp; ehrlich beantwortet</span>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>In welchem Gebiet sind Sie unterwegs?</summary>
+        <p>
+          Vor-Ort-Termine biete ich in <strong>Dormagen und Umgebung</strong> an — etwa
+          Neuss, Grevenbroich, Rommerskirchen sowie den Randlagen von Köln und Düsseldorf.
+          Per <strong>Fernwartung</strong> helfe ich deutschlandweit.
+        </p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Wie funktioniert die Fernwartung — ist das sicher?</summary>
+        <p>
+          Sie laden ein kleines Programm herunter und nennen mir den angezeigten Code —
+          erst dann kann ich mich verbinden. Sie sehen die ganze Zeit live, was auf Ihrem
+          Bildschirm passiert, und können die Verbindung jederzeit trennen. Nach der Sitzung
+          habe ich keinen Zugriff mehr auf Ihren Rechner.
+        </p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Was kostet mich das insgesamt?</summary>
+        <p>
+          Die telefonische Ersteinschätzung ist kostenlos. Danach gilt: <strong>39&nbsp;€ pro
+          Stunde</strong>, nach der ersten Stunde in 15-Minuten-Schritten abgerechnet. Die meisten
+          typischen Anliegen (z.&nbsp;B. Drucker einrichten, WLAN-Problem beheben) sind in ein bis
+          zwei Stunden erledigt. Für größere Vorhaben nenne ich Ihnen auf Wunsch vorab einen
+          Pauschalpreis.
+        </p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Wann sind Termine möglich?</summary>
+        <p>
+          Termine vereinbaren wir flexibel — in der Regel nachmittags, abends und am Wochenende.
+          Fernwartungstermine lassen sich oft kurzfristig einrichten.
+        </p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Was passiert mit meinen Daten?</summary>
+        <p>
+          Ihre Daten bleiben auf Ihren Geräten — ich kopiere nichts ohne ausdrückliche Absprache
+          (etwa für ein vereinbartes Backup). Alles, was ich bei der Arbeit sehe, behandle ich
+          selbstverständlich vertraulich.
+        </p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Was ist, wenn das Problem nicht lösbar ist?</summary>
+        <p>
+          Ehrlichkeit zuerst: Wenn ich schon bei der Ersteinschätzung sehe, dass sich etwas nicht
+          oder nicht wirtschaftlich lösen lässt (z.&nbsp;B. ein Hardwaredefekt, bei dem sich die
+          Reparatur nicht lohnt), sage ich Ihnen das offen — bevor Kosten entstehen.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============== KONTAKT ============== -->
+  <section id="kontakt" class="contact" aria-label="Kontakt">
+    <div class="contact-card reveal">
       <div>
         <span class="contact-eyebrow">
           <span class="badge"><i class="fas fa-envelope" aria-hidden="true"></i></span>
           <span>Kontakt</span>
         </span>
-        <h2>Sag <span class="accent-text">Hallo</span>.</h2>
-        <p class="lede">Für Festanstellung, Projektarbeit, HomeLab-Talk oder einfach einen guten Austausch — ich antworte zeitnah.</p>
+        <h2>Erzählen Sie mir, <span class="accent-text">wo es hakt</span>.</h2>
+        <p class="lede">
+          Schreiben Sie mir kurz, worum es geht — ich melde mich in der Regel innerhalb
+          von 24 Stunden mit einer ehrlichen Ersteinschätzung zurück. Unverbindlich und kostenlos.
+        </p>
         <div class="contact-actions">
-          <a href="mailto:info@rxf-sys.de" class="btn btn-primary" data-magnetic><i class="fas fa-envelope" aria-hidden="true"></i><span>info@rxf-sys.de</span></a>
-          <a href="https://portfolio.rxf-sys.de/#contact" class="btn btn-ghost">Mehr Wege <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="mailto:info@rxf-sys.de?subject=IT-Anfrage" class="btn btn-primary">
+            <i class="fas fa-envelope" aria-hidden="true"></i><span>info@rxf-sys.de</span>
+          </a>
+          <!-- TODO: Platzhalter durch echte Telefonnummer ersetzen (auch im Hero oben) -->
+          <a href="tel:+4915700000000" class="btn btn-ghost">
+            <i class="fas fa-phone" aria-hidden="true"></i><span>0157&nbsp;00000000</span>
+          </a>
         </div>
       </div>
       <div class="contact-side">
-        <div class="ci-item"><div class="ci-label"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Region</div><div class="ci-value">Dormagen, NRW</div></div>
-        <div class="ci-item"><div class="ci-label"><i class="fas fa-clock" aria-hidden="true"></i> Antwortzeit</div><div class="ci-value">in der Regel &lt;&nbsp;24h</div></div>
-        <div class="ci-item"><div class="ci-label"><i class="fab fa-github" aria-hidden="true"></i> GitHub</div><div class="ci-value"><a href="https://github.com/rxf-sys" target="_blank" rel="noopener noreferrer">@rxf-sys</a></div></div>
+        <div class="ci-item"><div class="ci-label"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Einsatzgebiet</div><div class="ci-value">Dormagen &amp; Umgebung · remote deutschlandweit</div></div>
+        <div class="ci-item"><div class="ci-label"><i class="fas fa-reply" aria-hidden="true"></i> Antwortzeit</div><div class="ci-value">in der Regel &lt;&nbsp;24&nbsp;Stunden</div></div>
+        <div class="ci-item"><div class="ci-label"><i class="fas fa-calendar-check" aria-hidden="true"></i> Termine</div><div class="ci-value">flexibel — auch abends &amp; am Wochenende</div></div>
       </div>
     </div>
   </section>
@@ -342,14 +392,16 @@
 <footer class="foot">
   <div class="foot-brand">
     <span class="brand-dot"></span>
-    <span>&copy; <span id="year">2026</span> Robin Frank</span>
+    <span>&copy; <span id="year">2026</span> Robin Frank · IT-Service</span>
   </div>
-  <nav class="foot-nav" aria-label="Rechtliches">
+  <nav class="foot-nav" aria-label="Weitere Links">
     <a href="impressum.html">Impressum</a>
     <span class="sep">·</span>
     <a href="datenschutz.html">Datenschutz</a>
     <span class="sep">·</span>
-    <a href="https://github.com/rxf-sys/www.rxf-sys.de" target="_blank" rel="noopener noreferrer">Source</a>
+    <a href="https://portfolio.rxf-sys.de/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+    <span class="sep">·</span>
+    <a href="https://github.com/rxf-sys" target="_blank" rel="noopener noreferrer">GitHub</a>
   </nav>
   <div class="foot-host mono">
     <span class="status-dot"></span>
@@ -357,7 +409,7 @@
   </div>
 </footer>
 
-<script src="/index.js?v=2026-05-21"></script>
+<script src="/index.js?v=2026-07-11"></script>
 
 </body>
 </html>
