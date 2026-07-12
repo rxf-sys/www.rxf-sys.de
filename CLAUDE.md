@@ -1,6 +1,11 @@
 # www.rxf-sys.de
 
-Hauptwebsite — statisches HTML/CSS/JS, kein Build-Schritt.
+Geschäftliche Hauptseite — statisches HTML/CSS/JS, kein Build-Schritt.
+Webauftritt des Kleingewerbes „rxf-sys IT-Service" (Robin Frank):
+IT-Dienstleistungen für Privatkunden in Dormagen & Umgebung
+(PC-/Laptop-Hilfe, WLAN & Heimnetz, Smart Home, Fernwartung).
+Preismodell: 39 €/Std., Kleinunternehmerregelung § 19 UStG (keine USt.).
+Theme ist light-first (Zielgruppe Privatkunden), Dark Mode via Toggle.
 
 ## Struktur
 
@@ -41,8 +46,6 @@ Hauptwebsite — statisches HTML/CSS/JS, kein Build-Schritt.
 
 ## CI
 
-`.github/workflows/ci.yml`: HTML-Validierung (informational) + Lychee Link-Check (blocking)
-bei jedem Push/PR auf `main`.
-
-Hinweis: HTML-Validate läuft mit `continue-on-error: true` bis bestehende Violations
-bereinigt sind — danach auf `false` setzen.
+`.github/workflows/ci.yml`: HTML-Validierung (blocking, Konfiguration in
+`.htmlvalidate.json`) + Lychee Link-Check (blocking) bei jedem Push/PR auf `main`.
+Lokal prüfen mit `npx html-validate "*.html"`.

@@ -1,45 +1,48 @@
 # rxf-sys.de
 
-Welcome-Page f&uuml;r die Hauptdom&auml;ne **rxf-sys.de** &mdash; eine statische
-Hub-Seite, die Besucher zu den Subdom&auml;nen f&uuml;hrt:
-
-- [`portfolio.rxf-sys.de`](https://portfolio.rxf-sys.de/) &mdash; pers&ouml;nliches Portfolio
-- [`admin.rxf-sys.de`](https://admin.rxf-sys.de/) &mdash; Live-Admin-Dashboard (Cloudflare-Access)
-- `lab.rxf-sys.de` &mdash; HomeLab-Spielwiese (in Planung)
+Gesch&auml;ftliche Hauptseite der Dom&auml;ne **rxf-sys.de** &mdash; Webauftritt des
+Kleingewerbes **rxf-sys IT-Service (Robin Frank)**: IT-Dienstleistungen f&uuml;r
+Privatkunden in Dormagen &amp; Umgebung, vor Ort oder per Fernwartung.
 
 ## Seite
 
-Single-Page mit den Sektionen Hero, Hub-Cards (Portfolio &middot; Admin
-&middot; Lab), Stats, Stack und Kontakt. Highlights:
+One-Pager mit den Sektionen:
 
-- **Boot-Sequenz** im Terminal-Stil beim ersten Laden (1&times; pro Session, &uuml;berspringbar)
-- **Kinetische Hero-Typo** &mdash; zeichenweiser Reveal &uuml;ber die Web Animations API
-- **Constellation-Backdrop** &mdash; animiertes SVG-Netzwerk mit Packet-Flow
-- **3D-Hub-Cards** mit Maus-Tilt, Hover-Sheen, Conic-Border-Sweep und Sparklines
-- **Stats** mit Count-Up (IntersectionObserver) und zweireihiges Stack-Marquee
-- **Cursor-Spotlight**, Scroll-Progress-Bar, Live-Ticker und Europe/Berlin-Uhr
-- **Theme** &mdash; Light/Dark automatisch via `prefers-color-scheme` plus
-  manueller Toggle (persistiert in `localStorage`)
-- Respektiert `prefers-reduced-motion`: alle Animationen werden dann deaktiviert
+- **Hero** &mdash; Leistungsversprechen, Kontakt-CTAs (E-Mail/Telefon), Eckdaten
+- **Leistungen** &mdash; PC- &amp; Laptop-Hilfe, WLAN &amp; Heimnetzwerk,
+  Smart Home &amp; Ger&auml;te, Fernwartung
+- **Ablauf** &mdash; drei Schritte von der Anfrage bis zur Abrechnung
+- **Preise** &mdash; 39&nbsp;&euro;/Std., Kleinunternehmerregelung (&sect;&nbsp;19 UStG),
+  Pauschalen auf Anfrage
+- **&Uuml;ber mich** &mdash; Qualifikation &amp; Arbeitsweise, Link zum Portfolio
+- **FAQ** &mdash; native `<details>`-Accordions, kein JS n&ouml;tig
+- **Kontakt** &mdash; E-Mail, Telefon, Einsatzgebiet, Antwortzeit
+
+Technische Highlights:
+
+- **Light-first Theme** &mdash; helles Design als Standard (Zielgruppe Privatkunden),
+  Dark Mode via `prefers-color-scheme` + manueller Toggle (persistiert in
+  `localStorage`); Inline-Theme-Init im `<head>` verhindert Theme-Flash
+- **Reveal-on-Scroll** via IntersectionObserver, respektiert `prefers-reduced-motion`
+- **SEO** &mdash; LocalBusiness-Schema (JSON-LD), sprechende Meta-Tags
 
 ## Stack
 
-Statisches HTML/CSS/JS, keine Build-Tools. `index.js` ist eine reine
-Vanilla-Motion-Schicht (Web Animations API, IntersectionObserver, SVG) &mdash;
-keine externen JS-Libraries. Inter + JetBrains Mono via Google Fonts, Font
-Awesome via cdnjs. Brand-DNA (Indigo `#424769` &rarr; Pfirsich `#ffb17a`) ist
-1:1 mit den Schwester-Repos abgestimmt.
+Statisches HTML/CSS/JS, keine Build-Tools, keine externen JS-Libraries.
+Inter + JetBrains Mono via Google Fonts, Font Awesome via cdnjs. Brand-DNA
+(Indigo `#424769` &rarr; Pfirsich `#ffb17a`) ist 1:1 mit den Schwester-Repos
+abgestimmt.
 
 ```
 .
-├─ index.html              # Welcome-Hub (Hero, Hub-Cards, Stats, Stack, Kontakt)
-├─ index.css               # Brand-Tokens + Light/Dark (auto + manueller Toggle)
-├─ index.js                # Motion & Interaktion (Boot, Hero-Reveal, Tilt, Theme)
-├─ impressum.html          # § 5 DDG
+├─ index.html              # One-Pager (Hero, Leistungen, Ablauf, Preise, Über mich, FAQ, Kontakt)
+├─ index.css               # Brand-Tokens, light-first + Dark-Override, Legal-Styles
+├─ index.js                # Theme-Toggle, Smooth Scroll, Reveal-on-Scroll
+├─ impressum.html          # § 5 DDG, § 19 UStG, VSBG
 ├─ datenschutz.html        # Art. 13 DSGVO
 ├─ assets/
 │  └─ favicon.svg
-├─ _headers                # Security-Header (Cloudflare Pages-Format, optional)
+├─ _headers                # Security-Header (Cloudflare Pages-Format, inaktiv)
 └─ infrastructure/
    ├─ Caddyfile            # Static-Webserver auf :80 (Ziel des Cloudflare-Tunnels)
    ├─ deploy.sh            # Pull-Deploy, installiert als /opt/landing/deploy.sh
