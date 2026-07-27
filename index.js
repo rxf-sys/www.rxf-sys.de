@@ -44,6 +44,31 @@
     applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
   });
 
+  // ============== STICKY TOPBAR ==============
+  const topbar = $('.topbar');
+  if (topbar) {
+    const onScroll = () => topbar.classList.toggle('scrolled', window.scrollY > 30);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // ============== AKTIVE NAVIGATION ==============
+  const navLinks = $$('.topbar-nav a[href^="#"]');
+  const navTargets = navLinks
+    .map((a) => ({ a, sec: document.querySelector(a.getAttribute('href')) }))
+    .filter((t) => t.sec);
+  if ('IntersectionObserver' in window && navTargets.length) {
+    const no = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((a) => a.classList.remove('active'));
+        const hit = navTargets.find((t) => t.sec === entry.target);
+        if (hit) hit.a.classList.add('active');
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    navTargets.forEach((t) => no.observe(t.sec));
+  }
+
   // ============== REVEAL ON SCROLL ==============
   const revealEls = $$('.reveal');
   if (reduceMotion || !('IntersectionObserver' in window)) {
