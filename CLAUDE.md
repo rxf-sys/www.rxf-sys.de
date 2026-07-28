@@ -7,6 +7,22 @@ IT-Dienstleistungen für Privatkunden in Dormagen & Umgebung
 Preismodell: 39 €/Std., Kleinunternehmerregelung § 19 UStG (keine USt.).
 Theme ist light-first (Zielgruppe Privatkunden), Dark Mode via Toggle.
 
+## Gemeinsames Designsystem mit portfolio.rxf-sys.de
+
+Beide Seiten teilen einen **identischen `:root`-Tokenblock** in `index.css`
+(Palette „Uxintace sunset": Navy `#181A2F`, Terracotta `#D16A3E` als
+Light-Akzent, Peach `#FDA481` als Dark-Akzent, Grund `#EFEBE5`/`#14162B`).
+
+- **Schriften**: Bricolage Grotesque (`--head`, Überschriften) ·
+  Manrope (`--sans`, Fließtext) · JetBrains Mono (`--mono`, Preise,
+  Kennzahlen, Sektionsnummern, Labels)
+- **Form**: Karten `--r` 24 px, Innenelemente `--r-sm` 16 px, Buttons und
+  Navigation als Kapsel; **Tiefe über weiche Schatten, keine Rahmen auf Karten**
+- **Keine Farbverläufe** — Akzente werden flächig gesetzt
+- **Layout bleibt seitenspezifisch**: hier zentrierter Hero mit klassischen
+  Sektionen, im Portfolio das Bento-Grid
+- Wird ein Token geändert, gehört dieselbe Änderung ins Schwester-Repo
+
 ## Struktur
 
 ```
@@ -38,6 +54,9 @@ Theme ist light-first (Zielgruppe Privatkunden), Dark Mode via Toggle.
 ## Wichtige Konventionen
 
 - **Kein Build-Schritt, kein npm** — Änderungen direkt in HTML/CSS/JS-Dateien
+- **Cache-Busting**: `index.css`/`index.js` werden mit `?v=…` referenziert —
+  **bei Änderungen an CSS/JS den `?v=`-Parameter in allen drei HTML-Dateien
+  bumpen** (z. B. auf das aktuelle Datum)
 - **Security-Header** werden **ausschließlich im `infrastructure/Caddyfile`** gesetzt
 - **`_headers`** wird von Caddy **nicht gelesen** (Cloudflare Pages Format, inaktiv)
 - **Interne Pfade** (`/infrastructure/`, `/.git/`, `/_headers`) werden von Caddy mit 404 blockiert

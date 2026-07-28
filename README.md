@@ -29,9 +29,13 @@ Technische Highlights:
 ## Stack
 
 Statisches HTML/CSS/JS, keine Build-Tools, keine externen JS-Libraries.
-Inter + JetBrains Mono via Google Fonts, Font Awesome via cdnjs. Brand-DNA
-(Indigo `#424769` &rarr; Pfirsich `#ffb17a`) ist 1:1 mit den Schwester-Repos
-abgestimmt.
+Bricolage Grotesque (Display) + Manrope (Flie&szlig;text) + JetBrains Mono
+(Zahlen &amp; Labels) via Google Fonts, Font Awesome via cdnjs.
+
+Der `:root`-Tokenblock in `index.css` ist mit `portfolio.rxf-sys.de`
+identisch &mdash; gemeinsame Palette „Uxintace sunset" (Navy `#181A2F`,
+Terracotta `#D16A3E` im Light-, Peach `#FDA481` im Dark-Theme). &Auml;nderungen
+an Farben, Schriften oder Radien geh&ouml;ren in beide Repos.
 
 ```
 .
