@@ -136,13 +136,15 @@ section[id] { scroll-margin-top: 84px; }
 :root[data-theme="dark"] .bg-glow { opacity: .55; }
 
 /* =============================================================
-   TOPBAR
+   TOPBAR — identisch aufgebaut wie auf portfolio.rxf-sys.de
+   Randlos über die volle Breite: die Marke sitzt links am Rand,
+   die Aktionen rechts — auf jedem Bildschirm.
    ============================================================= */
 .topbar {
   position: sticky; top: 0;
   z-index: 60;
   display: flex; align-items: center; gap: 10px;
-  padding: 14px clamp(16px, 3vw, 40px);
+  padding: 14px clamp(16px, 3vw, 48px);
   background: color-mix(in srgb, var(--bg) 86%, transparent);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
@@ -174,9 +176,11 @@ section[id] { scroll-margin-top: 84px; }
   border-radius: 999px;
   padding: 5px;
   box-shadow: var(--shadow);
-  max-width: 100%;
 }
-.topbar-nav a {
+/* :not(.nav-cta) — der Kontakt-Knopf im Mobil-Menü ist zwar ein Kind der
+   Navigation, behält aber die .btn-Gestaltung. */
+.topbar-nav a:not(.nav-cta) {
+  display: flex; align-items: center; gap: 10px;
   padding: 8px 16px;
   border-radius: 999px;
   font-size: 14px;
@@ -185,12 +189,38 @@ section[id] { scroll-margin-top: 84px; }
   white-space: nowrap;
   transition: color 0.2s ease, background 0.2s ease;
 }
-.topbar-nav a:hover { color: var(--ink); }
+.topbar-nav a:not(.nav-cta):hover { color: var(--ink); }
 .topbar-nav a.active {
   color: var(--card);
   background: var(--ink);
 }
 :root[data-theme="dark"] .topbar-nav a.active { color: var(--bg); }
+
+/* Sektionsnummer und Kontakt-Knopf erscheinen nur im Mobil-Menü */
+.topbar-nav .nav-num { display: none; }
+.topbar-nav .nav-cta { display: none; }
+
+/* Runde Aktionsknöpfe — Sprache, Theme, Menü teilen sich eine Form */
+.theme-toggle,
+.lang-toggle,
+.nav-toggle {
+  display: flex; align-items: center; justify-content: center;
+  height: 44px; min-width: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--card);
+  border: none;
+  box-shadow: var(--shadow);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 13.5px; font-weight: 800;
+  flex-shrink: 0;
+  transition: color 0.2s ease, transform 0.2s var(--ease);
+}
+.theme-toggle { padding: 0; font-size: 14px; }
+.theme-toggle:hover,
+.lang-toggle:hover,
+.nav-toggle:hover { color: var(--ink); transform: translateY(-2px); }
 
 .topbar-cta {
   display: inline-flex; align-items: center; gap: 8px;
@@ -214,19 +244,24 @@ section[id] { scroll-margin-top: 84px; }
   box-shadow: 0 6px 18px rgba(253, 164, 129, 0.2);
 }
 
-.theme-toggle {
-  display: flex; align-items: center; justify-content: center;
-  width: 44px; height: 44px;
-  border-radius: 999px;
-  background: var(--card);
-  border: none;
-  box-shadow: var(--shadow);
-  color: var(--muted);
-  font-size: 14px;
-  flex-shrink: 0;
-  transition: color 0.2s ease, transform 0.2s var(--ease);
+/* Menü-Knopf: zwei Striche, die sich zum Kreuz drehen */
+.nav-toggle { display: none; padding: 0; }
+.nav-toggle-bars {
+  position: relative;
+  width: 17px; height: 12px;
+  display: block;
 }
-.theme-toggle:hover { color: var(--ink); transform: translateY(-2px); }
+.nav-toggle-bars span {
+  position: absolute; left: 0; right: 0; height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 0.3s var(--ease), opacity 0.2s ease;
+}
+.nav-toggle-bars span:first-child { top: 1px; }
+.nav-toggle-bars span:last-child { bottom: 1px; }
+.topbar.nav-open .nav-toggle { color: var(--ink); }
+.topbar.nav-open .nav-toggle-bars span:first-child { transform: translateY(4px) rotate(45deg); }
+.topbar.nav-open .nav-toggle-bars span:last-child { transform: translateY(-4px) rotate(-45deg); }
 
 /* =============================================================
    MAIN + SECTIONS
@@ -234,7 +269,9 @@ section[id] { scroll-margin-top: 84px; }
 main { flex: 1; }
 section {
   padding: clamp(48px, 6.5vw, 72px) clamp(20px, 4vw, 48px);
-  max-width: 1180px;
+  /* Waechst auf grossen Bildschirmen mit, statt bei einer festen Breite
+     stehenzubleiben — identisch zu .container im Portfolio. */
+  max-width: min(1360px, 94vw);
   margin: 0 auto;
   width: 100%;
 }
@@ -383,6 +420,8 @@ section {
   transform: translateY(-3px);
   background: var(--blue-tile);
 }
+/* Kompakte Variante für die Kopfleiste der Rechtsseiten */
+.btn-nav { height: 44px; padding: 0 22px; font-size: 14px; }
 
 /* =============================================================
    LEISTUNGEN
@@ -781,29 +820,9 @@ section {
   width: 100%;
   max-width: 940px;
   margin: 0 auto;
-  padding: 20px clamp(18px, 4vw, 24px) 64px;
+  padding: 28px clamp(18px, 4vw, 24px) 64px;
   flex: 1;
 }
-.legal-head {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  padding: 12px 0 22px;
-  margin-bottom: 10px;
-}
-.legal-back {
-  display: inline-flex; align-items: center;
-  height: 44px;
-  padding: 0 22px;
-  border-radius: 999px;
-  background: var(--card);
-  box-shadow: var(--shadow);
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--muted);
-  transition: color 0.2s ease, transform 0.2s var(--ease);
-}
-.legal-back:hover { color: var(--ink); transform: translateY(-2px); }
 
 /* Karte wie die .legal-tile im Portfolio */
 .legal-main {
@@ -890,21 +909,80 @@ summary:focus-visible {
   .about-card { grid-template-columns: 1fr; }
 }
 
-/* Topbar bricht auf zwei Zeilen: Marke + Aktionen oben, Navigation darunter */
-@media (max-width: 780px) {
-  .topbar { flex-wrap: wrap; row-gap: 10px; }
-  .topbar-nav {
-    order: 3;
-    width: 100%;
-    margin-left: 0;
-    justify-content: flex-start;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+/* =============================================================
+   MOBIL-MENÜ
+   Unterhalb von 900 px klappt die Pill-Navigation in ein Panel unter
+   der Leiste auf: grosse Zeilen mit der Sektionsnummer, die auch im
+   Seiteninhalt steht, darunter der Kontakt-Knopf.
+   ============================================================= */
+@media (max-width: 900px) {
+  .nav-toggle { display: flex; }
+  .topbar-cta { display: none; }
+
+  /* Solange das Menü offen ist, wird die Leiste deckend — darunter liegt der
+     Schleier. Er ist an der Leiste absolut positioniert und beginnt bei
+     top:100 % exakt an deren Unterkante, ganz ohne feste Höhenangabe.
+     Geschlossen hat er die Höhe 0 und trägt so nichts zum Scrollbereich bei. */
+  .topbar.nav-open { background: var(--bg); }
+  .topbar::after {
+    content: '';
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    height: 0;
+    background: color-mix(in srgb, var(--navy) 45%, transparent);
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.28s var(--ease), visibility 0.28s;
   }
-  .topbar-nav::-webkit-scrollbar { display: none; }
-  .topbar-cta { margin-left: auto; }
-  section[id] { scroll-margin-top: 128px; }
+  .topbar.nav-open::after { height: 100vh; opacity: 1; visibility: visible; }
+
+  .topbar-nav {
+    position: absolute;
+    top: 100%; left: clamp(12px, 3vw, 48px); right: clamp(12px, 3vw, 48px);
+    z-index: 1; /* über dem Schleier */
+    display: flex; flex-direction: column; gap: 2px;
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: var(--r);
+    box-shadow: var(--shadow-hover);
+    opacity: 0; visibility: hidden;
+    transform: translateY(-10px) scale(0.985);
+    transform-origin: top center;
+    transition: opacity 0.26s var(--ease), transform 0.26s var(--ease), visibility 0.26s;
+  }
+  .topbar.nav-open .topbar-nav {
+    opacity: 1; visibility: visible;
+    transform: none;
+  }
+
+  .topbar-nav a:not(.nav-cta) {
+    padding: 15px 18px;
+    border-radius: var(--r-sm);
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .topbar-nav a:not(.nav-cta):hover,
+  .topbar-nav a.active { background: var(--tile-soft); color: var(--ink); }
+  .topbar-nav a.active .nav-num { color: var(--accent-ink); }
+
+  .topbar-nav .nav-num {
+    display: block;
+    font-family: var(--mono);
+    font-size: 11.5px; font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--faint);
+    min-width: 20px;
+  }
+
+  .topbar-nav .nav-cta {
+    display: flex; justify-content: center;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  /* Hintergrund festhalten, solange das Menü offen ist */
+  body.nav-locked { overflow: hidden; }
+
+  section[id] { scroll-margin-top: 88px; }
 }
 
 @media (max-width: 620px) {
@@ -918,12 +996,10 @@ summary:focus-visible {
   .contact-side { flex-direction: column; }
 }
 
-/* Die Topbar-Aktionen schrumpfen, statt die Beschriftung zu verlieren —
-   „Anfrage senden" ist der wichtigste Knopf der Seite. */
 @media (max-width: 420px) {
   .brand { font-size: 16px; }
-  .topbar-cta { height: 40px; padding: 0 16px; font-size: 13px; gap: 7px; }
-  .theme-toggle { width: 40px; height: 40px; }
+  .theme-toggle, .lang-toggle, .nav-toggle { height: 40px; min-width: 40px; }
+  .lang-toggle { padding: 0 12px; }
   .service-card, .step { padding: 22px 20px; }
   .hero-eyebrow { font-size: 12px; padding: 7px 13px; }
 }

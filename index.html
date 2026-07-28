@@ -30,7 +30,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<link rel="stylesheet" href="/index.css?v=2026-07-27" />
+<link rel="stylesheet" href="/index.css?v=2026-07-28" />
 
 <script>
 (function () {
@@ -69,30 +69,43 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<a class="skip-link" href="#main" data-i18n="skip">Zum Inhalt springen</a>
 
 <!-- ============== BACKDROP ============== -->
 <div class="bg-glow" aria-hidden="true"></div>
 
 <!-- ============== TOPBAR ============== -->
-<header class="topbar">
+<header class="topbar" id="topbar">
   <a href="/" class="brand" aria-label="rxf-sys — Zur Startseite">
     <span class="brand-dot"></span>
     <span class="brand-text">rxf-sys<span class="brand-tld">.de</span></span>
   </a>
-  <nav class="topbar-nav" aria-label="Hauptnavigation">
-    <a href="#leistungen">Leistungen</a>
-    <a href="#ablauf">Ablauf</a>
-    <a href="#preise">Preise</a>
-    <a href="#faq">FAQ</a>
-    <a href="#kontakt">Kontakt</a>
+
+  <nav class="topbar-nav" id="topbarNav" aria-label="Hauptnavigation">
+    <a href="#leistungen" data-section="leistungen"><span class="nav-num">01</span><span data-i18n="nav.services">Leistungen</span></a>
+    <a href="#ablauf" data-section="ablauf"><span class="nav-num">02</span><span data-i18n="nav.process">Ablauf</span></a>
+    <a href="#preise" data-section="preise"><span class="nav-num">03</span><span data-i18n="nav.pricing">Preise</span></a>
+    <a href="#ueber-mich" data-section="ueber-mich"><span class="nav-num">04</span><span data-i18n="nav.about">Über mich</span></a>
+    <a href="#faq" data-section="faq"><span class="nav-num">05</span><span data-i18n="nav.faq">FAQ</span></a>
+    <a href="mailto:info@rxf-sys.de" class="btn btn-primary nav-cta">
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+      <span data-i18n="nav.cta">Anfrage senden</span>
+    </a>
   </nav>
+
+  <button class="lang-toggle" id="langBtn" type="button" aria-label="Switch to English">EN</button>
+
   <a href="mailto:info@rxf-sys.de" class="topbar-cta">
     <i class="fas fa-envelope" aria-hidden="true"></i>
-    <span>Anfrage senden</span>
+    <span data-i18n="nav.cta">Anfrage senden</span>
   </a>
-  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Theme umschalten">
+
+  <button class="theme-toggle" id="themeBtn" type="button" aria-label="Theme umschalten">
     <i class="fas fa-moon" aria-hidden="true"></i>
+  </button>
+
+  <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="topbarNav" aria-label="Menü öffnen">
+    <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span></span>
   </button>
 </header>
 
@@ -102,15 +115,15 @@
   <section class="hero" aria-label="Einführung">
     <span class="hero-eyebrow reveal">
       <span class="badge"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></span>
-      <span>IT-Service für Privatkunden · Dormagen &amp; Umgebung</span>
+      <span data-i18n="hero.eyebrow">IT-Service für Privatkunden · Dormagen &amp; Umgebung</span>
     </span>
 
-    <h1 class="reveal">
+    <h1 class="reveal" data-i18n-html="hero.title">
       Computer&shy;probleme?<br />
       Ich kümmere mich <span class="accent-underline">drum</span>.
     </h1>
 
-    <p class="lede reveal">
+    <p class="lede reveal" data-i18n-html="hero.lede">
       Hallo, ich bin <strong>Robin Frank</strong> — Fachinformatiker aus Dormagen.
       Ich helfe Ihnen bei allem rund um PC, WLAN, Smartphone &amp; Smart Home:
       geduldig, verständlich erklärt und fair abgerechnet.
@@ -130,10 +143,10 @@
     </div>
 
     <div class="hero-meta reveal">
-      <div class="hero-meta-item"><i class="fas fa-house" aria-hidden="true"></i><span>Vor Ort in <strong>Dormagen &amp; Umgebung</strong></span></div>
-      <div class="hero-meta-item"><i class="fas fa-headset" aria-hidden="true"></i><span><strong>Fernwartung</strong> deutschlandweit</span></div>
-      <div class="hero-meta-item"><i class="fas fa-tag" aria-hidden="true"></i><span><strong>39 €</strong> pro Stunde — transparent</span></div>
-      <div class="hero-meta-item"><i class="fas fa-reply" aria-hidden="true"></i><span>Antwort meist <strong>&lt; 24 h</strong></span></div>
+      <div class="hero-meta-item"><i class="fas fa-house" aria-hidden="true"></i><span data-i18n-html="hero.m1">Vor Ort in <strong>Dormagen &amp; Umgebung</strong></span></div>
+      <div class="hero-meta-item"><i class="fas fa-headset" aria-hidden="true"></i><span data-i18n-html="hero.m2"><strong>Fernwartung</strong> deutschlandweit</span></div>
+      <div class="hero-meta-item"><i class="fas fa-tag" aria-hidden="true"></i><span data-i18n-html="hero.m3"><strong>39 €</strong> pro Stunde — transparent</span></div>
+      <div class="hero-meta-item"><i class="fas fa-reply" aria-hidden="true"></i><span data-i18n-html="hero.m4">Antwort meist <strong>&lt; 24 h</strong></span></div>
     </div>
   </section>
 
@@ -141,60 +154,60 @@
   <section id="leistungen" class="services" aria-label="Leistungen">
     <div class="section-head reveal">
       <span class="section-num">01</span>
-      <h2 class="section-title">Womit ich helfe</h2>
-      <span class="section-kicker">Alle Leistungen für Privatkunden</span>
+      <h2 class="section-title" data-i18n="s1.title">Womit ich helfe</h2>
+      <span class="section-kicker" data-i18n="s1.kicker">Alle Leistungen für Privatkunden</span>
     </div>
 
     <div class="services-grid">
       <article class="service-card reveal">
         <div class="service-icon"><i class="fas fa-laptop" aria-hidden="true"></i></div>
-        <h3>PC- &amp; Laptop-Hilfe</h3>
-        <p>Ihr Rechner streikt, ist langsam oder soll neu eingerichtet werden? Ich bringe ihn wieder in Form.</p>
+        <h3 data-i18n="svc1.title">PC- &amp; Laptop-Hilfe</h3>
+        <p data-i18n="svc1.desc">Ihr Rechner streikt, ist langsam oder soll neu eingerichtet werden? Ich bringe ihn wieder in Form.</p>
         <ul class="service-list">
-          <li><i class="fas fa-check" aria-hidden="true"></i> Einrichtung neuer PCs &amp; Laptops</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Windows-Probleme &amp; Fehlermeldungen</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Aufrüstung (SSD, Arbeitsspeicher)</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Viren- &amp; Schadsoftware-Entfernung</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Datenumzug &amp; Daten-Backup</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc1.l1">Einrichtung neuer PCs &amp; Laptops</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc1.l2">Windows-Probleme &amp; Fehlermeldungen</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc1.l3">Aufrüstung (SSD, Arbeitsspeicher)</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc1.l4">Viren- &amp; Schadsoftware-Entfernung</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc1.l5">Datenumzug &amp; Daten-Backup</span></li>
         </ul>
       </article>
 
       <article class="service-card reveal">
         <div class="service-icon"><i class="fas fa-wifi" aria-hidden="true"></i></div>
-        <h3>WLAN &amp; Heimnetzwerk</h3>
-        <p>Schluss mit Funklöchern und Verbindungsabbrüchen — für stabiles Internet in jedem Zimmer.</p>
+        <h3 data-i18n="svc2.title">WLAN &amp; Heimnetzwerk</h3>
+        <p data-i18n="svc2.desc">Schluss mit Funklöchern und Verbindungsabbrüchen — für stabiles Internet in jedem Zimmer.</p>
         <ul class="service-list">
-          <li><i class="fas fa-check" aria-hidden="true"></i> Router einrichten (z.&nbsp;B. FRITZ!Box)</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> WLAN im ganzen Haus (Mesh, Repeater)</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Netzwerkprobleme finden &amp; beheben</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Sichere Konfiguration &amp; Gastnetz</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Umzug auf neuen Internetanschluss</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc2.l1">Router einrichten (z.&nbsp;B. FRITZ!Box)</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc2.l2">WLAN im ganzen Haus (Mesh, Repeater)</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc2.l3">Netzwerkprobleme finden &amp; beheben</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc2.l4">Sichere Konfiguration &amp; Gastnetz</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc2.l5">Umzug auf neuen Internetanschluss</span></li>
         </ul>
       </article>
 
       <article class="service-card reveal">
         <div class="service-icon"><i class="fas fa-house-signal" aria-hidden="true"></i></div>
-        <h3>Smart Home &amp; Geräte</h3>
-        <p>Vom Drucker bis zur smarten Lampe — ich richte Ihre Geräte ein und bringe alles zum Zusammenspiel.</p>
+        <h3 data-i18n="svc3.title">Smart Home &amp; Geräte</h3>
+        <p data-i18n="svc3.desc">Vom Drucker bis zur smarten Lampe — ich richte Ihre Geräte ein und bringe alles zum Zusammenspiel.</p>
         <ul class="service-list">
-          <li><i class="fas fa-check" aria-hidden="true"></i> Drucker, Smart-TV &amp; Streaming</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Smartphone &amp; Tablet einrichten</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Smarte Lampen, Steckdosen, Heizung</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Sprachassistenten &amp; Automationen</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Netzwerkspeicher (NAS) für Fotos &amp; Co.</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc3.l1">Drucker, Smart-TV &amp; Streaming</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc3.l2">Smartphone &amp; Tablet einrichten</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc3.l3">Smarte Lampen, Steckdosen, Heizung</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc3.l4">Sprachassistenten &amp; Automationen</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc3.l5">Netzwerkspeicher (NAS) für Fotos &amp; Co.</span></li>
         </ul>
       </article>
 
       <article class="service-card reveal">
         <div class="service-icon"><i class="fas fa-headset" aria-hidden="true"></i></div>
-        <h3>Fernwartung</h3>
-        <p>Viele Probleme lassen sich ohne Termin lösen: Ich schalte mich sicher auf Ihren Bildschirm — Sie schauen live zu.</p>
+        <h3 data-i18n="svc4.title">Fernwartung</h3>
+        <p data-i18n="svc4.desc">Viele Probleme lassen sich ohne Termin lösen: Ich schalte mich sicher auf Ihren Bildschirm — Sie schauen live zu.</p>
         <ul class="service-list">
-          <li><i class="fas fa-check" aria-hidden="true"></i> Hilfe ohne Anfahrt — oft noch am selben Tag</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Verbindung nur mit Ihrer Zustimmung</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Sie sehen jeden Schritt live mit</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Nach der Sitzung: Zugriff automatisch beendet</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Deutschlandweit möglich</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc4.l1">Hilfe ohne Anfahrt — oft noch am selben Tag</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc4.l2">Verbindung nur mit Ihrer Zustimmung</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc4.l3">Sie sehen jeden Schritt live mit</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc4.l4">Nach der Sitzung: Zugriff automatisch beendet</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc4.l5">Deutschlandweit möglich</span></li>
         </ul>
       </article>
     </div>
@@ -204,25 +217,25 @@
   <section id="ablauf" class="steps" aria-label="So läuft es ab">
     <div class="section-head reveal">
       <span class="section-num">02</span>
-      <h2 class="section-title">So läuft&rsquo;s ab</h2>
-      <span class="section-kicker">In drei einfachen Schritten</span>
+      <h2 class="section-title" data-i18n="s2.title">So läuft&rsquo;s ab</h2>
+      <span class="section-kicker" data-i18n="s2.kicker">In drei einfachen Schritten</span>
     </div>
 
     <div class="steps-grid">
       <div class="step reveal">
         <span class="step-num">1</span>
-        <h3>Kontakt aufnehmen</h3>
-        <p>Schreiben Sie mir eine E-Mail oder rufen Sie an. Schildern Sie kurz, wo es hakt — Fachbegriffe sind nicht nötig.</p>
+        <h3 data-i18n="step1.title">Kontakt aufnehmen</h3>
+        <p data-i18n="step1.desc">Schreiben Sie mir eine E-Mail oder rufen Sie an. Schildern Sie kurz, wo es hakt — Fachbegriffe sind nicht nötig.</p>
       </div>
       <div class="step reveal">
         <span class="step-num">2</span>
-        <h3>Kostenlose Ersteinschätzung</h3>
-        <p>Ich melde mich zeitnah zurück, sage Ihnen ehrlich, ob und wie sich das Problem lösen lässt — per Fernwartung oder vor Ort — und wir vereinbaren einen Termin.</p>
+        <h3 data-i18n="step2.title">Kostenlose Ersteinschätzung</h3>
+        <p data-i18n="step2.desc">Ich melde mich zeitnah zurück, sage Ihnen ehrlich, ob und wie sich das Problem lösen lässt — per Fernwartung oder vor Ort — und wir vereinbaren einen Termin.</p>
       </div>
       <div class="step reveal">
         <span class="step-num">3</span>
-        <h3>Lösung &amp; faire Abrechnung</h3>
-        <p>Ich löse das Problem und erkläre Ihnen verständlich, was gemacht wurde. Abgerechnet wird nur die tatsächliche Arbeitszeit.</p>
+        <h3 data-i18n="step3.title">Lösung &amp; faire Abrechnung</h3>
+        <p data-i18n="step3.desc">Ich löse das Problem und erkläre Ihnen verständlich, was gemacht wurde. Abgerechnet wird nur die tatsächliche Arbeitszeit.</p>
       </div>
     </div>
   </section>
@@ -231,25 +244,25 @@
   <section id="preise" class="pricing" aria-label="Preise">
     <div class="section-head reveal">
       <span class="section-num">03</span>
-      <h2 class="section-title">Preise</h2>
-      <span class="section-kicker">Transparent, ohne Überraschungen</span>
+      <h2 class="section-title" data-i18n="s3.title">Preise</h2>
+      <span class="section-kicker" data-i18n="s3.kicker">Transparent, ohne Überraschungen</span>
     </div>
 
     <div class="pricing-card reveal">
       <div class="pricing-main">
-        <span class="pricing-label">Vor Ort &amp; Fernwartung</span>
-        <div class="pricing-value"><span class="pricing-amount">39&nbsp;€</span><span class="pricing-per">pro Stunde</span></div>
-        <p class="pricing-note">
+        <span class="pricing-label" data-i18n="price.label">Vor Ort &amp; Fernwartung</span>
+        <div class="pricing-value"><span class="pricing-amount">39&nbsp;€</span><span class="pricing-per" data-i18n="price.per">pro Stunde</span></div>
+        <p class="pricing-note" data-i18n-html="price.note">
           Endpreis — gemäß §&nbsp;19&nbsp;UStG (Kleinunternehmerregelung) wird
           keine Umsatzsteuer berechnet.
         </p>
       </div>
       <ul class="pricing-list">
-        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span><strong>Telefonische Ersteinschätzung kostenlos</strong> — Sie wissen vorher, woran Sie sind</span></li>
-        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span>Abrechnung nach der ersten Stunde in <strong>15-Minuten-Schritten</strong></span></li>
-        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span><strong>Anfahrt in Dormagen inklusive</strong> — Umgebung nach Absprache</span></li>
-        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span><strong>Pauschalpreise auf Anfrage</strong> — für größere Vorhaben (z.&nbsp;B. komplette Neueinrichtung) gern ein Festpreis vorab</span></li>
-        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span>Rechnung per E-Mail — Zahlung per Überweisung oder bar vor Ort</span></li>
+        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span data-i18n-html="price.l1"><strong>Telefonische Ersteinschätzung kostenlos</strong> — Sie wissen vorher, woran Sie sind</span></li>
+        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span data-i18n-html="price.l2">Abrechnung nach der ersten Stunde in <strong>15-Minuten-Schritten</strong></span></li>
+        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span data-i18n-html="price.l3"><strong>Anfahrt in Dormagen inklusive</strong> — Umgebung nach Absprache</span></li>
+        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span data-i18n-html="price.l4"><strong>Pauschalpreise auf Anfrage</strong> — für größere Vorhaben (z.&nbsp;B. komplette Neueinrichtung) gern ein Festpreis vorab</span></li>
+        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span data-i18n-html="price.l5">Rechnung per E-Mail — Zahlung per Überweisung oder bar vor Ort</span></li>
       </ul>
     </div>
   </section>
@@ -258,33 +271,33 @@
   <section id="ueber-mich" class="about" aria-label="Über mich">
     <div class="section-head reveal">
       <span class="section-num">04</span>
-      <h2 class="section-title">Wer hier hilft</h2>
-      <span class="section-kicker">Kein Callcenter — ein Ansprechpartner</span>
+      <h2 class="section-title" data-i18n="s4.title">Wer hier hilft</h2>
+      <span class="section-kicker" data-i18n="s4.kicker">Kein Callcenter — ein Ansprechpartner</span>
     </div>
 
     <div class="about-card reveal">
       <div class="about-text">
         <h3>Robin Frank</h3>
-        <p>
+        <p data-i18n-html="about.p1">
           Ich bin ausgebildeter <strong>Fachinformatiker für Anwendungsentwicklung</strong> und
           arbeite hauptberuflich als IT-Systemadministrator. Seit 2022 betreibe ich zudem meine
           eigene Server-Infrastruktur — Technik ist für mich nicht nur Beruf, sondern Leidenschaft.
         </p>
-        <p>
+        <p data-i18n-html="about.p2">
           Bei mir bekommen Sie keine Fachchinesisch-Vorträge und keine versteckten Kosten:
           Ich erkläre verständlich, was ich tue, empfehle nur, was Sie wirklich brauchen,
           und Sie haben vor, während und nach dem Termin immer denselben Ansprechpartner.
         </p>
-        <p class="about-link">
+        <p class="about-link" data-i18n-html="about.link">
           Mehr über meinen Werdegang und meine Projekte:
           <a href="https://portfolio.rxf-sys.de/" target="_blank" rel="noopener noreferrer">portfolio.rxf-sys.de <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </p>
       </div>
       <ul class="about-facts">
-        <li><i class="fas fa-graduation-cap" aria-hidden="true"></i><span><strong>Ausgebildeter Fachinformatiker</strong><br />Anwendungsentwicklung (IHK)</span></li>
-        <li><i class="fas fa-server" aria-hidden="true"></i><span><strong>IT-Systemadministrator</strong><br />täglich in der Praxis</span></li>
-        <li><i class="fas fa-comments" aria-hidden="true"></i><span><strong>Verständlich erklärt</strong><br />geduldig &amp; ohne Fachjargon</span></li>
-        <li><i class="fas fa-lock" aria-hidden="true"></i><span><strong>Diskret &amp; sorgfältig</strong><br />Ihre Daten bleiben Ihre Daten</span></li>
+        <li><i class="fas fa-graduation-cap" aria-hidden="true"></i><span data-i18n-html="fact1"><strong>Ausgebildeter Fachinformatiker</strong><br />Anwendungsentwicklung (IHK)</span></li>
+        <li><i class="fas fa-server" aria-hidden="true"></i><span data-i18n-html="fact2"><strong>IT-Systemadministrator</strong><br />täglich in der Praxis</span></li>
+        <li><i class="fas fa-comments" aria-hidden="true"></i><span data-i18n-html="fact3"><strong>Verständlich erklärt</strong><br />geduldig &amp; ohne Fachjargon</span></li>
+        <li><i class="fas fa-lock" aria-hidden="true"></i><span data-i18n-html="fact4"><strong>Diskret &amp; sorgfältig</strong><br />Ihre Daten bleiben Ihre Daten</span></li>
       </ul>
     </div>
   </section>
@@ -293,14 +306,14 @@
   <section id="faq" class="faq" aria-label="Häufige Fragen">
     <div class="section-head reveal">
       <span class="section-num">05</span>
-      <h2 class="section-title">Häufige Fragen</h2>
-      <span class="section-kicker">Kurz &amp; ehrlich beantwortet</span>
+      <h2 class="section-title" data-i18n="s5.title">Häufige Fragen</h2>
+      <span class="section-kicker" data-i18n="s5.kicker">Kurz &amp; ehrlich beantwortet</span>
     </div>
 
     <div class="faq-list">
       <details class="faq-item reveal">
-        <summary>In welchem Gebiet sind Sie unterwegs?</summary>
-        <p>
+        <summary data-i18n="faq1.q">In welchem Gebiet sind Sie unterwegs?</summary>
+        <p data-i18n-html="faq1.a">
           Vor-Ort-Termine biete ich in <strong>Dormagen und Umgebung</strong> an — etwa
           Neuss, Grevenbroich, Rommerskirchen sowie den Randlagen von Köln und Düsseldorf.
           Per <strong>Fernwartung</strong> helfe ich deutschlandweit.
@@ -308,8 +321,8 @@
       </details>
 
       <details class="faq-item reveal">
-        <summary>Wie funktioniert die Fernwartung — ist das sicher?</summary>
-        <p>
+        <summary data-i18n="faq2.q">Wie funktioniert die Fernwartung — ist das sicher?</summary>
+        <p data-i18n-html="faq2.a">
           Sie laden ein kleines Programm herunter und nennen mir den angezeigten Code —
           erst dann kann ich mich verbinden. Sie sehen die ganze Zeit live, was auf Ihrem
           Bildschirm passiert, und können die Verbindung jederzeit trennen. Nach der Sitzung
@@ -318,8 +331,8 @@
       </details>
 
       <details class="faq-item reveal">
-        <summary>Was kostet mich das insgesamt?</summary>
-        <p>
+        <summary data-i18n="faq3.q">Was kostet mich das insgesamt?</summary>
+        <p data-i18n-html="faq3.a">
           Die telefonische Ersteinschätzung ist kostenlos. Danach gilt: <strong>39&nbsp;€ pro
           Stunde</strong>, nach der ersten Stunde in 15-Minuten-Schritten abgerechnet. Die meisten
           typischen Anliegen (z.&nbsp;B. Drucker einrichten, WLAN-Problem beheben) sind in ein bis
@@ -329,16 +342,16 @@
       </details>
 
       <details class="faq-item reveal">
-        <summary>Wann sind Termine möglich?</summary>
-        <p>
+        <summary data-i18n="faq4.q">Wann sind Termine möglich?</summary>
+        <p data-i18n-html="faq4.a">
           Termine vereinbaren wir flexibel — in der Regel nachmittags, abends und am Wochenende.
           Fernwartungstermine lassen sich oft kurzfristig einrichten.
         </p>
       </details>
 
       <details class="faq-item reveal">
-        <summary>Was passiert mit meinen Daten?</summary>
-        <p>
+        <summary data-i18n="faq5.q">Was passiert mit meinen Daten?</summary>
+        <p data-i18n-html="faq5.a">
           Ihre Daten bleiben auf Ihren Geräten — ich kopiere nichts ohne ausdrückliche Absprache
           (etwa für ein vereinbartes Backup). Alles, was ich bei der Arbeit sehe, behandle ich
           selbstverständlich vertraulich.
@@ -346,8 +359,8 @@
       </details>
 
       <details class="faq-item reveal">
-        <summary>Was ist, wenn das Problem nicht lösbar ist?</summary>
-        <p>
+        <summary data-i18n="faq6.q">Was ist, wenn das Problem nicht lösbar ist?</summary>
+        <p data-i18n-html="faq6.a">
           Ehrlichkeit zuerst: Wenn ich schon bei der Ersteinschätzung sehe, dass sich etwas nicht
           oder nicht wirtschaftlich lösen lässt (z.&nbsp;B. ein Hardwaredefekt, bei dem sich die
           Reparatur nicht lohnt), sage ich Ihnen das offen — bevor Kosten entstehen.
@@ -362,10 +375,10 @@
       <div>
         <span class="contact-eyebrow">
           <span class="badge"><i class="fas fa-envelope" aria-hidden="true"></i></span>
-          <span>Kontakt</span>
+          <span data-i18n="contact.eyebrow">Kontakt</span>
         </span>
-        <h2>Erzählen Sie mir, <span class="accent-text">wo es hakt</span>.</h2>
-        <p class="lede">
+        <h2 data-i18n-html="contact.head">Erzählen Sie mir, <span class="accent-text">wo es hakt</span>.</h2>
+        <p class="lede" data-i18n="contact.lede">
           Schreiben Sie mir kurz, worum es geht — ich melde mich in der Regel innerhalb
           von 24 Stunden mit einer ehrlichen Ersteinschätzung zurück. Unverbindlich und kostenlos.
         </p>
@@ -380,9 +393,9 @@
         </div>
       </div>
       <div class="contact-side">
-        <div class="ci-item"><div class="ci-label"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Einsatzgebiet</div><div class="ci-value">Dormagen &amp; Umgebung · remote deutschlandweit</div></div>
-        <div class="ci-item"><div class="ci-label"><i class="fas fa-reply" aria-hidden="true"></i> Antwortzeit</div><div class="ci-value">in der Regel &lt;&nbsp;24&nbsp;Stunden</div></div>
-        <div class="ci-item"><div class="ci-label"><i class="fas fa-calendar-check" aria-hidden="true"></i> Termine</div><div class="ci-value">flexibel — auch abends &amp; am Wochenende</div></div>
+        <div class="ci-item"><div class="ci-label"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="ci1.label">Einsatzgebiet</span></div><div class="ci-value" data-i18n="ci1.value">Dormagen &amp; Umgebung · remote deutschlandweit</div></div>
+        <div class="ci-item"><div class="ci-label"><i class="fas fa-reply" aria-hidden="true"></i> <span data-i18n="ci2.label">Antwortzeit</span></div><div class="ci-value" data-i18n-html="ci2.value">in der Regel &lt;&nbsp;24&nbsp;Stunden</div></div>
+        <div class="ci-item"><div class="ci-label"><i class="fas fa-calendar-check" aria-hidden="true"></i> <span data-i18n="ci3.label">Termine</span></div><div class="ci-value" data-i18n="ci3.value">flexibel — auch abends &amp; am Wochenende</div></div>
       </div>
     </div>
   </section>
@@ -392,12 +405,12 @@
 <footer class="foot">
   <div class="foot-brand">
     <span class="brand-dot"></span>
-    <span>&copy; <span id="year">2026</span> Robin Frank · IT-Service</span>
+    <span data-i18n-html="foot.copy">&copy; <span id="year">2026</span> Robin Frank · IT-Service</span>
   </div>
   <nav class="foot-nav" aria-label="Weitere Links">
-    <a href="impressum.html">Impressum</a>
+    <a href="impressum.html" data-i18n="foot.imprint">Impressum</a>
     <span class="sep">·</span>
-    <a href="datenschutz.html">Datenschutz</a>
+    <a href="datenschutz.html" data-i18n="foot.privacy">Datenschutz</a>
     <span class="sep">·</span>
     <a href="https://portfolio.rxf-sys.de/" target="_blank" rel="noopener noreferrer">Portfolio</a>
     <span class="sep">·</span>
@@ -409,7 +422,7 @@
   </div>
 </footer>
 
-<script src="/index.js?v=2026-07-27"></script>
+<script src="/index.js?v=2026-07-28"></script>
 
 </body>
 </html>
