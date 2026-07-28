@@ -23,6 +23,10 @@ Technische Highlights:
 - **Light-first Theme** &mdash; helles Design als Standard (Zielgruppe Privatkunden),
   Dark Mode via `prefers-color-scheme` + manueller Toggle (persistiert in
   `localStorage`); Inline-Theme-Init im `<head>` verhindert Theme-Flash
+- **DE/EN-Sprachumschalter** &mdash; deutsche Texte stehen im Markup, Englisch im
+  `EN`-W&ouml;rterbuch in `index.js`; die Wahl wird in `localStorage` gemerkt
+- **Mobil-Men&uuml;** &mdash; unter 900&nbsp;px klappt die Navigation als Panel auf,
+  mit Sektionsnummern, Kontakt-Knopf, Escape und Klick-nach-au&szlig;en
 - **Reveal-on-Scroll** via IntersectionObserver, respektiert `prefers-reduced-motion`
 - **SEO** &mdash; LocalBusiness-Schema (JSON-LD), sprechende Meta-Tags
 
