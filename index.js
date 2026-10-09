@@ -40,7 +40,7 @@
     'svc1.desc': 'Your computer is acting up, slow or needs setting up? I&rsquo;ll get it back in shape.',
     'svc1.l1': 'Setting up new PCs and laptops', 'svc1.l2': 'Windows problems and error messages',
     'svc1.l3': 'Upgrades (SSD, memory)', 'svc1.l4': 'Removing viruses and malware', 'svc1.l5': 'Data migration and backup',
-    'img.wlan': 'White Wi-Fi router on a sideboard, a hand plugging in the power cable',
+    'img.wlan': 'White Wi-Fi router with green status lights on a wooden shelf in a living room',
     'svc2.title': 'Wi-Fi and home network',
     'svc2.desc': 'No more dead spots and dropouts. Stable internet in every room.',
     'svc2.l1': 'Router setup (e.g. FRITZ!Box)', 'svc2.l2': 'Wi-Fi in the whole house (mesh, repeaters)',
