@@ -37,6 +37,11 @@ Beide Seiten nutzen **dieselben Klassen und dieselbe Reihenfolge**:
 `.brand` → `.topbar-nav` → `.lang-toggle` → `.topbar-cta` → `.theme-toggle`
 → `.nav-toggle`. Änderungen daran gehören immer in beide Repos.
 
+- `.brand` enthält das Logo: `.brand-mark` (Kachel „rxf“) und `.brand-word`
+  („rxf-sys“), beide per `<use>` aus den Sprite-Symbolen `#logo-mark`/`#logo-word`.
+  Der gelbe Block-Cursor `.lg-cursor` liegt bewusst **außerhalb** des Symbols im
+  jeweiligen `<svg>`, damit er per CSS blinken kann (dreimal beim Laden, dauerhaft
+  bei Hover/Fokus, nicht bei `prefers-reduced-motion`)
 - Die runden Aktionsknöpfe tragen zusätzlich `.round`; unter der Leiste sitzt
   `#progress` (Scroll-Fortschritt), der gleitende Marker `.nav-ind` entsteht per JS
 - Unter **900 px** klappt `.topbar-nav` zu einem Panel unter der Leiste auf:
@@ -70,7 +75,8 @@ Beide Seiten nutzen **dieselben Klassen und dieselbe Reihenfolge**:
 ├── datenschutz.html
 ├── impressum.html
 ├── assets/
-│   ├── favicon.svg
+│   ├── favicon.svg     # Favicon „r“ + Cursor (dazu /favicon.ico mit 16/32/48 px)
+│   ├── brand/          # Logo-Dateien: Bildmarke, Logo hell, Logo dunkel (SVG, Pfade)
 │   ├── img/            # Fotos (WebP, ~1200 px breit)
 │   └── vendor/         # GSAP, ScrollTrigger, Lenis (lokal) + Lizenzhinweise
 ├── _headers            # INAKTIV — nur historische Referenz (Cloudflare Pages Format)

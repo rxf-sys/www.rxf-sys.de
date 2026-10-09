@@ -51,6 +51,10 @@ Atkinson Hyperlegible Next (Text) und Atkinson Hyperlegible Mono (Zahlen).
 Designsystem &bdquo;Signal&ldquo;: Signalgelb `#FFC21A`, Anthrazit `#1C2125`,
 Signalwei&szlig; `#F4F5F2`. Das Portfolio wird im n&auml;chsten Schritt angeglichen.
 
+Logo: Kachel &bdquo;rxf&ldquo; mit gelbem Block-Cursor und Schriftzug &bdquo;rxf-sys&ldquo;
+in Archivo (als Pfade, keine Schriftabh&auml;ngigkeit). Dateien zur Weiterverwendung
+liegen in `assets/brand/`, das Favicon zeigt die Kurzform &bdquo;r&ldquo; mit Cursor.
+
 ```
 .
 ├─ index.html              # One-Pager
@@ -60,6 +64,7 @@ Signalwei&szlig; `#F4F5F2`. Das Portfolio wird im n&auml;chsten Schritt angeglic
 ├─ datenschutz.html        # Art. 13 DSGVO
 ├─ assets/
 │  ├─ favicon.svg
+│  ├─ brand/               # Logo als SVG: Bildmarke, Logo hell, Logo dunkel
 │  ├─ img/                 # Fotos (WebP)
 │  └─ vendor/              # GSAP, ScrollTrigger, Lenis (lokal, mit Lizenzhinweisen)
 ├─ _headers                # Security-Header (Cloudflare Pages-Format, inaktiv)
