@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
 <title>IT-Service für Zuhause in Dormagen &amp; Umgebung | rxf-sys.de</title>
 <meta name="description" content="Schnelle IT-Hilfe für Privatkunden in Dormagen &amp; Umgebung: PC- &amp; Laptop-Hilfe, WLAN &amp; Heimnetzwerk, Smart Home, Fernwartung. Transparent für 39 €/Std. — vor Ort oder remote." />
@@ -19,18 +19,18 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="color-scheme" content="light dark" />
-<meta name="theme-color" content="#EFEBE5" media="(prefers-color-scheme: light)" />
-<meta name="theme-color" content="#14162B" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#F4F5F2" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#121517" media="(prefers-color-scheme: dark)" />
 
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Atkinson+Hyperlegible+Mono:wght@400;500;700&family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="/index.css?v=2026-07-28" />
+<link rel="preload" as="image" href="/assets/img/hero-kitchen-table.webp" fetchpriority="high" />
+<link rel="stylesheet" href="/index.css?v=2026-10-09" />
 
 <script>
 (function () {
@@ -50,6 +50,7 @@
   "name": "rxf-sys — IT-Service Robin Frank",
   "url": "https://rxf-sys.de/",
   "email": "info@rxf-sys.de",
+  "telephone": "+49 179 1496509",
   "description": "IT-Dienstleistungen für Privatkunden: PC- und Laptop-Hilfe, WLAN und Heimnetzwerk, Smart Home, Fernwartung. Vor Ort in Dormagen und Umgebung oder remote.",
   "address": {
     "@type": "PostalAddress",
@@ -69,358 +70,557 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main" data-i18n="skip">Zum Inhalt springen</a>
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true">
+<!-- Icons: Font Awesome Free 6.5.0 by @fontawesome, https://fontawesome.com, license: https://fontawesome.com/license/free (CC BY 4.0) -->
+<symbol id="i-envelope" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+<symbol id="i-phone" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 384 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 512 512"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></symbol>
+<symbol id="i-laptop" viewBox="0 0 640 512"><path d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z"/></symbol>
+<symbol id="i-wifi" viewBox="0 0 640 512"><path d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></symbol>
+<symbol id="i-house-signal" viewBox="0 0 576 512"><path d="M357.7 8.5c-12.3-11.3-31.2-11.3-43.4 0l-208 192c-9.4 8.6-12.7 22-8.5 34c87.1 25.3 155.6 94.2 180.3 181.6H464c26.5 0 48-21.5 48-48V256h32c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8.1-35.2l-208-192zM288 208c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H304c-8.8 0-16-7.2-16-16V208zM24 256c-13.3 0-24 10.7-24 24s10.7 24 24 24c101.6 0 184 82.4 184 184c0 13.3 10.7 24 24 24s24-10.7 24-24c0-128.1-103.9-232-232-232zm8 256a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM0 376c0 13.3 10.7 24 24 24c48.6 0 88 39.4 88 88c0 13.3 10.7 24 24 24s24-10.7 24-24c0-75.1-60.9-136-136-136c-13.3 0-24 10.7-24 24z"/></symbol>
+<symbol id="i-headset" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256v40c0 13.3-10.7 24-24 24s-24-10.7-24-24V256C0 114.6 114.6 0 256 0S512 114.6 512 256V400.1c0 48.6-39.4 88-88.1 88L313.6 488c-8.3 14.3-23.8 24-41.6 24H240c-26.5 0-48-21.5-48-48s21.5-48 48-48h32c17.8 0 33.3 9.7 41.6 24l110.4 .1c22.1 0 40-17.9 40-40V256c0-114.9-93.1-208-208-208zM144 208h16c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H144c-35.3 0-64-28.7-64-64V272c0-35.3 28.7-64 64-64zm224 0c35.3 0 64 28.7 64 64v48c0 35.3-28.7 64-64 64H352c-17.7 0-32-14.3-32-32V240c0-17.7 14.3-32 32-32h16z"/></symbol>
+<symbol id="i-check" viewBox="0 0 448 512"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></symbol>
+<symbol id="i-circle-check" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></symbol>
+<symbol id="i-house" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></symbol>
+<symbol id="i-tag" viewBox="0 0 448 512"><path d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></symbol>
+<symbol id="i-reply" viewBox="0 0 512 512"><path d="M205 34.8c11.5 5.1 19 16.6 19 29.2v64H336c97.2 0 176 78.8 176 176c0 113.3-81.5 163.9-100.2 174.1c-2.5 1.4-5.3 1.9-8.1 1.9c-10.9 0-19.7-8.9-19.7-19.7c0-7.5 4.3-14.4 9.8-19.5c9.4-8.8 22.2-26.4 22.2-56.7c0-53-43-96-96-96H224v64c0 12.6-7.4 24.1-19 29.2s-25 3-34.4-5.4l-160-144C3.9 225.7 0 217.1 0 208s3.9-17.7 10.6-23.8l160-144c9.4-8.5 22.9-10.6 34.4-5.4z"/></symbol>
+<symbol id="i-arrow-up-right-from-square" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></symbol>
+<symbol id="i-arrow-left" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></symbol>
+<symbol id="i-print" viewBox="0 0 512 512"><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zM432 248a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></symbol>
+<symbol id="i-copy" viewBox="0 0 448 512"><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></symbol>
+<symbol id="i-power-off" viewBox="0 0 512 512"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z"/></symbol>
+<symbol id="i-plug" viewBox="0 0 384 512"><path d="M96 0C78.3 0 64 14.3 64 32v96h64V32c0-17.7-14.3-32-32-32zM288 0c-17.7 0-32 14.3-32 32v96h64V32c0-17.7-14.3-32-32-32zM32 160c-17.7 0-32 14.3-32 32s14.3 32 32 32v32c0 77.4 55 142 128 156.8V480c0 17.7 14.3 32 32 32s32-14.3 32-32V412.8C297 398 352 333.4 352 256V224c17.7 0 32-14.3 32-32s-14.3-32-32-32H32z"/></symbol>
+<symbol id="i-camera" viewBox="0 0 512 512"><path d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></symbol>
+<symbol id="i-hourglass-half" viewBox="0 0 384 512"><path d="M32 0C14.3 0 0 14.3 0 32S14.3 64 32 64V75c0 42.4 16.9 83.1 46.9 113.1L146.7 256 78.9 323.9C48.9 353.9 32 394.6 32 437v11c-17.7 0-32 14.3-32 32s14.3 32 32 32H64 320h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V437c0-42.4-16.9-83.1-46.9-113.1L237.3 256l67.9-67.9c30-30 46.9-70.7 46.9-113.1V64c17.7 0 32-14.3 32-32s-14.3-32-32-32H320 64 32zM96 75V64H288V75c0 19-5.6 37.4-16 53H112c-10.3-15.6-16-34-16-53zm16 309c3.5-5.3 7.6-10.3 12.1-14.9L192 301.3l67.9 67.9c4.6 4.6 8.6 9.6 12.1 14.9H112z"/></symbol>
+<symbol id="i-minus" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></symbol>
+<symbol id="i-plus" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></symbol>
+<symbol id="i-temperature-half" viewBox="0 0 320 512"><path d="M160 64c-26.5 0-48 21.5-48 48V276.5c0 17.3-7.1 31.9-15.3 42.5C86.2 332.6 80 349.5 80 368c0 44.2 35.8 80 80 80s80-35.8 80-80c0-18.5-6.2-35.4-16.7-48.9c-8.2-10.6-15.3-25.2-15.3-42.5V112c0-26.5-21.5-48-48-48zM48 112C48 50.2 98.1 0 160 0s112 50.1 112 112V276.5c0 .1 .1 .3 .2 .6c.2 .6 .8 1.6 1.7 2.8c18.9 24.4 30.1 55 30.1 88.1c0 79.5-64.5 144-144 144S16 447.5 16 368c0-33.2 11.2-63.8 30.1-88.1c.9-1.2 1.5-2.2 1.7-2.8c.1-.3 .2-.5 .2-.6V112zM208 368c0 26.5-21.5 48-48 48s-48-21.5-48-48c0-20.9 13.4-38.7 32-45.3V208c0-8.8 7.2-16 16-16s16 7.2 16 16V322.7c18.6 6.6 32 24.4 32 45.3z"/></symbol>
+<symbol id="i-shield-halved" viewBox="0 0 512 512"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"/></symbol>
+<symbol id="i-xmark" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></symbol>
+<symbol id="i-mobile-screen-button" viewBox="0 0 384 512"><path d="M16 64C16 28.7 44.7 0 80 0H304c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H80c-35.3 0-64-28.7-64-64V64zM224 448a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM304 64H80V384H304V64z"/></symbol>
+<symbol id="i-pause" viewBox="0 0 320 512"><path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"/></symbol>
+<symbol id="i-play" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 448 512"><path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288H175.5L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7H272.5L349.4 44.6z"/></symbol>
+</svg>
 
-<!-- ============== BACKDROP ============== -->
-<div class="bg-glow" aria-hidden="true"></div>
+<a class="skip-link" href="#main" data-i18n="skip">Zum Inhalt springen</a>
 
 <!-- ============== TOPBAR ============== -->
 <header class="topbar" id="topbar">
-  <a href="/" class="brand" aria-label="rxf-sys — Zur Startseite">
+  <a href="#top" class="brand" aria-label="rxf-sys — Zum Seitenanfang">
     <span class="brand-dot"></span>
     <span class="brand-text">rxf-sys<span class="brand-tld">.de</span></span>
   </a>
 
   <nav class="topbar-nav" id="topbarNav" aria-label="Hauptnavigation">
     <a href="#leistungen" data-section="leistungen"><span class="nav-num">01</span><span data-i18n="nav.services">Leistungen</span></a>
-    <a href="#ablauf" data-section="ablauf"><span class="nav-num">02</span><span data-i18n="nav.process">Ablauf</span></a>
+    <a href="#projekte" data-section="projekte"><span class="nav-num">02</span><span data-i18n="nav.projects">Einsätze</span></a>
     <a href="#preise" data-section="preise"><span class="nav-num">03</span><span data-i18n="nav.pricing">Preise</span></a>
     <a href="#ueber-mich" data-section="ueber-mich"><span class="nav-num">04</span><span data-i18n="nav.about">Über mich</span></a>
     <a href="#faq" data-section="faq"><span class="nav-num">05</span><span data-i18n="nav.faq">FAQ</span></a>
-    <a href="mailto:info@rxf-sys.de" class="btn btn-primary nav-cta">
-      <i class="fas fa-envelope" aria-hidden="true"></i>
-      <span data-i18n="nav.cta">Anfrage senden</span>
-    </a>
+    <a href="#kontakt" class="btn btn-primary nav-cta"><svg class="ic" aria-hidden="true"><use href="#i-envelope"/></svg><span data-i18n="nav.cta">Anfrage senden</span></a>
   </nav>
 
-  <button class="lang-toggle" id="langBtn" type="button" aria-label="Switch to English">EN</button>
+  <button class="round lang-toggle" id="langBtn" type="button" aria-label="Switch to English">EN</button>
 
-  <a href="mailto:info@rxf-sys.de" class="topbar-cta">
-    <i class="fas fa-envelope" aria-hidden="true"></i>
-    <span data-i18n="nav.cta">Anfrage senden</span>
-  </a>
+  <a href="#kontakt" class="topbar-cta"><svg class="ic" aria-hidden="true"><use href="#i-envelope"/></svg><span data-i18n="nav.cta">Anfrage senden</span></a>
 
-  <button class="theme-toggle" id="themeBtn" type="button" aria-label="Theme umschalten">
-    <i class="fas fa-moon" aria-hidden="true"></i>
+  <button class="round theme-toggle" id="themeBtn" type="button" aria-label="Dunkles Design einschalten">
+    <svg class="ic i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+    <svg class="ic i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
   </button>
 
-  <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="topbarNav" aria-label="Menü öffnen">
+  <button class="round nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="topbarNav" aria-label="Menü öffnen">
     <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span></span>
   </button>
+  <span class="progress" id="progress" aria-hidden="true"></span>
 </header>
 
 <main id="main">
 
   <!-- ============== HERO ============== -->
-  <section class="hero" aria-label="Einführung">
-    <span class="hero-eyebrow reveal">
-      <span class="badge"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></span>
-      <span data-i18n="hero.eyebrow">IT-Service für Privatkunden · Dormagen &amp; Umgebung</span>
-    </span>
-
-    <h1 class="reveal" data-i18n-html="hero.title">
-      Computer&shy;probleme?<br />
-      Ich kümmere mich <span class="accent-underline">drum</span>.
-    </h1>
-
-    <p class="lede reveal" data-i18n-html="hero.lede">
-      Hallo, ich bin <strong>Robin Frank</strong> — Fachinformatiker aus Dormagen.
-      Ich helfe Ihnen bei allem rund um PC, WLAN, Smartphone &amp; Smart Home:
-      geduldig, verständlich erklärt und fair abgerechnet.
-      Vor Ort bei Ihnen zuhause oder bequem per Fernwartung.
-    </p>
-
-    <div class="hero-actions reveal">
-      <a href="mailto:info@rxf-sys.de" class="btn btn-primary">
-        <i class="fas fa-envelope" aria-hidden="true"></i>
-        <span>info@rxf-sys.de</span>
-      </a>
-      <a href="tel:+491791496509" class="btn btn-ghost">
-        <i class="fas fa-phone" aria-hidden="true"></i>
-        <span>0179&nbsp;1496509</span>
-      </a>
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="wrap">
+      <h1 id="hero-h" class="hero-title">
+        <span class="line"><span data-i18n-html="hero.l1">Computer&shy;probleme?</span></span>
+        <span class="line"><span data-i18n-html="hero.l2">Ich kümmere mich <span class="mark">drum</span>.</span></span>
+      </h1>
+      <div class="hero-grid">
+        <div>
+          <p class="lede" data-i18n="hero.lede">Ich bin Robin Frank, Fachinformatiker aus Dormagen. Ich helfe bei PC, WLAN und Smart Home, bei Ihnen zuhause oder per Fernwartung.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+491791496509"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span class="num">0179&nbsp;1496509</span></a>
+            <a class="btn btn-ghost" href="mailto:info@rxf-sys.de"><svg class="ic" aria-hidden="true"><use href="#i-envelope"/></svg><span>info@rxf-sys.de</span></a>
+          </div>
+          <ul class="hero-facts">
+            <li><span class="fact-ic"><svg class="ic" aria-hidden="true"><use href="#i-house"/></svg></span><div><strong data-i18n="fact1.t">Vor Ort</strong><span data-i18n="fact1.d">Dormagen und Umgebung</span></div></li>
+            <li><span class="fact-ic"><svg class="ic" aria-hidden="true"><use href="#i-headset"/></svg></span><div><strong data-i18n="fact2.t">Fernwartung</strong><span data-i18n="fact2.d">deutschlandweit</span></div></li>
+            <li><span class="fact-ic"><svg class="ic" aria-hidden="true"><use href="#i-tag"/></svg></span><div><strong data-i18n="fact3.t">39 € pro Stunde</strong><span data-i18n="fact3.d">Endpreis</span></div></li>
+            <li><span class="fact-ic"><svg class="ic" aria-hidden="true"><use href="#i-reply"/></svg></span><div><strong data-i18n="fact4.t">Antwort in 24 Std.</strong><span data-i18n="fact4.d">meistens schneller</span></div></li>
+          </ul>
+        </div>
+        <figure class="hero-photo">
+          <img src="/assets/img/hero-kitchen-table.webp" alt="Hände an einem Laptop auf einem Küchentisch, daneben Kaffeetasse und Lesebrille" data-i18n-alt="img.hero" width="960" height="1280" fetchpriority="high" />
+          <figcaption class="photo-note"><svg class="ic note-ic" aria-hidden="true"><use href="#i-circle-check"/></svg><span><b data-i18n="note.t">Ersteinschätzung kostenlos</b><span data-i18n="note.d">am Telefon, unverbindlich</span></span></figcaption>
+        </figure>
+      </div>
     </div>
+  </section>
 
-    <div class="hero-meta reveal">
-      <div class="hero-meta-item"><i class="fas fa-house" aria-hidden="true"></i><span data-i18n-html="hero.m1">Vor Ort in <strong>Dormagen &amp; Umgebung</strong></span></div>
-      <div class="hero-meta-item"><i class="fas fa-headset" aria-hidden="true"></i><span data-i18n-html="hero.m2"><strong>Fernwartung</strong> deutschlandweit</span></div>
-      <div class="hero-meta-item"><i class="fas fa-tag" aria-hidden="true"></i><span data-i18n-html="hero.m3"><strong>39 €</strong> pro Stunde — transparent</span></div>
-      <div class="hero-meta-item"><i class="fas fa-reply" aria-hidden="true"></i><span data-i18n-html="hero.m4">Antwort meist <strong>&lt; 24 h</strong></span></div>
+  <!-- ============== SCHNELLSTART ============== -->
+  <section class="quick" id="schnellstart" aria-labelledby="quick-h">
+    <div class="wrap quick-grid">
+      <div>
+        <h2 id="quick-h" class="h2" data-i18n="quick.title">Was ist los?</h2>
+        <p class="quick-sub" data-i18n="quick.sub">Tippen Sie an, was passt. Ich bereite Ihre Anfrage vor. Die Ersteinschätzung ist kostenlos.</p>
+      </div>
+      <div>
+        <div class="chips" id="starterChips" role="group" aria-label="Anliegen auswählen" data-i18n-aria="quick.group">
+          <button type="button" class="chip" data-topic="wlan" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-wifi"/></svg><span data-i18n="chip.wlan">WLAN langsam oder weg</span><svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></button>
+          <button type="button" class="chip" data-topic="drucker" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-print"/></svg><span data-i18n="chip.printer">Drucker streikt</span><svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></button>
+          <button type="button" class="chip" data-topic="pc" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-laptop"/></svg><span data-i18n="chip.pc">Neuer PC oder Laptop</span><svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></button>
+          <button type="button" class="chip" data-topic="virus" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-shield-halved"/></svg><span data-i18n="chip.virus">Virus oder Pop-ups</span><svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></button>
+          <button type="button" class="chip" data-topic="smarthome" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-house-signal"/></svg><span data-i18n="chip.smarthome">Smart Home einrichten</span><svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></button>
+          <button type="button" class="chip" data-topic="handy" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-mobile-screen-button"/></svg><span data-i18n="chip.phone">Smartphone oder Tablet</span><svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></button>
+        </div>
+        <div class="quick-row">
+          <div class="seg" role="radiogroup" aria-label="Wo soll geholfen werden?" data-i18n-aria="quick.where">
+            <label><input type="radio" name="s-mode" id="s-mode-onsite" value="onsite" checked /><span data-i18n="mode.onsite">Vor Ort</span></label>
+            <label><input type="radio" name="s-mode" id="s-mode-remote" value="remote" /><span data-i18n="mode.remote">Fernwartung</span></label>
+            <label><input type="radio" name="s-mode" id="s-mode-unsure" value="unsure" /><span data-i18n="mode.unsure">Weiß nicht</span></label>
+          </div>
+          <button type="button" class="btn" id="starterGo"><span id="starterGoLabel">Weiter zur Anfrage</span><svg class="ic i-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ============== LEISTUNGEN ============== -->
-  <section id="leistungen" class="services" aria-label="Leistungen">
-    <div class="section-head reveal">
-      <span class="section-num">01</span>
-      <h2 class="section-title" data-i18n="s1.title">Womit ich helfe</h2>
-      <span class="section-kicker" data-i18n="s1.kicker">Alle Leistungen für Privatkunden</span>
-    </div>
-
-    <div class="services-grid">
-      <article class="service-card reveal">
-        <div class="service-icon"><i class="fas fa-laptop" aria-hidden="true"></i></div>
-        <h3 data-i18n="svc1.title">PC- &amp; Laptop-Hilfe</h3>
-        <p data-i18n="svc1.desc">Ihr Rechner streikt, ist langsam oder soll neu eingerichtet werden? Ich bringe ihn wieder in Form.</p>
-        <ul class="service-list">
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc1.l1">Einrichtung neuer PCs &amp; Laptops</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc1.l2">Windows-Probleme &amp; Fehlermeldungen</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc1.l3">Aufrüstung (SSD, Arbeitsspeicher)</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc1.l4">Viren- &amp; Schadsoftware-Entfernung</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc1.l5">Datenumzug &amp; Daten-Backup</span></li>
-        </ul>
-      </article>
-
-      <article class="service-card reveal">
-        <div class="service-icon"><i class="fas fa-wifi" aria-hidden="true"></i></div>
-        <h3 data-i18n="svc2.title">WLAN &amp; Heimnetzwerk</h3>
-        <p data-i18n="svc2.desc">Schluss mit Funklöchern und Verbindungsabbrüchen — für stabiles Internet in jedem Zimmer.</p>
-        <ul class="service-list">
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc2.l1">Router einrichten (z.&nbsp;B. FRITZ!Box)</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc2.l2">WLAN im ganzen Haus (Mesh, Repeater)</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc2.l3">Netzwerkprobleme finden &amp; beheben</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc2.l4">Sichere Konfiguration &amp; Gastnetz</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc2.l5">Umzug auf neuen Internetanschluss</span></li>
-        </ul>
-      </article>
-
-      <article class="service-card reveal">
-        <div class="service-icon"><i class="fas fa-house-signal" aria-hidden="true"></i></div>
-        <h3 data-i18n="svc3.title">Smart Home &amp; Geräte</h3>
-        <p data-i18n="svc3.desc">Vom Drucker bis zur smarten Lampe — ich richte Ihre Geräte ein und bringe alles zum Zusammenspiel.</p>
-        <ul class="service-list">
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc3.l1">Drucker, Smart-TV &amp; Streaming</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc3.l2">Smartphone &amp; Tablet einrichten</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc3.l3">Smarte Lampen, Steckdosen, Heizung</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc3.l4">Sprachassistenten &amp; Automationen</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc3.l5">Netzwerkspeicher (NAS) für Fotos &amp; Co.</span></li>
-        </ul>
-      </article>
-
-      <article class="service-card reveal">
-        <div class="service-icon"><i class="fas fa-headset" aria-hidden="true"></i></div>
-        <h3 data-i18n="svc4.title">Fernwartung</h3>
-        <p data-i18n="svc4.desc">Viele Probleme lassen sich ohne Termin lösen: Ich schalte mich sicher auf Ihren Bildschirm — Sie schauen live zu.</p>
-        <ul class="service-list">
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc4.l1">Hilfe ohne Anfahrt — oft noch am selben Tag</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc4.l2">Verbindung nur mit Ihrer Zustimmung</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc4.l3">Sie sehen jeden Schritt live mit</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc4.l4">Nach der Sitzung: Zugriff automatisch beendet</span></li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="svc4.l5">Deutschlandweit möglich</span></li>
-        </ul>
-      </article>
+  <section id="leistungen" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="svc-intro">
+        <h2 id="svc-h" class="h2" data-i18n="svc.title">Womit ich helfe</h2>
+        <p class="sub" data-i18n="svc.sub">Vier Bereiche, ein Ansprechpartner. Ihr Anliegen ist nicht dabei? Fragen Sie einfach.</p>
+      </div>
+      <div class="stack">
+        <article class="svc-card">
+          <figure class="svc-photo"><img src="/assets/img/service-laptop-ssd.webp" alt="Hände setzen eine SSD in einen geöffneten Laptop ein" data-i18n-alt="img.pc" loading="lazy" width="1200" height="800" /></figure>
+          <div class="svc-body">
+            <div class="svc-head"><span class="svc-icon"><svg class="ic" aria-hidden="true"><use href="#i-laptop"/></svg></span><h3 data-i18n="svc1.title">PC- und Laptop-Hilfe</h3></div>
+            <p data-i18n="svc1.desc">Ihr Rechner streikt, ist langsam oder soll neu eingerichtet werden? Ich bringe ihn wieder in Form.</p>
+            <ul class="ticks">
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc1.l1">Einrichtung neuer PCs und Laptops</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc1.l2">Windows-Probleme und Fehlermeldungen</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc1.l3">Aufrüstung (SSD, Arbeitsspeicher)</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc1.l4">Viren und Schadsoftware entfernen</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc1.l5">Datenumzug und Backup</span></li>
+            </ul>
+          </div>
+          <span class="svc-dim" aria-hidden="true"></span>
+        </article>
+        <article class="svc-card">
+          <figure class="svc-photo"><img src="/assets/img/service-wifi-router.webp" alt="Weißer WLAN-Router mit grünen Lämpchen auf einem Holzregal im Wohnzimmer" data-i18n-alt="img.wlan" loading="lazy" width="1200" height="800" /></figure>
+          <div class="svc-body">
+            <div class="svc-head"><span class="svc-icon"><svg class="ic" aria-hidden="true"><use href="#i-wifi"/></svg></span><h3 data-i18n="svc2.title">WLAN und Heimnetz</h3></div>
+            <p data-i18n="svc2.desc">Schluss mit Funklöchern und Verbindungsabbrüchen. Stabiles Internet in jedem Zimmer.</p>
+            <ul class="ticks">
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n-html="svc2.l1">Router einrichten (z.&nbsp;B. FRITZ!Box)</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc2.l2">WLAN im ganzen Haus (Mesh, Repeater)</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc2.l3">Netzwerkprobleme finden und beheben</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc2.l4">Sichere Konfiguration und Gastnetz</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc2.l5">Umzug auf einen neuen Anschluss</span></li>
+            </ul>
+          </div>
+          <span class="svc-dim" aria-hidden="true"></span>
+        </article>
+        <article class="svc-card">
+          <figure class="svc-photo"><img src="/assets/img/service-smart-thermostat.webp" alt="Hand stellt ein smartes Thermostat am Heizkörper auf 21 Grad" data-i18n-alt="img.smarthome" loading="lazy" width="1200" height="800" /></figure>
+          <div class="svc-body">
+            <div class="svc-head"><span class="svc-icon"><svg class="ic" aria-hidden="true"><use href="#i-house-signal"/></svg></span><h3 data-i18n="svc3.title">Smart Home und Geräte</h3></div>
+            <p data-i18n="svc3.desc">Vom Drucker bis zur smarten Lampe: Ich richte Ihre Geräte ein und sorge dafür, dass alles zusammenspielt.</p>
+            <ul class="ticks">
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc3.l1">Drucker, Smart-TV und Streaming</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc3.l2">Smartphone und Tablet einrichten</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc3.l3">Smarte Lampen, Steckdosen, Heizung</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc3.l4">Sprachassistenten und Automationen</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc3.l5">Netzwerkspeicher (NAS) für Fotos</span></li>
+            </ul>
+          </div>
+          <span class="svc-dim" aria-hidden="true"></span>
+        </article>
+        <article class="svc-card svc-card--feat">
+          <figure class="svc-photo"><img src="/assets/img/service-remote-support.webp" alt="Person telefoniert abends am Schreibtisch vor einem Laptop" data-i18n-alt="img.remote" loading="lazy" width="1200" height="800" /></figure>
+          <div class="svc-body">
+            <div class="svc-head"><span class="svc-icon"><svg class="ic" aria-hidden="true"><use href="#i-headset"/></svg></span><h3 data-i18n="svc4.title">Fernwartung</h3></div>
+            <p data-i18n="svc4.desc">Viele Probleme lassen sich ohne Termin lösen. Ich schalte mich sicher auf Ihren Bildschirm, und Sie schauen live zu.</p>
+            <span class="feat-flag"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg><span data-i18n="svc4.flag">Oft noch am selben Tag</span></span>
+            <ul class="ticks">
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc4.l1">Hilfe ohne Anfahrt</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc4.l2">Verbindung nur mit Ihrer Zustimmung</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc4.l3">Sie sehen jeden Schritt mit</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc4.l4">Zugriff endet mit der Sitzung</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="svc4.l5">Deutschlandweit möglich</span></li>
+            </ul>
+          </div>
+          <span class="svc-dim" aria-hidden="true"></span>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- ============== ABLAUF ============== -->
-  <section id="ablauf" class="steps" aria-label="So läuft es ab">
-    <div class="section-head reveal">
-      <span class="section-num">02</span>
-      <h2 class="section-title" data-i18n="s2.title">So läuft&rsquo;s ab</h2>
-      <span class="section-kicker" data-i18n="s2.kicker">In drei einfachen Schritten</span>
-    </div>
+  <!-- ============== LAUFBAND ============== -->
+  <section class="mq" id="mq" aria-label="Geräte und Systeme, bei denen ich helfe" data-i18n-aria="mq.label">
+    <div class="mq-row"><div class="mq-track"><ul><li><span data-i18n="mq.d1">Windows 11</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d2">macOS</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d3">FRITZ!Box</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d4">iPhone und iPad</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d5">Android</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d6">Smart-TV</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d7">Drucker und Scanner</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d8">Mesh-WLAN</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d9">Smarte Thermostate</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d10">Sprachassistenten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d11">NAS und Backup</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li></ul><ul aria-hidden="true"><li><span data-i18n="mq.d1">Windows 11</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d2">macOS</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d3">FRITZ!Box</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d4">iPhone und iPad</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d5">Android</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d6">Smart-TV</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d7">Drucker und Scanner</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d8">Mesh-WLAN</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d9">Smarte Thermostate</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d10">Sprachassistenten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d11">NAS und Backup</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li></ul><ul aria-hidden="true"><li><span data-i18n="mq.d1">Windows 11</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d2">macOS</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d3">FRITZ!Box</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d4">iPhone und iPad</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d5">Android</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d6">Smart-TV</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d7">Drucker und Scanner</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d8">Mesh-WLAN</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d9">Smarte Thermostate</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d10">Sprachassistenten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d11">NAS und Backup</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li></ul></div></div>
+    <div class="mq-row alt" aria-hidden="true"><div class="mq-track"><ul aria-hidden="true"><li><span data-i18n="mq.v1">Einrichten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v2">Reparieren</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v3">Absichern</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v4">Verbinden</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v5">Erklären</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v6">Aufräumen</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v7">Sichern</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v8">Aufrüsten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li></ul><ul aria-hidden="true"><li><span data-i18n="mq.v1">Einrichten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v2">Reparieren</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v3">Absichern</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v4">Verbinden</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v5">Erklären</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v6">Aufräumen</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v7">Sichern</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v8">Aufrüsten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li></ul><ul aria-hidden="true"><li><span data-i18n="mq.v1">Einrichten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v2">Reparieren</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v3">Absichern</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v4">Verbinden</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v5">Erklären</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v6">Aufräumen</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v7">Sichern</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v8">Aufrüsten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li></ul></div></div>
+    <button type="button" class="round mq-pause" id="mqPause" aria-pressed="false" aria-label="Laufband anhalten"><svg class="ic" aria-hidden="true"><use href="#i-pause"/></svg></button>
+  </section>
 
-    <div class="steps-grid">
-      <div class="step reveal">
-        <span class="step-num">1</span>
-        <h3 data-i18n="step1.title">Kontakt aufnehmen</h3>
-        <p data-i18n="step1.desc">Schreiben Sie mir eine E-Mail oder rufen Sie an. Schildern Sie kurz, wo es hakt — Fachbegriffe sind nicht nötig.</p>
+  <!-- ============== TYPISCHE EINSÄTZE ============== -->
+  <section id="projekte" class="projects" aria-labelledby="proj-h">
+    <div class="wrap">
+      <div class="proj-head">
+        <div>
+          <h2 id="proj-h" class="h2" data-i18n="proj.title">Typische Einsätze</h2>
+          <p class="sub" data-i18n="proj.sub">Beispielrechnungen: So lange dauern typische Anliegen, und das kosten sie.</p>
+        </div>
+        <div class="proj-nav">
+          <button type="button" class="round" id="projPrev" aria-label="Vorheriger Einsatz" data-i18n-aria="proj.prev"><svg class="ic" aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+          <button type="button" class="round" id="projNext" aria-label="Nächster Einsatz" data-i18n-aria="proj.next"><svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+        </div>
       </div>
-      <div class="step reveal">
-        <span class="step-num">2</span>
-        <h3 data-i18n="step2.title">Kostenlose Ersteinschätzung</h3>
-        <p data-i18n="step2.desc">Ich melde mich zeitnah zurück, sage Ihnen ehrlich, ob und wie sich das Problem lösen lässt — per Fernwartung oder vor Ort — und wir vereinbaren einen Termin.</p>
-      </div>
-      <div class="step reveal">
-        <span class="step-num">3</span>
-        <h3 data-i18n="step3.title">Lösung &amp; faire Abrechnung</h3>
-        <p data-i18n="step3.desc">Ich löse das Problem und erkläre Ihnen verständlich, was gemacht wurde. Abgerechnet wird nur die tatsächliche Arbeitszeit.</p>
-      </div>
+    </div>
+    <section class="proj-track" id="projTrack" tabindex="0" aria-label="Typische Einsätze, seitlich scrollbar" data-i18n-aria="proj.track">
+      <article class="proj">
+        <div class="proj-meta"><span class="place"><svg class="ic" aria-hidden="true"><use href="#i-house"/></svg><span data-i18n="place.onsite">Vor Ort</span></span><span class="proj-ico"><svg class="ic" aria-hidden="true"><use href="#i-wifi"/></svg></span></div>
+        <h3 data-i18n="p1.title">Mesh-WLAN im Reihenhaus</h3>
+        <dl>
+          <div><dt data-i18n="p.problem">Problem</dt><dd data-i18n="p1.problem">Im Obergeschoss und im Garten bricht das WLAN ständig ab.</dd></div>
+          <div><dt data-i18n="p.solution">Lösung</dt><dd data-i18n="p1.solution">Router neu einrichten, zwei Mesh-Repeater platzieren, Gastnetz für Besuch anlegen.</dd></div>
+        </dl>
+        <div class="proj-foot"><span data-i18n="p1.time">2 Std.</span><b data-i18n="p1.price">78,00&nbsp;€</b></div>
+      </article>
+      <article class="proj">
+        <div class="proj-meta"><span class="place"><svg class="ic" aria-hidden="true"><use href="#i-house"/></svg><span data-i18n="place.onsite">Vor Ort</span></span><span class="proj-ico"><svg class="ic" aria-hidden="true"><use href="#i-laptop"/></svg></span></div>
+        <h3 data-i18n="p2.title">Neuer Laptop, alte Daten</h3>
+        <dl>
+          <div><dt data-i18n="p.problem">Problem</dt><dd data-i18n="p2.problem">Der alte PC ist zu langsam. Fotos und E-Mails sollen mit umziehen.</dd></div>
+          <div><dt data-i18n="p.solution">Lösung</dt><dd data-i18n="p2.solution">Laptop einrichten, Daten und Drucker übernehmen, automatisches Backup auf eine externe Festplatte.</dd></div>
+        </dl>
+        <div class="proj-foot"><span data-i18n="p2.time">2 Std. 30 Min.</span><b data-i18n="p2.price">97,50&nbsp;€</b></div>
+      </article>
+      <article class="proj">
+        <div class="proj-meta"><span class="place"><svg class="ic" aria-hidden="true"><use href="#i-headset"/></svg><span data-i18n="place.remote">Fernwartung</span></span><span class="proj-ico"><svg class="ic" aria-hidden="true"><use href="#i-print"/></svg></span></div>
+        <h3 data-i18n="p3.title">Drucker nach Update offline</h3>
+        <dl>
+          <div><dt data-i18n="p.problem">Problem</dt><dd data-i18n="p3.problem">Nach einem Windows-Update druckt der Drucker nicht mehr.</dd></div>
+          <div><dt data-i18n="p.solution">Lösung</dt><dd data-i18n="p3.solution">Treiber neu installieren, Druckerwarteschlange bereinigen, Scannen per E-Mail einrichten.</dd></div>
+        </dl>
+        <div class="proj-foot"><span data-i18n="p3.time">45 Min.</span><b data-i18n="p3.price">39,00&nbsp;€</b></div>
+      </article>
+      <article class="proj">
+        <div class="proj-meta"><span class="place"><svg class="ic" aria-hidden="true"><use href="#i-house"/></svg><span data-i18n="place.onsite">Vor Ort</span></span><span class="proj-ico"><svg class="ic" aria-hidden="true"><use href="#i-temperature-half"/></svg></span></div>
+        <h3 data-i18n="p4.title">Smarte Heizkörper</h3>
+        <dl>
+          <div><dt data-i18n="p.problem">Problem</dt><dd data-i18n="p4.problem">Morgens soll es warm sein, ohne dass die Heizung den ganzen Tag läuft.</dd></div>
+          <div><dt data-i18n="p.solution">Lösung</dt><dd data-i18n="p4.solution">Smarte Thermostate montieren, App einrichten, Zeitpläne pro Raum anlegen.</dd></div>
+        </dl>
+        <div class="proj-foot"><span data-i18n="p4.time">1 Std. 30 Min.</span><b data-i18n="p4.price">58,50&nbsp;€</b></div>
+      </article>
+      <article class="proj">
+        <div class="proj-meta"><span class="place"><svg class="ic" aria-hidden="true"><use href="#i-headset"/></svg><span data-i18n="place.remote">Fernwartung</span></span><span class="proj-ico"><svg class="ic" aria-hidden="true"><use href="#i-shield-halved"/></svg></span></div>
+        <h3 data-i18n="p5.title">Pop-ups im Browser</h3>
+        <dl>
+          <div><dt data-i18n="p.problem">Problem</dt><dd data-i18n="p5.problem">Ständig öffnen sich Werbefenster, die Startseite hat sich verändert.</dd></div>
+          <div><dt data-i18n="p.solution">Lösung</dt><dd data-i18n="p5.solution">Schadsoftware entfernen, Browser zurücksetzen, Virenschutz prüfen.</dd></div>
+        </dl>
+        <div class="proj-foot"><span data-i18n="p5.time">1 Std.</span><b data-i18n="p5.price">39,00&nbsp;€</b></div>
+      </article>
+    </section>
+    <div class="wrap"><div class="track-bar" aria-hidden="true"><span id="projBar"></span></div></div>
+  </section>
+
+  <!-- ============== ABLAUF ============== -->
+  <section id="ablauf" aria-labelledby="steps-h">
+    <div class="wrap">
+      <h2 id="steps-h" class="h2" data-i18n="steps.title">So läuft’s ab</h2>
+      <ol class="timeline">
+        <li><span class="step-n" aria-hidden="true">1</span><h3 data-i18n="step1.title">Melden</h3><p data-i18n="step1.desc">Rufen Sie an oder schreiben Sie mir. Beschreiben Sie kurz, wo es hakt. Fachbegriffe sind nicht nötig.</p></li>
+        <li><span class="step-n" aria-hidden="true">2</span><h3 data-i18n="step2.title">Kostenlose Ersteinschätzung</h3><p data-i18n="step2.desc">Ich sage Ihnen ehrlich, ob und wie sich das Problem lösen lässt. Dann vereinbaren wir einen Termin, vor Ort oder per Fernwartung.</p></li>
+        <li><span class="step-n" aria-hidden="true">3</span><h3 data-i18n="step3.title">Lösung und faire Rechnung</h3><p data-i18n="step3.desc">Ich löse das Problem und erkläre verständlich, was ich gemacht habe. Sie zahlen nur die tatsächliche Arbeitszeit.</p></li>
+      </ol>
     </div>
   </section>
 
   <!-- ============== PREISE ============== -->
-  <section id="preise" class="pricing" aria-label="Preise">
-    <div class="section-head reveal">
-      <span class="section-num">03</span>
-      <h2 class="section-title" data-i18n="s3.title">Preise</h2>
-      <span class="section-kicker" data-i18n="s3.kicker">Transparent, ohne Überraschungen</span>
-    </div>
-
-    <div class="pricing-card reveal">
-      <div class="pricing-main">
-        <span class="pricing-label" data-i18n="price.label">Vor Ort &amp; Fernwartung</span>
-        <div class="pricing-value"><span class="pricing-amount">39&nbsp;€</span><span class="pricing-per" data-i18n="price.per">pro Stunde</span></div>
-        <p class="pricing-note" data-i18n-html="price.note">
-          Endpreis — gemäß §&nbsp;19&nbsp;UStG (Kleinunternehmerregelung) wird
-          keine Umsatzsteuer berechnet.
-        </p>
+  <section id="preise" aria-labelledby="price-h">
+    <div class="wrap price-grid">
+      <div>
+        <h2 id="price-h" class="h2" data-i18n-html="price.title">Ein Preis.<br />Keine Überraschungen.</h2>
+        <p class="price-big"><span class="amt"><span class="dg"><span>3</span></span><span class="dg"><span>9</span></span><span class="eur">€</span></span><span class="per" data-i18n-html="price.per">pro Stunde,<br />vor Ort und per Fernwartung</span></p>
+        <p class="price-tax" data-i18n-html="price.tax">Endpreis. Nach §&nbsp;19&nbsp;UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet.</p>
+        <ul class="rules">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg><span data-i18n-html="rule1"><strong>Telefonische Ersteinschätzung kostenlos.</strong> Sie wissen vorher, woran Sie sind.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg><span data-i18n-html="rule2">Die erste Stunde wird voll berechnet, danach in <strong>15-Minuten-Schritten</strong> zu je 9,75&nbsp;€.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg><span data-i18n-html="rule3"><strong>Anfahrt in Dormagen inklusive.</strong> Umgebung nach Absprache.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg><span data-i18n-html="rule4"><strong>Festpreis auf Wunsch</strong> für größere Vorhaben, etwa eine komplette Neueinrichtung.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg><span data-i18n="rule5">Rechnung per E-Mail. Zahlung per Überweisung oder bar vor Ort.</span></li>
+        </ul>
       </div>
-      <ul class="pricing-list">
-        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span data-i18n-html="price.l1"><strong>Telefonische Ersteinschätzung kostenlos</strong> — Sie wissen vorher, woran Sie sind</span></li>
-        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span data-i18n-html="price.l2">Abrechnung nach der ersten Stunde in <strong>15-Minuten-Schritten</strong></span></li>
-        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span data-i18n-html="price.l3"><strong>Anfahrt in Dormagen inklusive</strong> — Umgebung nach Absprache</span></li>
-        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span data-i18n-html="price.l4"><strong>Pauschalpreise auf Anfrage</strong> — für größere Vorhaben (z.&nbsp;B. komplette Neueinrichtung) gern ein Festpreis vorab</span></li>
-        <li><i class="fas fa-circle-check" aria-hidden="true"></i> <span data-i18n-html="price.l5">Rechnung per E-Mail — Zahlung per Überweisung oder bar vor Ort</span></li>
-      </ul>
+      <div class="printer" id="printer">
+        <div class="printer-slot" aria-hidden="true"></div>
+        <div class="printer-clip">
+          <div class="receipt-wrap" id="receiptWrap">
+            <div class="receipt" role="group" aria-labelledby="rc-h">
+              <div class="rc-head">
+                <div><h3 id="rc-h" data-i18n="rc.title">Rechenbeispiel</h3><p data-i18n="rc.sub">Stellen Sie die Dauer ein.</p></div>
+              </div>
+              <div class="rc-ctrl">
+                <button type="button" class="round" id="rcMinus" aria-label="15 Minuten weniger" data-i18n-aria="rc.minus"><svg class="ic" aria-hidden="true"><use href="#i-minus"/></svg></button>
+                <output id="rcDur" aria-live="polite">1 Std. 15 Min.</output>
+                <button type="button" class="round" id="rcPlus" aria-label="15 Minuten mehr" data-i18n-aria="rc.plus"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></button>
+              </div>
+              <div class="seg" role="radiogroup" aria-label="Art des Termins" data-i18n-aria="rc.kind">
+                <label><input type="radio" name="rc-mode" id="rc-mode-onsite" value="onsite" checked /><span data-i18n="rc.onsite">Vor Ort in Dormagen</span></label>
+                <label><input type="radio" name="rc-mode" id="rc-mode-remote" value="remote" /><span data-i18n="mode.remote">Fernwartung</span></label>
+              </div>
+              <dl class="rc-lines">
+                <div class="rc-line"><dt data-i18n="rc.assess">Ersteinschätzung</dt><dd id="rcAssess">0,00&nbsp;€</dd></div>
+                <div class="rc-line"><dt id="rcFirstLabel">Arbeitszeit, erste Stunde</dt><dd id="rcFirst">39,00&nbsp;€</dd></div>
+                <div class="rc-line" id="rcExtraRow"><dt id="rcExtraLabel">1 × 15 Min. à 9,75 €</dt><dd id="rcExtra">9,75&nbsp;€</dd></div>
+                <div class="rc-line"><dt id="rcTravelLabel">Anfahrt in Dormagen</dt><dd id="rcTravel">0,00&nbsp;€</dd></div>
+                <div class="rc-line"><dt data-i18n-html="rc.vat">USt. (§&nbsp;19 UStG)</dt><dd data-i18n="rc.none">entfällt</dd></div>
+              </dl>
+              <div class="rc-total"><span data-i18n="rc.total">Gesamt</span><output id="rcTotal" aria-live="polite">48,75&nbsp;€</output></div>
+              <p class="rc-foot" data-i18n="rc.foot">Rechnung per E-Mail. Zahlung per Überweisung oder bar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== EINSATZGEBIET ============== -->
+  <section id="gebiet" aria-labelledby="area-h">
+    <div class="wrap area-grid">
+      <figure class="area-map" id="areaMap">
+        <svg viewBox="0 0 400 400" role="img" aria-labelledby="mapTitle mapDesc">
+          <title id="mapTitle" data-i18n="map.title">Einsatzgebiet rund um Dormagen</title>
+          <desc id="mapDesc" data-i18n="map.desc">Innerer Kreis: Dormagen, Anfahrt inklusive. Mittlerer Kreis: Neuss, Düsseldorf, Köln, Rommerskirchen und Grevenbroich nach Absprache. Äußerer Kreis: Fernwartung deutschlandweit.</desc>
+          <circle class="ring-3" cx="200" cy="200" r="188"/>
+          <path class="river" pathLength="1" d="M 352 400 C 330 330, 262 268, 258 205 S 276 120, 258 78 S 236 22, 246 0"/>
+          <circle class="ring-2" cx="200" cy="200" r="150"/>
+          <circle class="ring-1" cx="200" cy="200" r="64"/>
+          <circle class="wave" cx="200" cy="200" r="188"/>
+          <circle class="wave" cx="200" cy="200" r="188"/>
+          <circle class="wave" cx="200" cy="200" r="188"/>
+          <text class="map-label river-l" x="292" y="252" transform="rotate(-72 292 252)" data-i18n="map.rhine">RHEIN</text>
+          <circle class="dot home" cx="200" cy="200" r="8"/>
+          <text class="map-label home" x="200" y="230" text-anchor="middle">Dormagen</text>
+          <circle class="dot" cx="186" cy="68" r="4.5"/><text class="map-label" x="196" y="73">Neuss</text>
+          <circle class="dot" cx="292" cy="98" r="4.5"/><text class="map-label" x="292" y="84" text-anchor="middle">Düsseldorf</text>
+          <circle class="dot" cx="268" cy="306" r="4.5"/><text class="map-label" x="268" y="327" text-anchor="middle" data-i18n="map.cologne">Köln</text>
+          <circle class="dot" cx="92" cy="244" r="4.5"/><text class="map-label" x="92" y="265" text-anchor="middle">Rommerskirchen</text>
+          <circle class="dot" cx="66" cy="150" r="4.5"/><text class="map-label" x="66" y="136" text-anchor="middle">Grevenbroich</text>
+        </svg>
+        <figcaption data-i18n="map.caption">Schematisch, nicht maßstabsgetreu</figcaption>
+      </figure>
+      <div>
+        <h2 id="area-h" class="h2" data-i18n="area.title">Wo ich hinkomme</h2>
+        <div class="zones">
+          <div class="zone zone-1"><span class="zone-key" aria-hidden="true"></span><h3 data-i18n="zone1.title">Anfahrt inklusive</h3><p class="towns" data-i18n-html="zone1.desc">Dormagen mit allen Stadtteilen: Mitte, Nord, Horrem, Rheinfeld, Hackenbroich, Hackhausen, Delhoven, Zons, Stürzelberg, St.&nbsp;Peter, Nievenheim, Ückerath, Delrath, Gohr, Broich, Straberg und Knechtsteden.</p></div>
+          <div class="zone zone-2"><span class="zone-key" aria-hidden="true"></span><h3 data-i18n="zone2.title">Nach Absprache</h3><p data-i18n="zone2.desc">Neuss, Grevenbroich, Rommerskirchen, Köln, Düsseldorf und Umgebung. Weiter entfernt auf Anfrage.</p></div>
+          <div class="zone zone-3"><span class="zone-key" aria-hidden="true"></span><h3 data-i18n="zone3.title">Per Fernwartung</h3><p data-i18n="zone3.desc">Deutschlandweit, ganz ohne Anfahrt. Auch für alle, die weiter weg wohnen.</p></div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ============== ÜBER MICH ============== -->
-  <section id="ueber-mich" class="about" aria-label="Über mich">
-    <div class="section-head reveal">
-      <span class="section-num">04</span>
-      <h2 class="section-title" data-i18n="s4.title">Wer hier hilft</h2>
-      <span class="section-kicker" data-i18n="s4.kicker">Kein Callcenter — ein Ansprechpartner</span>
-    </div>
-
-    <div class="about-card reveal">
-      <div class="about-text">
-        <h3>Robin Frank</h3>
-        <p data-i18n-html="about.p1">
-          Ich bin ausgebildeter <strong>Fachinformatiker für Anwendungsentwicklung</strong> und
-          arbeite hauptberuflich als IT-Systemadministrator. Seit 2022 betreibe ich zudem meine
-          eigene Server-Infrastruktur — Technik ist für mich nicht nur Beruf, sondern Leidenschaft.
-        </p>
-        <p data-i18n-html="about.p2">
-          Bei mir bekommen Sie keine Fachchinesisch-Vorträge und keine versteckten Kosten:
-          Ich erkläre verständlich, was ich tue, empfehle nur, was Sie wirklich brauchen,
-          und Sie haben vor, während und nach dem Termin immer denselben Ansprechpartner.
-        </p>
-        <p class="about-link" data-i18n-html="about.link">
-          Mehr über meinen Werdegang und meine Projekte:
-          <a href="https://portfolio.rxf-sys.de/" target="_blank" rel="noopener noreferrer">portfolio.rxf-sys.de <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-        </p>
+  <section id="ueber-mich" aria-labelledby="about-h">
+    <div class="wrap about-grid">
+      <div class="portrait"><span class="monogram" aria-hidden="true"><span>R</span><span>F</span></span></div>
+      <div class="about-copy">
+        <h2 id="about-h" class="h2" data-i18n="about.title">Wer hier hilft</h2>
+        <p class="about-lead" data-i18n="about.lead">Kein Callcenter. Ein Ansprechpartner, von der ersten Frage bis zur Rechnung.</p>
+        <p data-i18n-html="about.p1">Ich bin ausgebildeter <strong>Fachinformatiker für Anwendungsentwicklung</strong> und arbeite hauptberuflich als IT-Systemadministrator. Seit 2022 betreibe ich zudem meine eigene Server-Infrastruktur. Technik ist für mich Beruf und Leidenschaft.</p>
+        <p data-i18n="about.p2">Bei mir gibt es kein Fachchinesisch und keine versteckten Kosten. Ich erkläre, was ich tue, und empfehle nur, was Sie wirklich brauchen.</p>
+        <dl class="facts">
+          <div><dt data-i18n="af1.t">Ausbildung</dt><dd data-i18n="af1.d">Fachinformatiker Anwendungsentwicklung (IHK)</dd></div>
+          <div><dt data-i18n="af2.t">Beruf</dt><dd data-i18n="af2.d">IT-Systemadministrator, täglich in der Praxis</dd></div>
+          <div><dt data-i18n="af3.t">Arbeitsweise</dt><dd data-i18n="af3.d">Geduldig und ohne Fachjargon</dd></div>
+          <div><dt data-i18n="af4.t">Ihre Daten</dt><dd data-i18n="af4.d">Bleiben auf Ihren Geräten</dd></div>
+        </dl>
+        <a class="text-link" href="https://portfolio.rxf-sys.de/" target="_blank" rel="noopener noreferrer"><span data-i18n="about.link">Werdegang und Projekte im Portfolio</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow-up-right-from-square"/></svg></a>
       </div>
-      <ul class="about-facts">
-        <li><i class="fas fa-graduation-cap" aria-hidden="true"></i><span data-i18n-html="fact1"><strong>Ausgebildeter Fachinformatiker</strong><br />Anwendungsentwicklung (IHK)</span></li>
-        <li><i class="fas fa-server" aria-hidden="true"></i><span data-i18n-html="fact2"><strong>IT-Systemadministrator</strong><br />täglich in der Praxis</span></li>
-        <li><i class="fas fa-comments" aria-hidden="true"></i><span data-i18n-html="fact3"><strong>Verständlich erklärt</strong><br />geduldig &amp; ohne Fachjargon</span></li>
-        <li><i class="fas fa-lock" aria-hidden="true"></i><span data-i18n-html="fact4"><strong>Diskret &amp; sorgfältig</strong><br />Ihre Daten bleiben Ihre Daten</span></li>
-      </ul>
+    </div>
+  </section>
+
+  <!-- ============== SELBSTHILFE ============== -->
+  <section class="selfhelp" aria-labelledby="sh-h">
+    <div class="wrap">
+      <div class="sh-panel">
+        <figure class="sh-photo"><img src="/assets/img/router-power-plug.webp" alt="Hand zieht den Stromstecker an der Rückseite eines Routers" data-i18n-alt="img.router" loading="lazy" width="1000" height="1000" /></figure>
+        <div class="sh-body">
+          <h2 id="sh-h" class="h2" data-i18n="sh.title">Vorab schon mal probieren</h2>
+          <p class="sub" data-i18n="sh.sub">Vier Handgriffe, die oft schon reichen. Und wenn nicht, beschleunigen sie die Ersteinschätzung.</p>
+          <ul class="sh-list">
+            <li><span class="sh-ic"><svg class="ic" aria-hidden="true"><use href="#i-power-off"/></svg></span><h3 data-i18n="sh1.t">Neu starten</h3><p data-i18n="sh1.d">Gerät ganz aus- und wieder einschalten. Beim Router den Stecker 30 Sekunden ziehen.</p></li>
+            <li><span class="sh-ic"><svg class="ic" aria-hidden="true"><use href="#i-plug"/></svg></span><h3 data-i18n="sh2.t">Kabel prüfen</h3><p data-i18n="sh2.d">Sitzen Strom- und Netzwerkkabel fest? Leuchten die Lämpchen am Router?</p></li>
+            <li><span class="sh-ic"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg></span><h3 data-i18n="sh3.t">Meldung fotografieren</h3><p data-i18n="sh3.d">Ein Handyfoto der Fehlermeldung hilft mir bei der Einschätzung.</p></li>
+            <li><span class="sh-ic"><svg class="ic" aria-hidden="true"><use href="#i-hourglass-half"/></svg></span><h3 data-i18n="sh4.t">Updates laufen lassen</h3><p data-i18n="sh4.d">Während eines Updates das Gerät nicht ausschalten, auch wenn es dauert.</p></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ============== FAQ ============== -->
-  <section id="faq" class="faq" aria-label="Häufige Fragen">
-    <div class="section-head reveal">
-      <span class="section-num">05</span>
-      <h2 class="section-title" data-i18n="s5.title">Häufige Fragen</h2>
-      <span class="section-kicker" data-i18n="s5.kicker">Kurz &amp; ehrlich beantwortet</span>
-    </div>
-
-    <div class="faq-list">
-      <details class="faq-item reveal">
-        <summary data-i18n="faq1.q">In welchem Gebiet sind Sie unterwegs?</summary>
-        <p data-i18n-html="faq1.a">
-          Vor-Ort-Termine biete ich in <strong>Dormagen und Umgebung</strong> an — etwa
-          Neuss, Grevenbroich, Rommerskirchen sowie den Randlagen von Köln und Düsseldorf.
-          Per <strong>Fernwartung</strong> helfe ich deutschlandweit.
-        </p>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary data-i18n="faq2.q">Wie funktioniert die Fernwartung — ist das sicher?</summary>
-        <p data-i18n-html="faq2.a">
-          Sie laden ein kleines Programm herunter und nennen mir den angezeigten Code —
-          erst dann kann ich mich verbinden. Sie sehen die ganze Zeit live, was auf Ihrem
-          Bildschirm passiert, und können die Verbindung jederzeit trennen. Nach der Sitzung
-          habe ich keinen Zugriff mehr auf Ihren Rechner.
-        </p>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary data-i18n="faq3.q">Was kostet mich das insgesamt?</summary>
-        <p data-i18n-html="faq3.a">
-          Die telefonische Ersteinschätzung ist kostenlos. Danach gilt: <strong>39&nbsp;€ pro
-          Stunde</strong>, nach der ersten Stunde in 15-Minuten-Schritten abgerechnet. Die meisten
-          typischen Anliegen (z.&nbsp;B. Drucker einrichten, WLAN-Problem beheben) sind in ein bis
-          zwei Stunden erledigt. Für größere Vorhaben nenne ich Ihnen auf Wunsch vorab einen
-          Pauschalpreis.
-        </p>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary data-i18n="faq4.q">Wann sind Termine möglich?</summary>
-        <p data-i18n-html="faq4.a">
-          Termine vereinbaren wir flexibel — in der Regel nachmittags, abends und am Wochenende.
-          Fernwartungstermine lassen sich oft kurzfristig einrichten.
-        </p>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary data-i18n="faq5.q">Was passiert mit meinen Daten?</summary>
-        <p data-i18n-html="faq5.a">
-          Ihre Daten bleiben auf Ihren Geräten — ich kopiere nichts ohne ausdrückliche Absprache
-          (etwa für ein vereinbartes Backup). Alles, was ich bei der Arbeit sehe, behandle ich
-          selbstverständlich vertraulich.
-        </p>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary data-i18n="faq6.q">Was ist, wenn das Problem nicht lösbar ist?</summary>
-        <p data-i18n-html="faq6.a">
-          Ehrlichkeit zuerst: Wenn ich schon bei der Ersteinschätzung sehe, dass sich etwas nicht
-          oder nicht wirtschaftlich lösen lässt (z.&nbsp;B. ein Hardwaredefekt, bei dem sich die
-          Reparatur nicht lohnt), sage ich Ihnen das offen — bevor Kosten entstehen.
-        </p>
-      </details>
+  <section id="faq" aria-labelledby="faq-h">
+    <div class="wrap faq-grid">
+      <div class="faq-side">
+        <h2 id="faq-h" class="h2" data-i18n="faq.title">Häufige Fragen</h2>
+        <p class="sub"><span data-i18n="faq.sub">Ihre Frage ist nicht dabei? Rufen Sie einfach an:</span> <a href="tel:+491791496509">0179&nbsp;1496509</a></p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item"><summary><span data-i18n="faq1.q">In welchem Gebiet sind Sie unterwegs?</span><span class="chev" aria-hidden="true"><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p data-i18n-html="faq1.a">Vor Ort komme ich in <strong>Dormagen und Umgebung</strong>, also auch nach Neuss, Grevenbroich, Rommerskirchen, Köln und Düsseldorf. Weiter entfernt auf Anfrage. Per <strong>Fernwartung</strong> helfe ich deutschlandweit.</p></details>
+        <details class="faq-item"><summary><span data-i18n="faq2.q">Wie funktioniert die Fernwartung, und ist das sicher?</span><span class="chev" aria-hidden="true"><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p data-i18n="faq2.a">Sie laden ein kleines Programm herunter und nennen mir den angezeigten Code. Erst dann kann ich mich verbinden. Sie sehen die ganze Zeit, was auf Ihrem Bildschirm passiert, und können die Verbindung jederzeit trennen. Nach der Sitzung habe ich keinen Zugriff mehr.</p></details>
+        <details class="faq-item"><summary><span data-i18n="faq3.q">Was kostet mich das insgesamt?</span><span class="chev" aria-hidden="true"><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p data-i18n-html="faq3.a">Die telefonische Ersteinschätzung ist kostenlos. Danach gilt: <strong>39&nbsp;€ pro Stunde</strong>. Die erste Stunde wird voll berechnet, danach in 15-Minuten-Schritten. Typische Anliegen wie einen Drucker einrichten oder ein WLAN-Problem beheben sind meist in ein bis zwei Stunden erledigt. Für größere Vorhaben nenne ich Ihnen gern vorab einen Festpreis.</p></details>
+        <details class="faq-item"><summary><span data-i18n="faq4.q">Wann sind Termine möglich?</span><span class="chev" aria-hidden="true"><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p data-i18n="faq4.a">Wir vereinbaren Termine flexibel, meist nachmittags, abends oder am Wochenende. Fernwartung klappt oft auch kurzfristig.</p></details>
+        <details class="faq-item"><summary><span data-i18n="faq5.q">Was passiert mit meinen Daten?</span><span class="chev" aria-hidden="true"><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p data-i18n="faq5.a">Ihre Daten bleiben auf Ihren Geräten. Ich kopiere nichts ohne ausdrückliche Absprache, etwa für ein vereinbartes Backup. Alles, was ich bei der Arbeit sehe, behandle ich vertraulich.</p></details>
+        <details class="faq-item"><summary><span data-i18n="faq6.q">Was, wenn sich das Problem nicht lösen lässt?</span><span class="chev" aria-hidden="true"><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p data-i18n="faq6.a">Dann sage ich Ihnen das offen, bevor Kosten entstehen. Zum Beispiel, wenn sich die Reparatur eines Hardwaredefekts nicht mehr lohnt.</p></details>
+      </div>
     </div>
   </section>
 
   <!-- ============== KONTAKT ============== -->
-  <section id="kontakt" class="contact" aria-label="Kontakt">
-    <div class="contact-card reveal">
-      <div>
-        <span class="contact-eyebrow">
-          <span class="badge"><i class="fas fa-envelope" aria-hidden="true"></i></span>
-          <span data-i18n="contact.eyebrow">Kontakt</span>
-        </span>
-        <h2 data-i18n-html="contact.head">Erzählen Sie mir, <span class="accent-text">wo es hakt</span>.</h2>
-        <p class="lede" data-i18n="contact.lede">
-          Schreiben Sie mir kurz, worum es geht — ich melde mich in der Regel innerhalb
-          von 24 Stunden mit einer ehrlichen Ersteinschätzung zurück. Unverbindlich und kostenlos.
-        </p>
-        <div class="contact-actions">
-          <a href="mailto:info@rxf-sys.de?subject=IT-Anfrage" class="btn btn-primary">
-            <i class="fas fa-envelope" aria-hidden="true"></i><span>info@rxf-sys.de</span>
-          </a>
-          <a href="tel:+491791496509" class="btn btn-ghost">
-            <i class="fas fa-phone" aria-hidden="true"></i><span>0179&nbsp;1496509</span>
-          </a>
+  <section id="kontakt" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="contact-card">
+        <div class="contact-info">
+          <h2 id="contact-h" class="h2" data-i18n-html="contact.title">Erzählen Sie mir, <span class="mark">wo es hakt</span>.</h2>
+          <p class="sub" data-i18n="contact.sub">Ich melde mich in der Regel innerhalb von 24 Stunden mit einer ehrlichen Ersteinschätzung. Unverbindlich und kostenlos.</p>
+          <ul class="direct">
+            <li>
+              <svg class="ic lead" aria-hidden="true"><use href="#i-phone"/></svg>
+              <div><span class="lbl" data-i18n="contact.phone">Telefon</span><span class="val" id="phoneVal">0179 1496509</span></div>
+              <div class="acts">
+                <a class="icon-btn" href="tel:+491791496509" aria-label="Anrufen" data-i18n-aria="contact.call"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></a>
+                <button type="button" class="icon-btn" data-copy="0179 1496509" data-copy-target="#phoneVal" aria-label="Telefonnummer kopieren" data-i18n-aria="contact.copyPhone"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg></button>
+              </div>
+            </li>
+            <li>
+              <svg class="ic lead" aria-hidden="true"><use href="#i-envelope"/></svg>
+              <div><span class="lbl" data-i18n="contact.mail">E-Mail</span><span class="val" id="mailVal">info@rxf-sys.de</span></div>
+              <div class="acts">
+                <a class="icon-btn" href="mailto:info@rxf-sys.de" aria-label="E-Mail schreiben" data-i18n-aria="contact.write"><svg class="ic" aria-hidden="true"><use href="#i-envelope"/></svg></a>
+                <button type="button" class="icon-btn" data-copy="info@rxf-sys.de" data-copy-target="#mailVal" aria-label="E-Mail-Adresse kopieren" data-i18n-aria="contact.copyMail"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg></button>
+              </div>
+            </li>
+          </ul>
+          <dl class="ci">
+            <dt data-i18n="ci1.label">Antwortzeit</dt><dd data-i18n="ci1.value">meist unter 24 Stunden</dd>
+            <dt data-i18n="ci2.label">Termine</dt><dd data-i18n="ci2.value">flexibel, auch abends und am Wochenende</dd>
+          </dl>
         </div>
-      </div>
-      <div class="contact-side">
-        <div class="ci-item"><div class="ci-label"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="ci1.label">Einsatzgebiet</span></div><div class="ci-value" data-i18n="ci1.value">Dormagen &amp; Umgebung · remote deutschlandweit</div></div>
-        <div class="ci-item"><div class="ci-label"><i class="fas fa-reply" aria-hidden="true"></i> <span data-i18n="ci2.label">Antwortzeit</span></div><div class="ci-value" data-i18n-html="ci2.value">in der Regel &lt;&nbsp;24&nbsp;Stunden</div></div>
-        <div class="ci-item"><div class="ci-label"><i class="fas fa-calendar-check" aria-hidden="true"></i> <span data-i18n="ci3.label">Termine</span></div><div class="ci-value" data-i18n="ci3.value">flexibel — auch abends &amp; am Wochenende</div></div>
+
+        <form class="form" id="inquiry" novalidate>
+          <div class="row-2">
+            <div class="field">
+              <label for="f-name" data-i18n="form.name">Ihr Name</label>
+              <input class="input" id="f-name" name="name" type="text" autocomplete="name" aria-describedby="f-name-err" />
+              <p class="err" id="f-name-err" hidden><svg class="ic" aria-hidden="true"><use href="#i-xmark"/></svg><span></span></p>
+            </div>
+            <div class="field">
+              <label for="f-reach" data-i18n="form.reach">Telefon oder E-Mail</label>
+              <input class="input" id="f-reach" name="reach" type="text" autocomplete="tel" aria-describedby="f-reach-err" />
+              <p class="err" id="f-reach-err" hidden><svg class="ic" aria-hidden="true"><use href="#i-xmark"/></svg><span></span></p>
+            </div>
+          </div>
+          <fieldset>
+            <legend class="legend"><span data-i18n="form.topics">Worum geht es?</span> <span class="opt" data-i18n="form.multi">(mehrere möglich)</span></legend>
+            <div class="chips" id="formChips">
+              <button type="button" class="chip" data-topic="wlan" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-wifi"/></svg><span data-i18n="topic.wlan">WLAN</span><svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></button>
+              <button type="button" class="chip" data-topic="drucker" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-print"/></svg><span data-i18n="topic.printer">Drucker</span><svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></button>
+              <button type="button" class="chip" data-topic="pc" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-laptop"/></svg><span data-i18n="topic.pc">PC / Laptop</span><svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></button>
+              <button type="button" class="chip" data-topic="virus" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-shield-halved"/></svg><span data-i18n="topic.virus">Virus</span><svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></button>
+              <button type="button" class="chip" data-topic="smarthome" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-house-signal"/></svg><span data-i18n="topic.smarthome">Smart Home</span><svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></button>
+              <button type="button" class="chip" data-topic="handy" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-mobile-screen-button"/></svg><span data-i18n="topic.phone">Handy / Tablet</span><svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></button>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="f-msg"><span data-i18n="form.msg">Was ist passiert?</span> <span class="opt" data-i18n="form.optional">(optional)</span></label>
+            <textarea class="input" id="f-msg" name="message" rows="4" placeholder="z. B. Seit gestern bricht das WLAN im Obergeschoss ständig ab." data-i18n-ph="form.msgPh"></textarea>
+          </div>
+          <fieldset>
+            <legend class="legend" data-i18n="form.how">Wie soll ich helfen?</legend>
+            <div class="seg">
+              <label><input type="radio" name="f-mode" id="f-mode-onsite" value="onsite" checked /><span data-i18n="mode.onsite">Vor Ort</span></label>
+              <label><input type="radio" name="f-mode" id="f-mode-remote" value="remote" /><span data-i18n="mode.remote">Fernwartung</span></label>
+              <label><input type="radio" name="f-mode" id="f-mode-unsure" value="unsure" /><span data-i18n="mode.unsure">Weiß nicht</span></label>
+            </div>
+          </fieldset>
+          <div class="row-2">
+            <div class="field">
+              <label for="f-place"><span data-i18n="form.place">Ort oder PLZ</span> <span class="opt" data-i18n="form.optional">(optional)</span></label>
+              <input class="input" id="f-place" name="place" type="text" autocomplete="postal-code" placeholder="z. B. 41541 Dormagen" data-i18n-ph="form.placePh" />
+            </div>
+            <div class="field">
+              <label for="f-time" data-i18n="form.time">Am besten erreichbar</label>
+              <select class="input" id="f-time" name="time">
+                <option value="any" data-i18n="time.any">egal</option>
+                <option value="morning" data-i18n="time.morning">vormittags</option>
+                <option value="afternoon" data-i18n="time.afternoon">nachmittags</option>
+                <option value="evening" data-i18n="time.evening">abends</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-static"><span data-i18n="form.submit">Anfrage vorbereiten</span><svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+            <p class="help" data-i18n="form.help">Ihr E-Mail-Programm öffnet sich mit dem fertigen Text. Auf dieser Website wird nichts gespeichert.</p>
+          </div>
+          <div class="form-result" id="formResult" tabindex="-1" hidden>
+            <h3><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg><span data-i18n="form.ready">Ihre Anfrage ist fertig</span></h3>
+            <p class="help" data-i18n="form.readyHelp">Ihr E-Mail-Programm sollte sich geöffnet haben. Falls nicht: Text kopieren und an info@rxf-sys.de schicken.</p>
+            <pre id="resultText" data-lenis-prevent></pre>
+            <div class="row">
+              <a class="btn btn-primary btn-static" id="resultMail" href="mailto:info@rxf-sys.de"><svg class="ic" aria-hidden="true"><use href="#i-envelope"/></svg><span data-i18n="form.openMail">E-Mail-Programm öffnen</span></a>
+              <button type="button" class="btn btn-ghost btn-static" data-copy-from="#resultText"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span data-i18n="form.copy">Text kopieren</span></button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </section>
-
 </main>
 
 <footer class="foot">
-  <div class="foot-brand">
-    <span class="brand-dot"></span>
-    <span data-i18n-html="foot.copy">&copy; <span id="year">2026</span> Robin Frank · IT-Service</span>
-  </div>
-  <nav class="foot-nav" aria-label="Weitere Links">
-    <a href="impressum.html" data-i18n="foot.imprint">Impressum</a>
-    <span class="sep">·</span>
-    <a href="datenschutz.html" data-i18n="foot.privacy">Datenschutz</a>
-    <span class="sep">·</span>
-    <a href="https://portfolio.rxf-sys.de/" target="_blank" rel="noopener noreferrer">Portfolio</a>
-    <span class="sep">·</span>
-    <a href="https://github.com/rxf-sys" target="_blank" rel="noopener noreferrer">GitHub</a>
-  </nav>
-  <div class="foot-host mono">
-    <span class="status-dot"></span>
-    <span>rxf-sys.de</span>
+  <div class="wrap">
+    <div class="foot-in">
+      <a href="#top" class="foot-brand"><span class="brand-dot"></span><span>rxf-sys<span class="brand-tld">.de</span></span></a>
+      <nav class="foot-nav" aria-label="Weitere Links">
+        <a href="impressum.html" data-i18n="foot.imprint">Impressum</a>
+        <a href="datenschutz.html" data-i18n="foot.privacy">Datenschutz</a>
+        <a href="https://portfolio.rxf-sys.de/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        <a href="https://github.com/rxf-sys" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+      <span class="foot-copy" data-i18n-html="foot.copy">&copy; <span id="year">2026</span> Robin Frank · IT-Service Dormagen</span>
+    </div>
   </div>
 </footer>
 
-<script src="/index.js?v=2026-07-28"></script>
+<div class="mbar" id="mbar" inert>
+  <a class="btn btn-ghost" href="tel:+491791496509"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="mbar.call">Anrufen</span></a>
+  <a class="btn btn-primary" href="#kontakt"><svg class="ic" aria-hidden="true"><use href="#i-envelope"/></svg><span data-i18n="nav.cta">Anfrage senden</span></a>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="/assets/vendor/gsap.min.js?v=3.12.5" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js?v=3.12.5" defer></script>
+<script src="/assets/vendor/lenis.min.js?v=1.1.13" defer></script>
+<script src="/index.js?v=2026-10-09" defer></script>
 
 </body>
 </html>
