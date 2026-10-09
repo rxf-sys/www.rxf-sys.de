@@ -8,15 +8,22 @@ Privatkunden in Dormagen &amp; Umgebung, vor Ort oder per Fernwartung.
 
 One-Pager mit den Sektionen:
 
-- **Hero** &mdash; Leistungsversprechen, Kontakt-CTAs (E-Mail/Telefon), Eckdaten
-- **Leistungen** &mdash; PC- &amp; Laptop-Hilfe, WLAN &amp; Heimnetzwerk,
-  Smart Home &amp; Ger&auml;te, Fernwartung
-- **Ablauf** &mdash; drei Schritte von der Anfrage bis zur Abrechnung
-- **Preise** &mdash; 39&nbsp;&euro;/Std., Kleinunternehmerregelung (&sect;&nbsp;19 UStG),
-  Pauschalen auf Anfrage
+- **Hero** &mdash; Leistungsversprechen, Telefon/E-Mail, Eckdaten, Foto
+- **Schnellstart** &mdash; Anliegen antippen, Wunsch vor Ort/Fernwartung w&auml;hlen,
+  die Auswahl landet vorausgef&uuml;llt im Anfrage-Formular
+- **Leistungen** &mdash; PC- &amp; Laptop-Hilfe, WLAN &amp; Heimnetz,
+  Smart Home &amp; Ger&auml;te, Fernwartung (gestapelte Karten mit Fotos)
+- **Laufband** &mdash; Ger&auml;te und Systeme, bei denen geholfen wird
+- **Typische Eins&auml;tze** &mdash; Beispielrechnungen mit Dauer und Preis
+- **Ablauf** &mdash; drei Schritte von der Anfrage bis zur Rechnung
+- **Preise** &mdash; 39&nbsp;&euro;/Std., erste Stunde voll, danach 15-Minuten-Schritte;
+  Rechenbeispiel zum Einstellen; Kleinunternehmerregelung (&sect;&nbsp;19 UStG)
+- **Einsatzgebiet** &mdash; schematische Karte und Zonen (inklusive, nach Absprache, Fernwartung)
 - **&Uuml;ber mich** &mdash; Qualifikation &amp; Arbeitsweise, Link zum Portfolio
-- **FAQ** &mdash; native `<details>`-Accordions, kein JS n&ouml;tig
-- **Kontakt** &mdash; E-Mail, Telefon, Einsatzgebiet, Antwortzeit
+- **Selbsthilfe** &mdash; vier Handgriffe vor dem Anruf
+- **FAQ** &mdash; native `<details>`-Accordions
+- **Kontakt** &mdash; Telefon, E-Mail, Formular, das eine vorbef&uuml;llte E-Mail &ouml;ffnet
+  (kein Server, keine Speicherung)
 
 Technische Highlights:
 
@@ -24,32 +31,37 @@ Technische Highlights:
   Dark Mode via `prefers-color-scheme` + manueller Toggle (persistiert in
   `localStorage`); Inline-Theme-Init im `<head>` verhindert Theme-Flash
 - **DE/EN-Sprachumschalter** &mdash; deutsche Texte stehen im Markup, Englisch im
-  `EN`-W&ouml;rterbuch in `index.js`; die Wahl wird in `localStorage` gemerkt
+  `EN`-W&ouml;rterbuch in `index.js`, per Script erzeugte Texte im `STR`-Objekt;
+  die Wahl wird in `localStorage` gemerkt
+- **Bewegung** &mdash; GSAP + ScrollTrigger und Lenis (Smooth Scroll), lokal unter
+  `assets/vendor/`. Inhalte bleiben ohne JS bzw. bei `prefers-reduced-motion`
+  statisch und vollst&auml;ndig sichtbar
 - **Mobil-Men&uuml;** &mdash; unter 900&nbsp;px klappt die Navigation als Panel auf,
-  mit Sektionsnummern, Kontakt-Knopf, Escape und Klick-nach-au&szlig;en
-- **Reveal-on-Scroll** via IntersectionObserver, respektiert `prefers-reduced-motion`
+  mit Kontakt-Knopf, Escape und Klick-nach-au&szlig;en; mobile Aktionsleiste
 - **SEO** &mdash; LocalBusiness-Schema (JSON-LD), sprechende Meta-Tags
 
 ## Stack
 
-Statisches HTML/CSS/JS, keine Build-Tools, keine externen JS-Libraries.
-Bricolage Grotesque (Display) + Manrope (Flie&szlig;text) + JetBrains Mono
-(Zahlen &amp; Labels) via Google Fonts, Font Awesome via cdnjs.
+Statisches HTML/CSS/JS, keine Build-Tools. Bibliotheken liegen lokal in
+`assets/vendor/` (GSAP 3.12.5, ScrollTrigger, Lenis 1.1.13, siehe
+`assets/vendor/README.md`), Icons als eingebettetes SVG-Sprite (Font Awesome Free).
+Schriften via Google Fonts: Archivo (&Uuml;berschriften, breite Schnitte),
+Atkinson Hyperlegible Next (Text) und Atkinson Hyperlegible Mono (Zahlen).
 
-Der `:root`-Tokenblock in `index.css` ist mit `portfolio.rxf-sys.de`
-identisch &mdash; gemeinsame Palette „Uxintace sunset" (Navy `#181A2F`,
-Terracotta `#D16A3E` im Light-, Peach `#FDA481` im Dark-Theme). &Auml;nderungen
-an Farben, Schriften oder Radien geh&ouml;ren in beide Repos.
+Designsystem &bdquo;Signal&ldquo;: Signalgelb `#FFC21A`, Anthrazit `#1C2125`,
+Signalwei&szlig; `#F4F5F2`. Das Portfolio wird im n&auml;chsten Schritt angeglichen.
 
 ```
 .
-├─ index.html              # One-Pager (Hero, Leistungen, Ablauf, Preise, Über mich, FAQ, Kontakt)
-├─ index.css               # Brand-Tokens, light-first + Dark-Override, Legal-Styles
-├─ index.js                # Theme-Toggle, Smooth Scroll, Reveal-on-Scroll
+├─ index.html              # One-Pager
+├─ index.css               # Tokens (light-first + Dark), Komponenten, Legal-Styles
+├─ index.js                # Theme, DE/EN, Navigation, Formular, Rechenbeispiel, Bewegung
 ├─ impressum.html          # § 5 DDG, § 19 UStG, VSBG
 ├─ datenschutz.html        # Art. 13 DSGVO
 ├─ assets/
-│  └─ favicon.svg
+│  ├─ favicon.svg
+│  ├─ img/                 # Fotos (WebP)
+│  └─ vendor/              # GSAP, ScrollTrigger, Lenis (lokal, mit Lizenzhinweisen)
 ├─ _headers                # Security-Header (Cloudflare Pages-Format, inaktiv)
 └─ infrastructure/
    ├─ Caddyfile            # Static-Webserver auf :80 (Ziel des Cloudflare-Tunnels)
