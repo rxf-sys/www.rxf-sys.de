@@ -13,6 +13,7 @@
   // DE steht im Markup. Einträge dürfen HTML-Entities enthalten (werden über innerHTML gesetzt).
   const EN = {
     'skip': 'Skip to content',
+    'brand.label': 'rxf-sys IT service, back to top',
     'nav.services': 'Services', 'nav.projects': 'Examples', 'nav.pricing': 'Pricing',
     'nav.about': 'About me', 'nav.faq': 'FAQ', 'nav.cta': 'Send a request',
 
@@ -134,6 +135,7 @@
     'about.link': 'Background and projects in my portfolio',
 
     'img.router': 'Hand pulling the power plug at the back of a router',
+    'img.portrait': 'Robin Frank in a blue polo shirt with arms crossed against a light background',
     'sh.title': 'Worth trying first',
     'sh.sub': 'Four simple steps that often do the trick. And if not, they speed up the assessment.',
     'sh1.t': 'Restart', 'sh1.d': 'Switch the device off completely and on again. For the router, unplug it for 30 seconds.',
@@ -896,10 +898,10 @@
     });
     reveal($('.zones'), '.zones .zone', { autoAlpha: 0, y: 26 }, { stagger: 0.09 });
 
-    /* --- Über mich: Vorhang, Monogramm, Kernsatz wird beim Lesen scharf (ScrollReveal-Prinzip) --- */
+    /* --- Über mich: Vorhang, Foto zoomt aus, Kernsatz wird beim Lesen scharf (ScrollReveal-Prinzip) --- */
     const portrait = $('.portrait');
     reveal(portrait, portrait, { clipPath: 'inset(100% 0% 0% 0% round 22px)' }, { clipPath: 'inset(0% 0% 0% 0% round 22px)', duration: 1.25, ease: 'expo.inOut', clearProps: 'clipPath' });
-    reveal(portrait, $$('.monogram > span', portrait), { yPercent: 110 }, { stagger: 0.12, delay: 0.45, duration: 1.1 });
+    reveal(portrait, $('img', portrait), { scale: 1.12 }, { delay: 0.2, duration: 1.6 });
     const lead = $('.about-lead');
     ScrollTrigger.create({
       trigger: lead, start: 'top bottom+=260', once: true,
