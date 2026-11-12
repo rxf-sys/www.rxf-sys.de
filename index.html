@@ -5,16 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
 <title>IT-Service für Zuhause in Dormagen &amp; Umgebung | rxf-sys.de</title>
-<meta name="description" content="Schnelle IT-Hilfe für Privatkunden in Dormagen &amp; Umgebung: PC- &amp; Laptop-Hilfe, WLAN &amp; Heimnetzwerk, Smart Home, Fernwartung. Transparent für 39 €/Std. — vor Ort oder remote." />
+<meta name="description" content="Schnelle IT-Hilfe für Privatkunden in Dormagen &amp; Umgebung: PC- &amp; Laptop-Hilfe, WLAN &amp; Heimnetzwerk, Smart Home, Fernwartung. Transparent für 39 €/Std., vor Ort oder per Fernwartung." />
 <meta name="keywords" content="IT-Service Dormagen, PC-Hilfe Dormagen, Computerhilfe, WLAN einrichten, Fernwartung, Smart Home Hilfe, IT-Hilfe Privatkunden, Robin Frank" />
 <meta name="author" content="Robin Frank" />
 <meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://rxf-sys.de/" />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rxf-sys.de/" />
 <meta property="og:title" content="IT-Service für Zuhause in Dormagen &amp; Umgebung | rxf-sys.de" />
-<meta property="og:description" content="PC- &amp; Laptop-Hilfe, WLAN &amp; Heimnetzwerk, Smart Home und Fernwartung für Privatkunden — verständlich erklärt, transparent abgerechnet: 39 €/Std." />
+<meta property="og:description" content="PC- &amp; Laptop-Hilfe, WLAN &amp; Heimnetzwerk, Smart Home und Fernwartung für Privatkunden. Verständlich erklärt, transparent abgerechnet: 39 €/Std." />
 <meta property="og:locale" content="de_DE" />
+<meta property="og:image" content="https://rxf-sys.de/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="rxf-sys IT-Service: Computerprobleme? Ich kümmere mich drum." />
+<meta name="twitter:card" content="summary_large_image" />
 
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -25,40 +31,42 @@
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Atkinson+Hyperlegible+Mono:wght@400;500;700&family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&display=swap" rel="stylesheet" />
 
-<link rel="preload" as="image" href="/assets/img/hero-kitchen-table.webp" fetchpriority="high" />
-<link rel="stylesheet" href="/index.css?v=2026-10-09-2" />
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/archivo-latin.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/atkinson-hyperlegible-next-latin.woff2" crossorigin />
+<link rel="preload" as="image" href="/assets/img/hero-kitchen-table.webp" imagesrcset="/assets/img/hero-kitchen-table-720.webp 720w, /assets/img/hero-kitchen-table.webp 960w" imagesizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 52vw, 690px" fetchpriority="high" />
+<link rel="stylesheet" href="/index.css?v=2026-11-12-2" />
 
-<script>
-(function () {
-  document.documentElement.classList.add('js');
-  try {
-    var t = localStorage.getItem('rxf-theme');
-    if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    document.documentElement.dataset.theme = t;
-  } catch (e) { document.documentElement.dataset.theme = 'light'; }
-})();
-</script>
+<script src="/assets/theme-init.js?v=2026-11-12-2"></script>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "rxf-sys — IT-Service Robin Frank",
+  "@id": "https://rxf-sys.de/#business",
+  "name": "rxf-sys IT-Service Robin Frank",
   "url": "https://rxf-sys.de/",
+  "image": "https://rxf-sys.de/assets/og-image.png",
+  "logo": "https://rxf-sys.de/assets/brand/rxf-sys-logo.svg",
   "email": "info@rxf-sys.de",
   "telephone": "+49 179 1496509",
   "description": "IT-Dienstleistungen für Privatkunden: PC- und Laptop-Hilfe, WLAN und Heimnetzwerk, Smart Home, Fernwartung. Vor Ort in Dormagen und Umgebung oder remote.",
   "address": {
     "@type": "PostalAddress",
+    "postalCode": "41540",
     "addressLocality": "Dormagen",
     "addressRegion": "NRW",
     "addressCountry": "DE"
   },
-  "areaServed": "Dormagen und Umgebung (Neuss, Grevenbroich, Rommerskirchen, Köln, Düsseldorf)",
+  "areaServed": [
+    { "@type": "City", "name": "Dormagen" },
+    { "@type": "City", "name": "Neuss" },
+    { "@type": "City", "name": "Grevenbroich" },
+    { "@type": "City", "name": "Rommerskirchen" },
+    { "@type": "City", "name": "Köln" },
+    { "@type": "City", "name": "Düsseldorf" }
+  ],
+  "sameAs": ["https://portfolio.rxf-sys.de/", "https://github.com/rxf-sys"],
   "founder": {
     "@type": "Person",
     "name": "Robin Frank",
@@ -92,6 +100,7 @@
 <symbol id="i-arrow-left" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></symbol>
 <symbol id="i-print" viewBox="0 0 512 512"><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zM432 248a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></symbol>
 <symbol id="i-copy" viewBox="0 0 448 512"><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></symbol>
+<symbol id="i-whatsapp" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></symbol>
 <symbol id="i-power-off" viewBox="0 0 512 512"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z"/></symbol>
 <symbol id="i-plug" viewBox="0 0 384 512"><path d="M96 0C78.3 0 64 14.3 64 32v96h64V32c0-17.7-14.3-32-32-32zM288 0c-17.7 0-32 14.3-32 32v96h64V32c0-17.7-14.3-32-32-32zM32 160c-17.7 0-32 14.3-32 32s14.3 32 32 32v32c0 77.4 55 142 128 156.8V480c0 17.7 14.3 32 32 32s32-14.3 32-32V412.8C297 398 352 333.4 352 256V224c17.7 0 32-14.3 32-32s-14.3-32-32-32H32z"/></symbol>
 <symbol id="i-camera" viewBox="0 0 512 512"><path d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></symbol>
@@ -126,7 +135,7 @@
     <a href="#kontakt" class="btn btn-primary nav-cta"><svg class="ic" aria-hidden="true"><use href="#i-envelope"/></svg><span data-i18n="nav.cta">Anfrage senden</span></a>
   </nav>
 
-  <button class="round lang-toggle" id="langBtn" type="button" aria-label="Switch to English">EN</button>
+  <button class="round lang-toggle" id="langBtn" type="button" aria-label="EN, switch to English">EN</button>
 
   <a href="#kontakt" class="topbar-cta"><svg class="ic" aria-hidden="true"><use href="#i-envelope"/></svg><span data-i18n="nav.cta">Anfrage senden</span></a>
 
@@ -165,7 +174,7 @@
           </ul>
         </div>
         <figure class="hero-photo">
-          <img src="/assets/img/hero-kitchen-table.webp" alt="Hände an einem Laptop auf einem Küchentisch, daneben Kaffeetasse und Lesebrille" data-i18n-alt="img.hero" width="960" height="1280" fetchpriority="high" />
+          <img src="/assets/img/hero-kitchen-table.webp" srcset="/assets/img/hero-kitchen-table-720.webp 720w, /assets/img/hero-kitchen-table.webp 960w" sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 52vw, 690px" alt="Hände an einem Laptop auf einem Küchentisch, daneben Kaffeetasse und Lesebrille" data-i18n-alt="img.hero" width="960" height="1280" fetchpriority="high" />
           <figcaption class="photo-note"><svg class="ic note-ic" aria-hidden="true"><use href="#i-circle-check"/></svg><span><b data-i18n="note.t">Ersteinschätzung kostenlos</b><span data-i18n="note.d">am Telefon, unverbindlich</span></span></figcaption>
         </figure>
       </div>
@@ -209,7 +218,7 @@
       </div>
       <div class="stack">
         <article class="svc-card">
-          <figure class="svc-photo"><img src="/assets/img/service-laptop-ssd.webp" alt="Hände setzen eine SSD in einen geöffneten Laptop ein" data-i18n-alt="img.pc" loading="lazy" width="1200" height="800" /></figure>
+          <figure class="svc-photo"><img src="/assets/img/service-laptop-ssd.webp" srcset="/assets/img/service-laptop-ssd-720.webp 720w, /assets/img/service-laptop-ssd.webp 1200w" sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 39vw, 517px" alt="Hände setzen eine SSD in einen geöffneten Laptop ein" data-i18n-alt="img.pc" loading="lazy" width="1200" height="800" /></figure>
           <div class="svc-body">
             <div class="svc-head"><span class="svc-icon"><svg class="ic" aria-hidden="true"><use href="#i-laptop"/></svg></span><h3 data-i18n="svc1.title">PC- und Laptop-Hilfe</h3></div>
             <p data-i18n="svc1.desc">Ihr Rechner streikt, ist langsam oder soll neu eingerichtet werden? Ich bringe ihn wieder in Form.</p>
@@ -224,7 +233,7 @@
           <span class="svc-dim" aria-hidden="true"></span>
         </article>
         <article class="svc-card">
-          <figure class="svc-photo"><img src="/assets/img/service-wifi-router.webp" alt="Weißer WLAN-Router mit grünen Lämpchen auf einem Holzregal im Wohnzimmer" data-i18n-alt="img.wlan" loading="lazy" width="1200" height="800" /></figure>
+          <figure class="svc-photo"><img src="/assets/img/service-wifi-router.webp" srcset="/assets/img/service-wifi-router-720.webp 720w, /assets/img/service-wifi-router.webp 1200w" sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 39vw, 517px" alt="Weißer WLAN-Router mit grünen Lämpchen auf einem Holzregal im Wohnzimmer" data-i18n-alt="img.wlan" loading="lazy" width="1200" height="800" /></figure>
           <div class="svc-body">
             <div class="svc-head"><span class="svc-icon"><svg class="ic" aria-hidden="true"><use href="#i-wifi"/></svg></span><h3 data-i18n="svc2.title">WLAN und Heimnetz</h3></div>
             <p data-i18n="svc2.desc">Schluss mit Funklöchern und Verbindungsabbrüchen. Stabiles Internet in jedem Zimmer.</p>
@@ -239,7 +248,7 @@
           <span class="svc-dim" aria-hidden="true"></span>
         </article>
         <article class="svc-card">
-          <figure class="svc-photo"><img src="/assets/img/service-smart-thermostat.webp" alt="Hand stellt ein smartes Thermostat am Heizkörper auf 21 Grad" data-i18n-alt="img.smarthome" loading="lazy" width="1200" height="800" /></figure>
+          <figure class="svc-photo"><img src="/assets/img/service-smart-thermostat.webp" srcset="/assets/img/service-smart-thermostat-720.webp 720w, /assets/img/service-smart-thermostat.webp 1200w" sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 39vw, 517px" alt="Hand stellt ein smartes Thermostat am Heizkörper auf 21 Grad" data-i18n-alt="img.smarthome" loading="lazy" width="1200" height="800" /></figure>
           <div class="svc-body">
             <div class="svc-head"><span class="svc-icon"><svg class="ic" aria-hidden="true"><use href="#i-house-signal"/></svg></span><h3 data-i18n="svc3.title">Smart Home und Geräte</h3></div>
             <p data-i18n="svc3.desc">Vom Drucker bis zur smarten Lampe: Ich richte Ihre Geräte ein und sorge dafür, dass alles zusammenspielt.</p>
@@ -254,7 +263,7 @@
           <span class="svc-dim" aria-hidden="true"></span>
         </article>
         <article class="svc-card svc-card--feat">
-          <figure class="svc-photo"><img src="/assets/img/service-remote-support.webp" alt="Person telefoniert abends am Schreibtisch vor einem Laptop" data-i18n-alt="img.remote" loading="lazy" width="1200" height="800" /></figure>
+          <figure class="svc-photo"><img src="/assets/img/service-remote-support.webp" srcset="/assets/img/service-remote-support-720.webp 720w, /assets/img/service-remote-support.webp 1200w" sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 39vw, 517px" alt="Person telefoniert abends am Schreibtisch vor einem Laptop" data-i18n-alt="img.remote" loading="lazy" width="1200" height="800" /></figure>
           <div class="svc-body">
             <div class="svc-head"><span class="svc-icon"><svg class="ic" aria-hidden="true"><use href="#i-headset"/></svg></span><h3 data-i18n="svc4.title">Fernwartung</h3></div>
             <p data-i18n="svc4.desc">Viele Probleme lassen sich ohne Termin lösen. Ich schalte mich sicher auf Ihren Bildschirm, und Sie schauen live zu.</p>
@@ -276,7 +285,6 @@
   <!-- ============== LAUFBAND ============== -->
   <section class="mq" id="mq" aria-label="Geräte und Systeme, bei denen ich helfe" data-i18n-aria="mq.label">
     <div class="mq-row"><div class="mq-track"><ul><li><span data-i18n="mq.d1">Windows 11</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d2">macOS</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d3">FRITZ!Box</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d4">iPhone und iPad</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d5">Android</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d6">Smart-TV</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d7">Drucker und Scanner</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d8">Mesh-WLAN</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d9">Smarte Thermostate</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d10">Sprachassistenten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d11">NAS und Backup</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li></ul><ul aria-hidden="true"><li><span data-i18n="mq.d1">Windows 11</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d2">macOS</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d3">FRITZ!Box</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d4">iPhone und iPad</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d5">Android</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d6">Smart-TV</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d7">Drucker und Scanner</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d8">Mesh-WLAN</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d9">Smarte Thermostate</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d10">Sprachassistenten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d11">NAS und Backup</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li></ul><ul aria-hidden="true"><li><span data-i18n="mq.d1">Windows 11</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d2">macOS</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d3">FRITZ!Box</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d4">iPhone und iPad</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d5">Android</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d6">Smart-TV</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d7">Drucker und Scanner</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d8">Mesh-WLAN</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d9">Smarte Thermostate</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d10">Sprachassistenten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.d11">NAS und Backup</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li></ul></div></div>
-    <div class="mq-row alt" aria-hidden="true"><div class="mq-track"><ul aria-hidden="true"><li><span data-i18n="mq.v1">Einrichten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v2">Reparieren</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v3">Absichern</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v4">Verbinden</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v5">Erklären</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v6">Aufräumen</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v7">Sichern</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v8">Aufrüsten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li></ul><ul aria-hidden="true"><li><span data-i18n="mq.v1">Einrichten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v2">Reparieren</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v3">Absichern</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v4">Verbinden</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v5">Erklären</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v6">Aufräumen</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v7">Sichern</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v8">Aufrüsten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li></ul><ul aria-hidden="true"><li><span data-i18n="mq.v1">Einrichten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v2">Reparieren</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v3">Absichern</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v4">Verbinden</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v5">Erklären</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v6">Aufräumen</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v7">Sichern</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li><li><span data-i18n="mq.v8">Aufrüsten</span><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></li></ul></div></div>
     <button type="button" class="round mq-pause" id="mqPause" aria-pressed="false" aria-label="Laufband anhalten"><svg class="ic" aria-hidden="true"><use href="#i-pause"/></svg></button>
   </section>
 
@@ -294,7 +302,7 @@
         </div>
       </div>
     </div>
-    <section class="proj-track" id="projTrack" tabindex="0" aria-label="Typische Einsätze, seitlich scrollbar" data-i18n-aria="proj.track">
+    <section class="proj-track" id="projTrack" tabindex="0" aria-label="Beispielrechnungen" data-i18n-aria="proj.track">
       <article class="proj">
         <div class="proj-meta"><span class="place"><svg class="ic" aria-hidden="true"><use href="#i-house"/></svg><span data-i18n="place.onsite">Vor Ort</span></span><span class="proj-ico"><svg class="ic" aria-hidden="true"><use href="#i-wifi"/></svg></span></div>
         <h3 data-i18n="p1.title">Mesh-WLAN im Reihenhaus</h3>
@@ -341,7 +349,10 @@
         <div class="proj-foot"><span data-i18n="p5.time">1 Std.</span><b data-i18n="p5.price">39,00&nbsp;€</b></div>
       </article>
     </section>
-    <div class="wrap"><div class="track-bar" aria-hidden="true"><span id="projBar"></span></div></div>
+    <div class="wrap">
+      <div class="track-bar" aria-hidden="true"><span id="projBar"></span></div>
+      <button type="button" class="btn btn-ghost proj-more" id="projMore"><span data-i18n="proj.more">Alle 5 Einsätze zeigen</span><svg class="ic" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
+    </div>
   </section>
 
   <!-- ============== ABLAUF ============== -->
@@ -464,7 +475,7 @@
   <section class="selfhelp" aria-labelledby="sh-h">
     <div class="wrap">
       <div class="sh-panel">
-        <figure class="sh-photo"><img src="/assets/img/router-power-plug.webp" alt="Hand zieht den Stromstecker an der Rückseite eines Routers" data-i18n-alt="img.router" loading="lazy" width="1000" height="1000" /></figure>
+        <figure class="sh-photo"><img src="/assets/img/router-power-plug.webp" srcset="/assets/img/router-power-plug-720.webp 720w, /assets/img/router-power-plug.webp 1000w" sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 31vw, 413px" alt="Hand zieht den Stromstecker an der Rückseite eines Routers" data-i18n-alt="img.router" loading="lazy" width="1000" height="1000" /></figure>
         <div class="sh-body">
           <h2 id="sh-h" class="h2" data-i18n="sh.title">Vorab schon mal probieren</h2>
           <p class="sub" data-i18n="sh.sub">Vier Handgriffe, die oft schon reichen. Und wenn nicht, beschleunigen sie die Ersteinschätzung.</p>
@@ -585,10 +596,11 @@
           </div>
           <div class="form-result" id="formResult" tabindex="-1" hidden>
             <h3><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg><span data-i18n="form.ready">Ihre Anfrage ist fertig</span></h3>
-            <p class="help" data-i18n="form.readyHelp">Ihr E-Mail-Programm sollte sich geöffnet haben. Falls nicht: Text kopieren und an info@rxf-sys.de schicken.</p>
+            <p class="help" data-i18n="form.readyHelp">Ihr E-Mail-Programm sollte sich geöffnet haben. Falls nicht: per WhatsApp senden oder den Text kopieren und an info@rxf-sys.de schicken.</p>
             <pre id="resultText" data-lenis-prevent></pre>
             <div class="row">
               <a class="btn btn-primary btn-static" id="resultMail" href="mailto:info@rxf-sys.de"><svg class="ic" aria-hidden="true"><use href="#i-envelope"/></svg><span data-i18n="form.openMail">E-Mail-Programm öffnen</span></a>
+              <a class="btn btn-ghost btn-static" id="resultWa" href="https://wa.me/491791496509" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg><span data-i18n="form.openWa">Per WhatsApp senden</span></a>
               <button type="button" class="btn btn-ghost btn-static" data-copy-from="#resultText"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span data-i18n="form.copy">Text kopieren</span></button>
             </div>
           </div>
@@ -602,6 +614,10 @@
   <div class="wrap">
     <div class="foot-in">
       <a href="#top" class="foot-brand" aria-label="rxf-sys IT-Service, zum Seitenanfang" data-i18n-aria="brand.label"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#logo-mark"/><rect class="lg-cursor" x="50.55" y="25.88" width="7.00" height="12.25" rx="0.8"/></svg><svg class="brand-word" viewBox="51 -747 4133 960" aria-hidden="true"><use href="#logo-word" x="51" y="-747"/><rect class="lg-cursor" x="3923.00" y="-528.00" width="250.00" height="528.00" rx="28"/></svg></a>
+      <div class="foot-contact">
+        <a href="tel:+491791496509">0179&nbsp;1496509</a>
+        <a href="mailto:info@rxf-sys.de">info@rxf-sys.de</a>
+      </div>
       <nav class="foot-nav" aria-label="Weitere Links">
         <a href="impressum.html" data-i18n="foot.imprint">Impressum</a>
         <a href="datenschutz.html" data-i18n="foot.privacy">Datenschutz</a>
@@ -622,7 +638,7 @@
 <script src="/assets/vendor/gsap.min.js?v=3.12.5" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js?v=3.12.5" defer></script>
 <script src="/assets/vendor/lenis.min.js?v=1.1.13" defer></script>
-<script src="/index.js?v=2026-10-09-2" defer></script>
+<script src="/index.js?v=2026-11-12-2" defer></script>
 
 </body>
 </html>

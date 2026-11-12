@@ -62,12 +62,10 @@
     'mq.d1': 'Windows 11', 'mq.d2': 'macOS', 'mq.d3': 'FRITZ!Box', 'mq.d4': 'iPhone and iPad', 'mq.d5': 'Android',
     'mq.d6': 'Smart TV', 'mq.d7': 'Printers and scanners', 'mq.d8': 'Mesh Wi-Fi', 'mq.d9': 'Smart thermostats',
     'mq.d10': 'Voice assistants', 'mq.d11': 'NAS and backup',
-    'mq.v1': 'Set up', 'mq.v2': 'Repair', 'mq.v3': 'Secure', 'mq.v4': 'Connect',
-    'mq.v5': 'Explain', 'mq.v6': 'Clean up', 'mq.v7': 'Back up', 'mq.v8': 'Upgrade',
 
     'proj.title': 'Typical jobs',
     'proj.sub': 'Example bills: how long typical issues take and what they cost.',
-    'proj.prev': 'Previous example', 'proj.next': 'Next example', 'proj.track': 'Typical jobs, scrolls sideways',
+    'proj.prev': 'Previous example', 'proj.next': 'Next example', 'proj.track': 'Example bills', 'proj.more': 'Show all 5 jobs',
     'place.onsite': 'On site', 'place.remote': 'Remote support',
     'p.problem': 'Problem', 'p.solution': 'Solution',
     'p1.title': 'Mesh Wi-Fi in a terraced house',
@@ -178,8 +176,8 @@
     'form.submit': 'Prepare request',
     'form.help': 'Your email program opens with the finished text. Nothing is stored on this website.',
     'form.ready': 'Your request is ready',
-    'form.readyHelp': 'Your email program should have opened. If not: copy the text and send it to info@rxf-sys.de.',
-    'form.openMail': 'Open email program', 'form.copy': 'Copy text',
+    'form.readyHelp': 'Your email program should have opened. If not: send it via WhatsApp, or copy the text and send it to info@rxf-sys.de.',
+    'form.openMail': 'Open email program', 'form.openWa': 'Send via WhatsApp', 'form.copy': 'Copy text',
 
     'foot.imprint': 'Imprint', 'foot.privacy': 'Privacy',
     'foot.copy': '&copy; <span id="year">2026</span> Robin Frank · IT services Dormagen',
@@ -203,7 +201,7 @@
       toLight: 'Helles Design einschalten', toDark: 'Dunkles Design einschalten',
       menuOpen: 'Menü öffnen', menuClose: 'Menü schließen',
       mqPause: 'Laufband anhalten', mqPlay: 'Laufband fortsetzen',
-      langLabel: 'Switch to English', langText: 'EN',
+      langLabel: 'EN, switch to English', langText: 'EN',
       subject: 'IT-Anfrage', hello: 'Hallo Herr Frank,', topicsLine: 'mein Anliegen: ', noTopics: 'ich habe ein Anliegen.',
       helpLine: 'Hilfe gewünscht: ', placeLine: 'Ort: ', reachLine: 'Erreichbar unter: ', best: (t) => ` (am besten ${t})`, bye: 'Viele Grüße',
       modes: { onsite: 'vor Ort', remote: 'per Fernwartung', unsure: 'weiß ich noch nicht' },
@@ -225,7 +223,7 @@
       toLight: 'Switch to light theme', toDark: 'Switch to dark theme',
       menuOpen: 'Open menu', menuClose: 'Close menu',
       mqPause: 'Pause ticker', mqPlay: 'Resume ticker',
-      langLabel: 'Auf Deutsch umschalten', langText: 'DE',
+      langLabel: 'DE, auf Deutsch umschalten', langText: 'DE',
       subject: 'IT request', hello: 'Hello Mr Frank,', topicsLine: 'my request: ', noTopics: 'I have a request.',
       helpLine: 'Help wanted: ', placeLine: 'Location: ', reachLine: 'Contact: ', best: (t) => ` (best ${t})`, bye: 'Kind regards',
       modes: { onsite: 'on site', remote: 'via remote support', unsure: 'not sure yet' },
@@ -553,6 +551,16 @@
     window.addEventListener('resize', syncProj);
     syncProj();
   }
+  /* Schmale Bildschirme: Karten stehen untereinander, ab der dritten per Knopf */
+  const projMore = $('#projMore');
+  if (track && projMore) {
+    projMore.addEventListener('click', () => {
+      track.classList.add('all');
+      projMore.hidden = true;
+      const firstNew = $$('.proj', track)[2];
+      if (firstNew) { firstNew.setAttribute('tabindex', '-1'); firstNew.focus({ preventScroll: true }); }
+    });
+  }
 
   /* ============== FORMULAR → vorbefüllte E-Mail ============== */
   const form = $('#inquiry');
@@ -599,6 +607,7 @@
       const href = `mailto:info@rxf-sys.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       $('#resultText').textContent = `${subject}\n\n${body}`;
       $('#resultMail').href = href;
+      $('#resultWa').href = `https://wa.me/491791496509?text=${encodeURIComponent(body)}`;
       const res = $('#formResult');
       const wasHidden = res.hidden;
       res.hidden = false;
