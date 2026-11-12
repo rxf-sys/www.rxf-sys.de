@@ -178,8 +178,8 @@
     'form.submit': 'Prepare request',
     'form.help': 'Your email program opens with the finished text. Nothing is stored on this website.',
     'form.ready': 'Your request is ready',
-    'form.readyHelp': 'Your email program should have opened. If not: copy the text and send it to info@rxf-sys.de.',
-    'form.openMail': 'Open email program', 'form.copy': 'Copy text',
+    'form.readyHelp': 'Your email program should have opened. If not: send it via WhatsApp, or copy the text and send it to info@rxf-sys.de.',
+    'form.openMail': 'Open email program', 'form.openWa': 'Send via WhatsApp', 'form.copy': 'Copy text',
 
     'foot.imprint': 'Imprint', 'foot.privacy': 'Privacy',
     'foot.copy': '&copy; <span id="year">2026</span> Robin Frank · IT services Dormagen',
@@ -203,7 +203,7 @@
       toLight: 'Helles Design einschalten', toDark: 'Dunkles Design einschalten',
       menuOpen: 'Menü öffnen', menuClose: 'Menü schließen',
       mqPause: 'Laufband anhalten', mqPlay: 'Laufband fortsetzen',
-      langLabel: 'Switch to English', langText: 'EN',
+      langLabel: 'EN, switch to English', langText: 'EN',
       subject: 'IT-Anfrage', hello: 'Hallo Herr Frank,', topicsLine: 'mein Anliegen: ', noTopics: 'ich habe ein Anliegen.',
       helpLine: 'Hilfe gewünscht: ', placeLine: 'Ort: ', reachLine: 'Erreichbar unter: ', best: (t) => ` (am besten ${t})`, bye: 'Viele Grüße',
       modes: { onsite: 'vor Ort', remote: 'per Fernwartung', unsure: 'weiß ich noch nicht' },
@@ -225,7 +225,7 @@
       toLight: 'Switch to light theme', toDark: 'Switch to dark theme',
       menuOpen: 'Open menu', menuClose: 'Close menu',
       mqPause: 'Pause ticker', mqPlay: 'Resume ticker',
-      langLabel: 'Auf Deutsch umschalten', langText: 'DE',
+      langLabel: 'DE, auf Deutsch umschalten', langText: 'DE',
       subject: 'IT request', hello: 'Hello Mr Frank,', topicsLine: 'my request: ', noTopics: 'I have a request.',
       helpLine: 'Help wanted: ', placeLine: 'Location: ', reachLine: 'Contact: ', best: (t) => ` (best ${t})`, bye: 'Kind regards',
       modes: { onsite: 'on site', remote: 'via remote support', unsure: 'not sure yet' },
@@ -599,6 +599,7 @@
       const href = `mailto:info@rxf-sys.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       $('#resultText').textContent = `${subject}\n\n${body}`;
       $('#resultMail').href = href;
+      $('#resultWa').href = `https://wa.me/491791496509?text=${encodeURIComponent(body)}`;
       const res = $('#formResult');
       const wasHidden = res.hidden;
       res.hidden = false;

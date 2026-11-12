@@ -10,4 +10,5 @@ Update by downloading the exact version from the npm registry and replacing the 
 | `lenis.min.js` | 1.1.13 | `lenis/dist/lenis.min.js` | MIT, see `lenis.LICENSE.txt` |
 
 Icons in `index.html` are an inline SVG sprite built from Font Awesome Free 6.5.0
-(`@fontawesome/fontawesome-free/svgs/solid`), icons licensed CC BY 4.0, https://fontawesome.com/license/free.
+(`@fontawesome/fontawesome-free/svgs/solid`, the WhatsApp mark from `svgs/brands`), icons licensed
+CC BY 4.0, https://fontawesome.com/license/free.
