@@ -74,10 +74,16 @@ Beide Seiten nutzen **dieselben Klassen und dieselbe Reihenfolge**:
 ├── index.js            # JavaScript
 ├── datenschutz.html
 ├── impressum.html
+├── 404.html            # Fehlerseite (Caddy liefert sie bei 404 aus)
+├── robots.txt
+├── sitemap.xml         # nur die Startseite (Rechtstexte sind noindex)
 ├── assets/
 │   ├── favicon.svg     # Favicon „r“ + Cursor (dazu /favicon.ico mit 16/32/48 px)
+│   ├── og-image.png    # Vorschaubild für geteilte Links (1200 × 630)
+│   ├── theme-init.js   # setzt das Theme vor dem ersten Rendern (statt Inline-Script)
 │   ├── brand/          # Logo-Dateien: Bildmarke, Logo hell, Logo dunkel (SVG, Pfade)
-│   ├── img/            # Fotos (WebP, ~1200 px breit)
+│   ├── fonts/          # Schriften (lokal, WOFF2) + Lizenzhinweise und Update-Weg
+│   ├── img/            # Fotos (WebP, ~1200 px breit, dazu je eine Variante `-720`)
 │   └── vendor/         # GSAP, ScrollTrigger, Lenis (lokal) + Lizenzhinweise
 ├── _headers            # INAKTIV — nur historische Referenz (Cloudflare Pages Format)
 └── infrastructure/
@@ -109,14 +115,25 @@ Beide Seiten nutzen **dieselben Klassen und dieselbe Reihenfolge**:
   Datenschutz bleiben als Rechtstexte deutsch (wie im Portfolio).
   Einträge im `EN`-Objekt dürfen HTML-Entities enthalten, sie werden über
   `innerHTML` gesetzt
-- **Cache-Busting**: `index.css`/`index.js` werden mit `?v=…` referenziert —
-  **bei Änderungen an CSS/JS den `?v=`-Parameter in allen drei HTML-Dateien
-  bumpen** (z. B. auf das aktuelle Datum)
+- **Cache-Busting**: `index.css`, `index.js` und `assets/theme-init.js` werden mit
+  `?v=…` referenziert und ein Jahr gecacht — **bei Änderungen daran den
+  `?v=`-Parameter in allen vier HTML-Dateien bumpen** (z. B. auf das aktuelle Datum).
+  Bilder und Schriften haben kein `?v=` (Cache eine Woche): **geänderte Datei =
+  neuer Dateiname**
+- **Hauptadresse** ist `https://rxf-sys.de/` (Canonical, `og:url`, JSON-LD, Sitemap,
+  `robots.txt`); bei einem Wechsel alle fünf Stellen anpassen
+- **Fotos**: große Bilder haben eine 720-px-Variante (`name-720.webp`) und werden mit
+  `srcset`/`sizes` eingebunden; beim Hero-Bild muss der Preload im `<head>` dieselben
+  Angaben tragen (`imagesrcset`/`imagesizes`)
 - **Security-Header** werden **ausschließlich im `infrastructure/Caddyfile`** gesetzt
 - **`_headers`** wird von Caddy **nicht gelesen** (Cloudflare Pages Format, inaktiv)
 - **Interne Pfade** (`/infrastructure/`, `/.git/`, `/_headers`) werden von Caddy mit 404 blockiert
 - **`X-Frame-Options: DENY`** — die Site soll nirgendwo eingebettet werden
-- Google Fonts werden über CSP explizit erlaubt (`fonts.googleapis.com`, `fonts.gstatic.com`)
+- **CSP erlaubt nur den eigenen Server** (`'self'`): keine Inline-Skripte (das
+  Theme-Script liegt deshalb in `assets/theme-init.js`), keine externen Schriften oder
+  Skripte. Schriften liegen lokal in `assets/fonts/`
+- Änderungen am `Caddyfile` werden erst nach einem Reload von Caddy auf dem LXC aktiv
+  (der Auto-Deploy aktualisiert nur die Dateien)
 - Icons sind ein eingebettetes SVG-Sprite am Anfang von `index.html` (Font Awesome
   Free 6.5, `<svg class="ic"><use href="#i-…"/></svg>`); keine Icon-Webfont mehr
 

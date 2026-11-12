@@ -45,8 +45,9 @@ Technische Highlights:
 Statisches HTML/CSS/JS, keine Build-Tools. Bibliotheken liegen lokal in
 `assets/vendor/` (GSAP 3.12.5, ScrollTrigger, Lenis 1.1.13, siehe
 `assets/vendor/README.md`), Icons als eingebettetes SVG-Sprite (Font Awesome Free).
-Schriften via Google Fonts: Archivo (&Uuml;berschriften, breite Schnitte),
-Atkinson Hyperlegible Next (Text) und Atkinson Hyperlegible Mono (Zahlen).
+Schriften liegen lokal in `assets/fonts/` (siehe `assets/fonts/README.md`):
+Archivo (&Uuml;berschriften, breite Schnitte), Atkinson Hyperlegible Next (Text)
+und Atkinson Hyperlegible Mono (Zahlen).
 
 Designsystem &bdquo;Signal&ldquo;: Signalgelb `#FFC21A`, Anthrazit `#1C2125`,
 Signalwei&szlig; `#F4F5F2`. Das Portfolio wird im n&auml;chsten Schritt angeglichen.
@@ -62,10 +63,16 @@ liegen in `assets/brand/`, das Favicon zeigt die Kurzform &bdquo;r&ldquo; mit Cu
 ├─ index.js                # Theme, DE/EN, Navigation, Formular, Rechenbeispiel, Bewegung
 ├─ impressum.html          # § 5 DDG, § 19 UStG, VSBG
 ├─ datenschutz.html        # Art. 13 DSGVO
+├─ 404.html                # Fehlerseite
+├─ robots.txt
+├─ sitemap.xml
 ├─ assets/
 │  ├─ favicon.svg
+│  ├─ og-image.png         # Vorschaubild für geteilte Links
+│  ├─ theme-init.js        # Theme vor dem ersten Rendern setzen
 │  ├─ brand/               # Logo als SVG: Bildmarke, Logo hell, Logo dunkel
-│  ├─ img/                 # Fotos (WebP)
+│  ├─ fonts/               # Schriften (lokal, mit Lizenzhinweisen)
+│  ├─ img/                 # Fotos (WebP, je eine 720-px-Variante)
 │  └─ vendor/              # GSAP, ScrollTrigger, Lenis (lokal, mit Lizenzhinweisen)
 ├─ _headers                # Security-Header (Cloudflare Pages-Format, inaktiv)
 └─ infrastructure/
