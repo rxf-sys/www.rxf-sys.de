@@ -28,7 +28,10 @@ nächsten Schritt angeglichen; bis dahin unterscheiden sich die `:root`-Tokens.
 - **Texte**: keine Gedankenstriche (— / –) in sichtbaren Texten, keine
   Kicker-Zeilen über Überschriften, ein Label pro Aktion („Anfrage senden")
 - **Layout**: breite Hero-Überschrift über Text + Foto; jede Sektion hat ihre eigene
-  Layout-Form (Band, Karten-Stapel, horizontaler Track, Zeitleiste, Kassenbon, Karte)
+  Layout-Form (Band, Karten-Stapel, horizontaler Track, Zeitleiste, Kassenbon, Karte).
+  Bis 720 px stehen die Einsätze untereinander (zwei sichtbar, Rest über `#projMore`)
+- **Lesbarkeit und Bedienung** (Zielgruppe Privatkunden): keine Schrift unter 14 px,
+  Tippflächen mindestens 44 × 44 px (Fließtext-Links ausgenommen)
 
 ### Gemeinsame Kopfleiste
 

@@ -62,12 +62,10 @@
     'mq.d1': 'Windows 11', 'mq.d2': 'macOS', 'mq.d3': 'FRITZ!Box', 'mq.d4': 'iPhone and iPad', 'mq.d5': 'Android',
     'mq.d6': 'Smart TV', 'mq.d7': 'Printers and scanners', 'mq.d8': 'Mesh Wi-Fi', 'mq.d9': 'Smart thermostats',
     'mq.d10': 'Voice assistants', 'mq.d11': 'NAS and backup',
-    'mq.v1': 'Set up', 'mq.v2': 'Repair', 'mq.v3': 'Secure', 'mq.v4': 'Connect',
-    'mq.v5': 'Explain', 'mq.v6': 'Clean up', 'mq.v7': 'Back up', 'mq.v8': 'Upgrade',
 
     'proj.title': 'Typical jobs',
     'proj.sub': 'Example bills: how long typical issues take and what they cost.',
-    'proj.prev': 'Previous example', 'proj.next': 'Next example', 'proj.track': 'Typical jobs, scrolls sideways',
+    'proj.prev': 'Previous example', 'proj.next': 'Next example', 'proj.track': 'Example bills', 'proj.more': 'Show all 5 jobs',
     'place.onsite': 'On site', 'place.remote': 'Remote support',
     'p.problem': 'Problem', 'p.solution': 'Solution',
     'p1.title': 'Mesh Wi-Fi in a terraced house',
@@ -552,6 +550,16 @@
     track.addEventListener('scroll', syncProj, { passive: true });
     window.addEventListener('resize', syncProj);
     syncProj();
+  }
+  /* Schmale Bildschirme: Karten stehen untereinander, ab der dritten per Knopf */
+  const projMore = $('#projMore');
+  if (track && projMore) {
+    projMore.addEventListener('click', () => {
+      track.classList.add('all');
+      projMore.hidden = true;
+      const firstNew = $$('.proj', track)[2];
+      if (firstNew) { firstNew.setAttribute('tabindex', '-1'); firstNew.focus({ preventScroll: true }); }
+    });
   }
 
   /* ============== FORMULAR → vorbefüllte E-Mail ============== */
