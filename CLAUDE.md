@@ -130,7 +130,10 @@ Beide Seiten nutzen **dieselben Klassen und dieselbe Reihenfolge**:
   Angaben tragen (`imagesrcset`/`imagesizes`)
 - **Security-Header** werden **ausschließlich im `infrastructure/Caddyfile`** gesetzt
 - **`_headers`** wird von Caddy **nicht gelesen** (Cloudflare Pages Format, inaktiv)
-- **Interne Pfade** (`/infrastructure/`, `/.git/`, `/_headers`) werden von Caddy mit 404 blockiert
+- **Interne Pfade** werden von Caddy mit 404 blockiert: `/infrastructure/`, `/_headers`,
+  `/CLAUDE.md`, `/README.md` und alles, was im Wurzelverzeichnis mit einem Punkt beginnt
+  (`/.git/`, `/.github/`, `/.htmlvalidate.json`); Ausnahme ist `/.well-known/`.
+  Neue interne Dateien im Wurzelverzeichnis dort ergänzen
 - **`X-Frame-Options: DENY`** — die Site soll nirgendwo eingebettet werden
 - **CSP erlaubt nur den eigenen Server** (`'self'`): keine Inline-Skripte (das
   Theme-Script liegt deshalb in `assets/theme-init.js`), keine externen Schriften oder

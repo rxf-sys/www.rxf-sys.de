@@ -19,8 +19,13 @@
 
     encode gzip zstd
 
-    # Interne Pfade (Repo-Metadaten, Infrastruktur-Configs) nicht ausliefern
-    @hidden path /infrastructure/* /.git/* /_headers
+    # Interne Pfade (Repo-Metadaten, Infrastruktur-Configs, Projektdoku) nicht
+    # ausliefern. "/.*" deckt alle Punkt-Dateien und -Ordner im Wurzelverzeichnis ab
+    # (.git, .github, .htmlvalidate.json); /.well-known bleibt erreichbar.
+    @hidden {
+        path /infrastructure/* /_headers /CLAUDE.md /README.md /.*
+        not path /.well-known/*
+    }
     handle @hidden {
         error 404
     }
