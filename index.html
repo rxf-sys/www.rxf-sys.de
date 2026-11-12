@@ -25,23 +25,13 @@
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Atkinson+Hyperlegible+Mono:wght@400;500;700&family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&display=swap" rel="stylesheet" />
 
-<link rel="preload" as="image" href="/assets/img/hero-kitchen-table.webp" fetchpriority="high" />
-<link rel="stylesheet" href="/index.css?v=2026-10-09-2" />
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/archivo-latin.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/atkinson-hyperlegible-next-latin.woff2" crossorigin />
+<link rel="preload" as="image" href="/assets/img/hero-kitchen-table.webp" imagesrcset="/assets/img/hero-kitchen-table-720.webp 720w, /assets/img/hero-kitchen-table.webp 960w" imagesizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 52vw, 690px" fetchpriority="high" />
+<link rel="stylesheet" href="/index.css?v=2026-11-12" />
 
-<script>
-(function () {
-  document.documentElement.classList.add('js');
-  try {
-    var t = localStorage.getItem('rxf-theme');
-    if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    document.documentElement.dataset.theme = t;
-  } catch (e) { document.documentElement.dataset.theme = 'light'; }
-})();
-</script>
+<script src="/assets/theme-init.js?v=2026-11-12"></script>
 
 <script type="application/ld+json">
 {
@@ -165,7 +155,7 @@
           </ul>
         </div>
         <figure class="hero-photo">
-          <img src="/assets/img/hero-kitchen-table.webp" alt="Hände an einem Laptop auf einem Küchentisch, daneben Kaffeetasse und Lesebrille" data-i18n-alt="img.hero" width="960" height="1280" fetchpriority="high" />
+          <img src="/assets/img/hero-kitchen-table.webp" srcset="/assets/img/hero-kitchen-table-720.webp 720w, /assets/img/hero-kitchen-table.webp 960w" sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 52vw, 690px" alt="Hände an einem Laptop auf einem Küchentisch, daneben Kaffeetasse und Lesebrille" data-i18n-alt="img.hero" width="960" height="1280" fetchpriority="high" />
           <figcaption class="photo-note"><svg class="ic note-ic" aria-hidden="true"><use href="#i-circle-check"/></svg><span><b data-i18n="note.t">Ersteinschätzung kostenlos</b><span data-i18n="note.d">am Telefon, unverbindlich</span></span></figcaption>
         </figure>
       </div>
@@ -209,7 +199,7 @@
       </div>
       <div class="stack">
         <article class="svc-card">
-          <figure class="svc-photo"><img src="/assets/img/service-laptop-ssd.webp" alt="Hände setzen eine SSD in einen geöffneten Laptop ein" data-i18n-alt="img.pc" loading="lazy" width="1200" height="800" /></figure>
+          <figure class="svc-photo"><img src="/assets/img/service-laptop-ssd.webp" srcset="/assets/img/service-laptop-ssd-720.webp 720w, /assets/img/service-laptop-ssd.webp 1200w" sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 39vw, 517px" alt="Hände setzen eine SSD in einen geöffneten Laptop ein" data-i18n-alt="img.pc" loading="lazy" width="1200" height="800" /></figure>
           <div class="svc-body">
             <div class="svc-head"><span class="svc-icon"><svg class="ic" aria-hidden="true"><use href="#i-laptop"/></svg></span><h3 data-i18n="svc1.title">PC- und Laptop-Hilfe</h3></div>
             <p data-i18n="svc1.desc">Ihr Rechner streikt, ist langsam oder soll neu eingerichtet werden? Ich bringe ihn wieder in Form.</p>
@@ -224,7 +214,7 @@
           <span class="svc-dim" aria-hidden="true"></span>
         </article>
         <article class="svc-card">
-          <figure class="svc-photo"><img src="/assets/img/service-wifi-router.webp" alt="Weißer WLAN-Router mit grünen Lämpchen auf einem Holzregal im Wohnzimmer" data-i18n-alt="img.wlan" loading="lazy" width="1200" height="800" /></figure>
+          <figure class="svc-photo"><img src="/assets/img/service-wifi-router.webp" srcset="/assets/img/service-wifi-router-720.webp 720w, /assets/img/service-wifi-router.webp 1200w" sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 39vw, 517px" alt="Weißer WLAN-Router mit grünen Lämpchen auf einem Holzregal im Wohnzimmer" data-i18n-alt="img.wlan" loading="lazy" width="1200" height="800" /></figure>
           <div class="svc-body">
             <div class="svc-head"><span class="svc-icon"><svg class="ic" aria-hidden="true"><use href="#i-wifi"/></svg></span><h3 data-i18n="svc2.title">WLAN und Heimnetz</h3></div>
             <p data-i18n="svc2.desc">Schluss mit Funklöchern und Verbindungsabbrüchen. Stabiles Internet in jedem Zimmer.</p>
@@ -239,7 +229,7 @@
           <span class="svc-dim" aria-hidden="true"></span>
         </article>
         <article class="svc-card">
-          <figure class="svc-photo"><img src="/assets/img/service-smart-thermostat.webp" alt="Hand stellt ein smartes Thermostat am Heizkörper auf 21 Grad" data-i18n-alt="img.smarthome" loading="lazy" width="1200" height="800" /></figure>
+          <figure class="svc-photo"><img src="/assets/img/service-smart-thermostat.webp" srcset="/assets/img/service-smart-thermostat-720.webp 720w, /assets/img/service-smart-thermostat.webp 1200w" sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 39vw, 517px" alt="Hand stellt ein smartes Thermostat am Heizkörper auf 21 Grad" data-i18n-alt="img.smarthome" loading="lazy" width="1200" height="800" /></figure>
           <div class="svc-body">
             <div class="svc-head"><span class="svc-icon"><svg class="ic" aria-hidden="true"><use href="#i-house-signal"/></svg></span><h3 data-i18n="svc3.title">Smart Home und Geräte</h3></div>
             <p data-i18n="svc3.desc">Vom Drucker bis zur smarten Lampe: Ich richte Ihre Geräte ein und sorge dafür, dass alles zusammenspielt.</p>
@@ -254,7 +244,7 @@
           <span class="svc-dim" aria-hidden="true"></span>
         </article>
         <article class="svc-card svc-card--feat">
-          <figure class="svc-photo"><img src="/assets/img/service-remote-support.webp" alt="Person telefoniert abends am Schreibtisch vor einem Laptop" data-i18n-alt="img.remote" loading="lazy" width="1200" height="800" /></figure>
+          <figure class="svc-photo"><img src="/assets/img/service-remote-support.webp" srcset="/assets/img/service-remote-support-720.webp 720w, /assets/img/service-remote-support.webp 1200w" sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 39vw, 517px" alt="Person telefoniert abends am Schreibtisch vor einem Laptop" data-i18n-alt="img.remote" loading="lazy" width="1200" height="800" /></figure>
           <div class="svc-body">
             <div class="svc-head"><span class="svc-icon"><svg class="ic" aria-hidden="true"><use href="#i-headset"/></svg></span><h3 data-i18n="svc4.title">Fernwartung</h3></div>
             <p data-i18n="svc4.desc">Viele Probleme lassen sich ohne Termin lösen. Ich schalte mich sicher auf Ihren Bildschirm, und Sie schauen live zu.</p>
@@ -464,7 +454,7 @@
   <section class="selfhelp" aria-labelledby="sh-h">
     <div class="wrap">
       <div class="sh-panel">
-        <figure class="sh-photo"><img src="/assets/img/router-power-plug.webp" alt="Hand zieht den Stromstecker an der Rückseite eines Routers" data-i18n-alt="img.router" loading="lazy" width="1000" height="1000" /></figure>
+        <figure class="sh-photo"><img src="/assets/img/router-power-plug.webp" srcset="/assets/img/router-power-plug-720.webp 720w, /assets/img/router-power-plug.webp 1000w" sizes="(max-width: 900px) calc(100vw - 32px), (max-width: 1320px) 31vw, 413px" alt="Hand zieht den Stromstecker an der Rückseite eines Routers" data-i18n-alt="img.router" loading="lazy" width="1000" height="1000" /></figure>
         <div class="sh-body">
           <h2 id="sh-h" class="h2" data-i18n="sh.title">Vorab schon mal probieren</h2>
           <p class="sub" data-i18n="sh.sub">Vier Handgriffe, die oft schon reichen. Und wenn nicht, beschleunigen sie die Ersteinschätzung.</p>
@@ -622,7 +612,7 @@
 <script src="/assets/vendor/gsap.min.js?v=3.12.5" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js?v=3.12.5" defer></script>
 <script src="/assets/vendor/lenis.min.js?v=1.1.13" defer></script>
-<script src="/index.js?v=2026-10-09-2" defer></script>
+<script src="/index.js?v=2026-11-12" defer></script>
 
 </body>
 </html>
