@@ -157,3 +157,11 @@ Beide Seiten nutzen **dieselben Klassen und dieselbe Reihenfolge**:
   Die Testdatei liegt bewusst unter `.github/`, weil Caddy Punkt-Pfade sperrt
   (ein Ordner `tests/` im Wurzelverzeichnis wäre öffentlich)
 - **Lychee Link-Check** (LinkedIn, Xing und WhatsApp ausgenommen, Bot-Blocking)
+
+## Skills (Cloud-Sessions)
+
+`.claude/hooks/install-skills.sh` installiert beim Start jeder Cloud-Session die
+Design-Skills aus drei Quellen, festgenagelt auf geprüfte Commits: `taste-skill`
+(Art Direction, copy-lint, Layout-Check), `impeccable` (Kritik, Politur) und
+`emil-design-eng`/`break-ui` (Feinschliff, Stresstest). Lizenzen: MIT bzw.
+Apache-2.0. Neue Versionen erst prüfen, dann den Commit-Hash ersetzen.
