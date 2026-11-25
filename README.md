@@ -1,5 +1,7 @@
 # rxf-sys.de
 
+> **Status:** Live &middot; **Stand:** 25.11.2026 &middot; Teil meines [Portfolios](https://portfolio.rxf-sys.de/#projects)
+
 Gesch&auml;ftliche Hauptseite der Dom&auml;ne **rxf-sys.de** &mdash; Webauftritt des
 Kleingewerbes **rxf-sys IT-Service (Robin Frank)**: IT-Dienstleistungen f&uuml;r
 Privatkunden in Dormagen &amp; Umgebung, vor Ort oder per Fernwartung.
@@ -29,7 +31,8 @@ Technische Highlights:
 
 - **Light-first Theme** &mdash; helles Design als Standard (Zielgruppe Privatkunden),
   Dark Mode via `prefers-color-scheme` + manueller Toggle (persistiert in
-  `localStorage`); Inline-Theme-Init im `<head>` verhindert Theme-Flash
+  `localStorage`); `assets/theme-init.js` im `<head>` setzt das Theme vor dem ersten
+  Rendern und verhindert Theme-Flash (kein Inline-Script, CSP nur `self`)
 - **DE/EN-Sprachumschalter** &mdash; deutsche Texte stehen im Markup, Englisch im
   `EN`-W&ouml;rterbuch in `index.js`, per Script erzeugte Texte im `STR`-Objekt;
   die Wahl wird in `localStorage` gemerkt

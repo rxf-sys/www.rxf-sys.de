@@ -12,8 +12,9 @@ Theme ist light-first (Zielgruppe Privatkunden), Dark Mode via Toggle.
 ## Designsystem „Signal"
 
 Seit Oktober 2026 nutzt die Hauptseite das Designsystem **Signal**. Das Portfolio
-(`portfolio.rxf-sys.de`) hat noch die alte Palette „Uxintace sunset" und wird im
-nächsten Schritt angeglichen; bis dahin unterscheiden sich die `:root`-Tokens.
+(`portfolio.rxf-sys.de`) hat bewusst ein eigenes System („Leitstand“: Bernstein,
+Geist) und wird nicht angeglichen; gemeinsam ist nur die Struktur der Kopfleiste.
+Farb- und Schriftänderungen hier gehören deshalb nicht ins Portfolio.
 
 - **Farben** (Tokens im `:root` von `index.css`, Dark-Werte unter
   `:root[data-theme="dark"]` und `prefers-color-scheme`): Signalgelb `#FFC21A`
@@ -105,7 +106,9 @@ Beide Seiten nutzen **dieselben Klassen und dieselbe Reihenfolge**:
 
 1. `deploy.sh` liegt bereits unter `/opt/landing/deploy.sh`
 2. In `webhook.json` den Platzhalter für das Webhook-Secret prüfen/ersetzen
-3. GitHub → Settings → Webhooks → URL: `https://www.rxf-sys.de/hooks/deploy-landing`
+3. GitHub → Settings → Webhooks → URL: `https://hooks.rxf-sys.de/hooks/deploy-rxf-sys`
+   (Hook-ID aus `infrastructure/webhook.json`; `hooks.rxf-sys.de` zeigt per Cloudflare
+   Tunnel auf CT 108, Port 9000)
 
 ## Wichtige Konventionen
 
