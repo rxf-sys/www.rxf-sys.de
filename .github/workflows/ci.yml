@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate HTML
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      - name: Install html-validate
+        run: npm install -g html-validate
+
+      - name: Validate HTML
+        run: html-validate "*.html"
+
+  dom:
+    name: DOM Smoke Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      - name: Install jsdom
+        run: npm install --no-save jsdom@25
+
+      - name: Run DOM tests
+        run: node .github/tests/dom.test.js
+
+  links:
+    name: Check Links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Lychee link check
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --no-progress
+            --root-dir ${{ github.workspace }}
+            --exclude 'https://www\.linkedin\.com'
+            --exclude 'https://www\.xing\.com'
+            --exclude 'https://wa\.me'
+            --exclude 'https://www\.whatsapp\.com'
+            '*.html'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

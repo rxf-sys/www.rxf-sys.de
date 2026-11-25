@@ -1,45 +1,83 @@
 # rxf-sys.de
 
-Welcome-Page f&uuml;r die Hauptdom&auml;ne **rxf-sys.de** &mdash; eine statische
-Hub-Seite, die Besucher zu den Subdom&auml;nen f&uuml;hrt:
+> **Status:** Live &middot; **Stand:** 25.11.2026 &middot; Teil meines [Portfolios](https://portfolio.rxf-sys.de/#projects)
 
-- [`portfolio.rxf-sys.de`](https://portfolio.rxf-sys.de/) &mdash; pers&ouml;nliches Portfolio
-- [`admin.rxf-sys.de`](https://admin.rxf-sys.de/) &mdash; Live-Admin-Dashboard (Cloudflare-Access)
-- `lab.rxf-sys.de` &mdash; HomeLab-Spielwiese (in Planung)
+Gesch&auml;ftliche Hauptseite der Dom&auml;ne **rxf-sys.de** &mdash; Webauftritt des
+Kleingewerbes **rxf-sys IT-Service (Robin Frank)**: IT-Dienstleistungen f&uuml;r
+Privatkunden in Dormagen &amp; Umgebung, vor Ort oder per Fernwartung.
 
 ## Seite
 
-Single-Page mit den Sektionen Hero, Hub-Cards (Portfolio &middot; Admin
-&middot; Lab), Stats, Stack und Kontakt. Highlights:
+One-Pager mit den Sektionen:
 
-- **Boot-Sequenz** im Terminal-Stil beim ersten Laden (1&times; pro Session, &uuml;berspringbar)
-- **Kinetische Hero-Typo** &mdash; zeichenweiser Reveal &uuml;ber die Web Animations API
-- **Constellation-Backdrop** &mdash; animiertes SVG-Netzwerk mit Packet-Flow
-- **3D-Hub-Cards** mit Maus-Tilt, Hover-Sheen, Conic-Border-Sweep und Sparklines
-- **Stats** mit Count-Up (IntersectionObserver) und zweireihiges Stack-Marquee
-- **Cursor-Spotlight**, Scroll-Progress-Bar, Live-Ticker und Europe/Berlin-Uhr
-- **Theme** &mdash; Light/Dark automatisch via `prefers-color-scheme` plus
-  manueller Toggle (persistiert in `localStorage`)
-- Respektiert `prefers-reduced-motion`: alle Animationen werden dann deaktiviert
+- **Hero** &mdash; Leistungsversprechen, Telefon/E-Mail, Eckdaten, Foto
+- **Schnellstart** &mdash; Anliegen antippen, Wunsch vor Ort/Fernwartung w&auml;hlen,
+  die Auswahl landet vorausgef&uuml;llt im Anfrage-Formular
+- **Leistungen** &mdash; PC- &amp; Laptop-Hilfe, WLAN &amp; Heimnetz,
+  Smart Home &amp; Ger&auml;te, Fernwartung (gestapelte Karten mit Fotos)
+- **Laufband** &mdash; Ger&auml;te und Systeme, bei denen geholfen wird
+- **Typische Eins&auml;tze** &mdash; Beispielrechnungen mit Dauer und Preis
+- **Ablauf** &mdash; drei Schritte von der Anfrage bis zur Rechnung
+- **Preise** &mdash; 39&nbsp;&euro;/Std., erste Stunde voll, danach 15-Minuten-Schritte;
+  Rechenbeispiel zum Einstellen; Kleinunternehmerregelung (&sect;&nbsp;19 UStG)
+- **Einsatzgebiet** &mdash; schematische Karte und Zonen (inklusive, nach Absprache, Fernwartung)
+- **&Uuml;ber mich** &mdash; Qualifikation &amp; Arbeitsweise, Link zum Portfolio
+- **Selbsthilfe** &mdash; vier Handgriffe vor dem Anruf
+- **FAQ** &mdash; native `<details>`-Accordions
+- **Kontakt** &mdash; Telefon, E-Mail, Formular, das eine vorbef&uuml;llte E-Mail &ouml;ffnet
+  (kein Server, keine Speicherung)
+
+Technische Highlights:
+
+- **Light-first Theme** &mdash; helles Design als Standard (Zielgruppe Privatkunden),
+  Dark Mode via `prefers-color-scheme` + manueller Toggle (persistiert in
+  `localStorage`); `assets/theme-init.js` im `<head>` setzt das Theme vor dem ersten
+  Rendern und verhindert Theme-Flash (kein Inline-Script, CSP nur `self`)
+- **DE/EN-Sprachumschalter** &mdash; deutsche Texte stehen im Markup, Englisch im
+  `EN`-W&ouml;rterbuch in `index.js`, per Script erzeugte Texte im `STR`-Objekt;
+  die Wahl wird in `localStorage` gemerkt
+- **Bewegung** &mdash; GSAP + ScrollTrigger und Lenis (Smooth Scroll), lokal unter
+  `assets/vendor/`. Inhalte bleiben ohne JS bzw. bei `prefers-reduced-motion`
+  statisch und vollst&auml;ndig sichtbar
+- **Mobil-Men&uuml;** &mdash; unter 900&nbsp;px klappt die Navigation als Panel auf,
+  mit Kontakt-Knopf, Escape und Klick-nach-au&szlig;en; mobile Aktionsleiste
+- **SEO** &mdash; LocalBusiness-Schema (JSON-LD), sprechende Meta-Tags
 
 ## Stack
 
-Statisches HTML/CSS/JS, keine Build-Tools. `index.js` ist eine reine
-Vanilla-Motion-Schicht (Web Animations API, IntersectionObserver, SVG) &mdash;
-keine externen JS-Libraries. Inter + JetBrains Mono via Google Fonts, Font
-Awesome via cdnjs. Brand-DNA (Indigo `#424769` &rarr; Pfirsich `#ffb17a`) ist
-1:1 mit den Schwester-Repos abgestimmt.
+Statisches HTML/CSS/JS, keine Build-Tools. Bibliotheken liegen lokal in
+`assets/vendor/` (GSAP 3.12.5, ScrollTrigger, Lenis 1.1.13, siehe
+`assets/vendor/README.md`), Icons als eingebettetes SVG-Sprite (Font Awesome Free).
+Schriften liegen lokal in `assets/fonts/` (siehe `assets/fonts/README.md`):
+Archivo (&Uuml;berschriften, breite Schnitte), Atkinson Hyperlegible Next (Text)
+und Atkinson Hyperlegible Mono (Zahlen).
+
+Designsystem &bdquo;Signal&ldquo;: Signalgelb `#FFC21A`, Anthrazit `#1C2125`,
+Signalwei&szlig; `#F4F5F2`. Das Portfolio wird im n&auml;chsten Schritt angeglichen.
+
+Logo: Kachel &bdquo;rxf&ldquo; mit gelbem Block-Cursor und Schriftzug &bdquo;rxf-sys&ldquo;
+in Archivo (als Pfade, keine Schriftabh&auml;ngigkeit). Dateien zur Weiterverwendung
+liegen in `assets/brand/`, das Favicon zeigt die Kurzform &bdquo;r&ldquo; mit Cursor.
 
 ```
 .
-├─ index.html              # Welcome-Hub (Hero, Hub-Cards, Stats, Stack, Kontakt)
-├─ index.css               # Brand-Tokens + Light/Dark (auto + manueller Toggle)
-├─ index.js                # Motion & Interaktion (Boot, Hero-Reveal, Tilt, Theme)
-├─ impressum.html          # § 5 DDG
+├─ index.html              # One-Pager
+├─ index.css               # Tokens (light-first + Dark), Komponenten, Legal-Styles
+├─ index.js                # Theme, DE/EN, Navigation, Formular, Rechenbeispiel, Bewegung
+├─ impressum.html          # § 5 DDG, § 19 UStG, VSBG
 ├─ datenschutz.html        # Art. 13 DSGVO
+├─ 404.html                # Fehlerseite
+├─ robots.txt
+├─ sitemap.xml
 ├─ assets/
-│  └─ favicon.svg
-├─ _headers                # Security-Header (Cloudflare Pages-Format, optional)
+│  ├─ favicon.svg
+│  ├─ og-image.png         # Vorschaubild für geteilte Links
+│  ├─ theme-init.js        # Theme vor dem ersten Rendern setzen
+│  ├─ brand/               # Logo als SVG: Bildmarke, Logo hell, Logo dunkel
+│  ├─ fonts/               # Schriften (lokal, mit Lizenzhinweisen)
+│  ├─ img/                 # Fotos (WebP, je eine 720-px-Variante)
+│  └─ vendor/              # GSAP, ScrollTrigger, Lenis (lokal, mit Lizenzhinweisen)
+├─ _headers                # Security-Header (Cloudflare Pages-Format, inaktiv)
 └─ infrastructure/
    ├─ Caddyfile            # Static-Webserver auf :80 (Ziel des Cloudflare-Tunnels)
    ├─ deploy.sh            # Pull-Deploy, installiert als /opt/landing/deploy.sh
