@@ -81,7 +81,7 @@ liegen in `assets/brand/`, das Favicon zeigt die Kurzform &bdquo;r&ldquo; mit Cu
 └─ infrastructure/
    ├─ Caddyfile            # Static-Webserver auf :80 (Ziel des Cloudflare-Tunnels)
    ├─ deploy.sh            # Pull-Deploy, installiert als /opt/landing/deploy.sh
-   ├─ webhook.json         # GitHub-Webhook für Auto-Deploy (Push auf main)
+   ├─ webhook.json         # GitHub-Webhook für Auto-Deploy (Push auf prod)
    └─ webhook.service      # systemd-Unit für adnanh/webhook
 ```
 
@@ -93,5 +93,5 @@ liegen in `assets/brand/`, das Favicon zeigt die Kurzform &bdquo;r&ldquo; mit Cu
    `www.rxf-sys.de` auf und zeigt auf die interne LXC-IP `:80`. Keine
    &ouml;ffentlichen Ports, kein direkter DNS-A-Record auf den Host.
 4. `infrastructure/deploy.sh` ausf&uuml;hrbar nach `/opt/landing/deploy.sh`
-   kopieren. Der GitHub-Webhook triggert es bei jedem Push auf `main` und
-   bringt das Arbeitsverzeichnis per `git reset --hard origin/main` auf Stand.
+   kopieren. Der GitHub-Webhook triggert es bei jedem Push auf `prod` und
+   bringt das Arbeitsverzeichnis per `git reset --hard origin/prod` auf Stand.

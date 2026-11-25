@@ -19,7 +19,7 @@
         {
           "match": {
             "type": "value",
-            "value": "refs/heads/main",
+            "value": "refs/heads/prod",
             "parameter": {
               "source": "payload",
               "name": "ref"
