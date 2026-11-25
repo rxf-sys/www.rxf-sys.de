@@ -99,13 +99,16 @@ Beide Seiten nutzen **dieselben Klassen und dieselbe Reihenfolge**:
 
 ## Deployment
 
-`git push origin main` → GitHub-Webhook → adnanh/webhook auf LXC → `deploy.sh`
-→ `git fetch && git reset --hard origin/main` → Caddy liefert automatisch neu aus.
+Entwickelt wird auf `dev`, ausgeliefert wird `prod`:
+`git push origin prod` (bzw. Merge von `dev` nach `prod`) → GitHub-Webhook → adnanh/webhook
+auf LXC → `deploy.sh` → `git fetch && git reset --hard origin/prod` → Caddy liefert automatisch neu aus.
 
 ### Einmaliges Setup auf dem LXC
 
 1. `deploy.sh` liegt bereits unter `/opt/landing/deploy.sh`
-2. In `webhook.json` den Platzhalter für das Webhook-Secret prüfen/ersetzen
+2. In `webhook.json` den Platzhalter für das Webhook-Secret prüfen/ersetzen; der Branch-Filter
+   steht auf `refs/heads/prod`. Auf dem LXC liegt die Datei als `/etc/webhook.conf`
+   (siehe `webhook.service`)
 3. GitHub → Settings → Webhooks → URL: `https://hooks.rxf-sys.de/hooks/deploy-rxf-sys`
    (Hook-ID aus `infrastructure/webhook.json`; `hooks.rxf-sys.de` zeigt per Cloudflare
    Tunnel auf CT 108, Port 9000)
@@ -148,7 +151,7 @@ Beide Seiten nutzen **dieselben Klassen und dieselbe Reihenfolge**:
 
 ## CI
 
-`.github/workflows/ci.yml` bei jedem Push/PR auf `main`, alle Jobs blocking:
+`.github/workflows/ci.yml` bei jedem Push/PR auf `dev` und `prod`, alle Jobs blocking:
 
 - **HTML-Validierung** (Konfiguration in `.htmlvalidate.json`); lokal
   `npx html-validate "*.html"`
