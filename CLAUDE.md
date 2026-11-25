@@ -148,6 +148,12 @@ Beide Seiten nutzen **dieselben Klassen und dieselbe Reihenfolge**:
 
 ## CI
 
-`.github/workflows/ci.yml`: HTML-Validierung (blocking, Konfiguration in
-`.htmlvalidate.json`) + Lychee Link-Check (blocking) bei jedem Push/PR auf `main`.
-Lokal prüfen mit `npx html-validate "*.html"`.
+`.github/workflows/ci.yml` bei jedem Push/PR auf `main`, alle Jobs blocking:
+
+- **HTML-Validierung** (Konfiguration in `.htmlvalidate.json`); lokal
+  `npx html-validate "*.html"`
+- **DOM-Smoke-Tests** (jsdom): Theme-Init, Rechenbeispiel (Beträge, Grenzen,
+  Fernwartung), DE/EN; lokal `npm install --no-save jsdom@25 && node .github/tests/dom.test.js`.
+  Die Testdatei liegt bewusst unter `.github/`, weil Caddy Punkt-Pfade sperrt
+  (ein Ordner `tests/` im Wurzelverzeichnis wäre öffentlich)
+- **Lychee Link-Check** (LinkedIn, Xing und WhatsApp ausgenommen, Bot-Blocking)
